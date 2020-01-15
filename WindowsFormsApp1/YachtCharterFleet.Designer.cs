@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class YachtCharterFleet
     {
         /// <summary>
         /// Required designer variable.
@@ -32,15 +32,16 @@
             this.Destination = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.Label();
             this.Submit = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.typebox = new System.Windows.Forms.ComboBox();
+            this.destbox = new System.Windows.Forms.ComboBox();
+            this.timebox = new System.Windows.Forms.ComboBox();
+            this.Quota = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Type
             // 
             this.Type.AutoSize = true;
-            this.Type.Location = new System.Drawing.Point(12, 87);
+            this.Type.Location = new System.Drawing.Point(74, 95);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(31, 13);
             this.Type.TabIndex = 1;
@@ -49,7 +50,7 @@
             // Destination
             // 
             this.Destination.AutoSize = true;
-            this.Destination.Location = new System.Drawing.Point(269, 87);
+            this.Destination.Location = new System.Drawing.Point(74, 168);
             this.Destination.Name = "Destination";
             this.Destination.Size = new System.Drawing.Size(60, 13);
             this.Destination.TabIndex = 2;
@@ -58,15 +59,15 @@
             // Time
             // 
             this.Time.AutoSize = true;
-            this.Time.Location = new System.Drawing.Point(476, 87);
+            this.Time.Location = new System.Drawing.Point(74, 241);
             this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(30, 13);
+            this.Time.Size = new System.Drawing.Size(87, 13);
             this.Time.TabIndex = 3;
             this.Time.Text = "Number of nights";
             // 
             // Submit
-            // 
-            this.Submit.Location = new System.Drawing.Point(272, 285);
+            //
+            this.Submit.Location = new System.Drawing.Point(77, 307);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(75, 23);
             this.Submit.TabIndex = 5;
@@ -74,59 +75,69 @@
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
-            // comboBox1
+            // typebox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.typebox.Items.AddRange(new object[] {
+            "",
             "Sailing",
             "Powered",
             "Crewed"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.typebox.Location = new System.Drawing.Point(248, 87);
+            this.typebox.Name = "typebox";
+            this.typebox.Size = new System.Drawing.Size(121, 21);
+            this.typebox.TabIndex = 7;
+            this.typebox.SelectedIndexChanged += new System.EventHandler(this.typebox_SelectedIndexChanged);
             // 
-            // comboBox2
+            // destbox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.destbox.Items.AddRange(new object[] {
+            "",
             "Americas",
             "Caribbean",
             "Mediterranean"});
-            this.comboBox2.Location = new System.Drawing.Point(272, 130);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 8;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.destbox.Location = new System.Drawing.Point(248, 160);
+            this.destbox.Name = "destbox";
+            this.destbox.Size = new System.Drawing.Size(121, 21);
+            this.destbox.TabIndex = 8;
+            this.destbox.SelectedIndexChanged += new System.EventHandler(this.destbox_SelectedIndexChanged);
             // 
-            // comboBox3
+            // timebox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.timebox.Items.AddRange(new object[] {
+            "",
             1,
             7,
             14});
-            this.comboBox3.Location = new System.Drawing.Point(479, 130);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 9;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.timebox.Location = new System.Drawing.Point(248, 233);
+            this.timebox.Name = "timebox";
+            this.timebox.Size = new System.Drawing.Size(121, 21);
+            this.timebox.TabIndex = 9;
+            this.timebox.SelectedIndexChanged += new System.EventHandler(this.timebox_SelectedIndexChanged);
             // 
-            // Form1
+            // Quota
+            // 
+            this.Quota.AutoSize = true;
+            this.Quota.Location = new System.Drawing.Point(248, 316);
+            this.Quota.Name = "Quota";
+            this.Quota.Size = new System.Drawing.Size(35, 13);
+            this.Quota.TabIndex = 10;
+            this.Quota.Text = "Quota";
+            // 
+            // YachtCharterFleet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(654, 354);
+            this.Controls.Add(this.Quota);
+            this.Controls.Add(this.timebox);
+            this.Controls.Add(this.destbox);
+            this.Controls.Add(this.typebox);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.Time);
             this.Controls.Add(this.Destination);
             this.Controls.Add(this.Type);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "YachtCharterFleet";
+            this.Text = "Yacht Charter Fleet";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,9 +148,10 @@
         private System.Windows.Forms.Label Destination;
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Button Submit;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox typebox;
+        private System.Windows.Forms.ComboBox destbox;
+        private System.Windows.Forms.ComboBox timebox;
+        private System.Windows.Forms.Label Quota;
     }
 }
 
