@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System;
+
+namespace WindowsFormsApp1
 {
     partial class YachtCharterFleet
     {
@@ -71,7 +73,7 @@
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(75, 23);
             this.Submit.TabIndex = 5;
-            this.Submit.Text = "Submit";
+            this.Submit.Text = "Email Quote";
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
@@ -105,7 +107,7 @@
             // 
             this.timebox.Items.AddRange(new object[] {
             "",
-            1,
+            5,
             7,
             14});
             this.timebox.Location = new System.Drawing.Point(248, 233);

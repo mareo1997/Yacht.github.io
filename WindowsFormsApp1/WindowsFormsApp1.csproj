@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IDForm.Designer.cs">
+      <DependentUpon>IDForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="YachtCharterFleet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="IDForm.resx">
+      <DependentUpon>IDForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YachtCharterFleet.resx">
       <DependentUpon>YachtCharterFleet.cs</DependentUpon>
     </EmbeddedResource>
