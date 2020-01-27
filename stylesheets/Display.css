@@ -1,0 +1,32 @@
+@charset "ISO-8859-1";
+
+header{
+	text-align: center;
+	font-family: Arial;
+	font-size: 20px;
+}
+
+.navbar{
+	overflow: hidden;
+	background: black;
+	padding: 14px 16px;
+}
+
+.navbar a{
+	font-family: Arial;
+	position: sticky;		
+}
+
+.navbar a.active{ 
+	color: white;
+}
+
+body{
+	background: white;
+	font-family: Arial;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
