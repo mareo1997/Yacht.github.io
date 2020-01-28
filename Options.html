@@ -7,52 +7,19 @@
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
 <body>
+  <header>Options</header><br>
+  
   <div class= "navbar">
   	<a href="#" onclick="myHOME()">Home</a>
-  	<a href="#" class = "active" onclick="myOPTIONS()">Order Rental</a>
+  	<a href="#" onclick="myDEST()">Destination</a>
+  	<a href="#" onclick="myYACHTS()">Yachts</a>
+  	<a href="#" class = "active" onclick="myORDER()">Order Rental</a>
   	<a href="#" onclick="myFAQ()">FAQ</a>
   </div><br>
-  <header>Order Rental</header><br>
-  <form name="yachts" onsubmit="return validateForm()" method="post">  
-    Type:<br>
-    <select name = "types">      
-      <option value = ""></option>
-      <option value = "type1">Sailing</option>
-      <option value = "type2">Powered</option>
-      <option value = "type3">Crewed</option>
-      <option value = "type4">Any type</option>      
-    </select><br><br>
-    
-    Destination*:<br>
-    <select required name = "dests">      
-      <option value = ""></option>
-      <option value = "dest1">Americas</option>
-      <option value = "dest2">Caribbean</option>
-      <option value = "dest3">Exotics</option>
-      <option value = "dest4">Mediterranean</option>
-    </select><br><br>
-    
-    Number of nights*:<br>
-    <select required name = "times">      
-      <option value = ""></option>
-      <option value = "time1">5</option>
-      <option value = "time2">7</option>
-      <option value = "time3">10</option>
-      <option value = "time4">14</option>
-    </select><br><br>
-
-    Budget*:<br>
-    <select required name = "budget">
-      <option value = ""></option>
-      <option value = "rent1">$5000 - 10000</option>
-      <option value = "rent2">$11000 - 20000</option>
-      <option value = "rent3">$21000 - 30000</option>
-      <option value = "rent4">$31000 - 40000</option>
-      <option value = "rent5">$41000 - 50000</option>
-    </select><br><br>
-
-    <input type = "submit" Value="Email Quote" id= "Quote">
   
-  </form>
+  <p>What are you interested in?</p><br>
+  <button type="submit" onclick="mySingle()">A specific yacht</button><br><br>
+  <button type="submit" onclick="myMulti()">See multiple yachts</button><br><br>  
+  
 </body>
 </html>
