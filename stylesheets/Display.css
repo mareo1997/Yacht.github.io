@@ -8,17 +8,97 @@ header{
 
 .navbar{
 	overflow: hidden;
-	background: black;
-	padding: 14px 16px;
+	background-color: black;
+	font-family: Arial;
+}
+
+.navbar b{
+	float: left;
+	font-size: 16px;  	
+	position: sticky;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 0px;
+	color: blue;
 }
 
 .navbar a{
-	font-family: Arial;
-	position: sticky;		
+	float: left;
+	font-size: 16px;  	
+	position: sticky;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+	color: blue;
 }
 
 .navbar a.active{ 
 	color: white;
+}
+
+.navbar a:hover{ 
+	background-color: white;
+}
+
+.navbar a.active:hover{ 
+	color: black;
+}
+
+.dropdown{
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  margin: 0;
+  color: blue;
+  background-color: black;
+}
+
+.dropdown .dropbtn:hover {
+	background-color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: blue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.read{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0;
+  color: blue;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 body{

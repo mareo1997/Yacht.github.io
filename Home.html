@@ -6,15 +6,25 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body>
-  <header>Home Page</header><br>
+<body onload = "myBackgroundimg()">
+  <header>Yacht Charter Fleet</header><br>
+
   <div class= "navbar">
-  	<a href="#" class = "active" onclick="myHOME()">Home</a>
-  	<a href="#" onclick="myDEST()">Destination</a>
-  	<a href="#" onclick="myYACHTS()">Yachts</a>
-  	<a href="#" onclick="myORDER()">Order Rental</a>
-  	<a href="#" onclick="myFAQ()">FAQ</a>
+  	<a href="#" class = "active" onclick="myHOME()"> Home </a>
+  	<div class="dropdown">
+  		<button class="dropbtn" onclick="myMenu()"> Destinations </button>
+  		<div class="dropdown-content" id="myDropDown">
+  			<a href="#" onclick="myAmericas()">Americas Yacht Charters</a>
+  			<a href="#" onclick="myCaribbean()">Caribbean Yacht Charters</a>
+  			<a href="#" onclick="myExotics()">Exotics Yacht Charters</a>
+  			<a href="#" onclick="myMediterranean()">Mediterranean Yacht Charters</a>
+  		</div>
+  	</div>
+  	<a href="#" onclick="myYACHTS()"> Yachts </a>
+  	<a href="#" onclick="myORDER()"> Order Rental </a>
+  	<a href="#" onclick="myFAQ()"> FAQ </a>
   </div><br>
+
   	<p><img src="https://oysteryachts.com/assets/YachtHolder/Oyster-565/intro-images/starboard-profile-oyster-565-luxury-sailing-yacht__FillMaxWzc1MCw2NDBd.jpg">
   	Info on this yacht</p><br>
   	<p><img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/22/2017/08/Eos-600x400.jpg">
@@ -29,5 +39,6 @@
 	Info on this yacht</p><br>
 	<p><img src="http://www.oceanblueyachts.com/images/Lagoon620.jpg">
   	Info on this yacht</p><br>  	
+
 </body>
 </html>

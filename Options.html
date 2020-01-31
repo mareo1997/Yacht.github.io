@@ -6,16 +6,24 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body>
+<body onload = "myBackgroundimg()">
   <header>Options</header><br>
   
   <div class= "navbar">
   	<a href="#" onclick="myHOME()">Home</a>
-  	<a href="#" onclick="myDEST()">Destination</a>
-  	<a href="#" onclick="myYACHTS()">Yachts</a>
-  	<a href="#" class = "active" onclick="myORDER()">Order Rental</a>
-  	<a href="#" onclick="myFAQ()">FAQ</a>
-  </div><br>
+	<div class="dropdown">
+  		<button class="dropbtn" onclick="myMenu()"> Destinations </button>
+  		<div class="dropdown-content" id="myDropDown">
+  			<a href="#" onclick="myAmericas()">Americas Charter</a>
+  			<a href="#" onclick="myCaribbean()">Caribbean Charter</a>
+  			<a href="#" onclick="myExotics()">Exotics Charter</a>
+  			<a href="#" onclick="myMediterranean()">Mediterranean Charter</a>
+  		</div>
+  	</div>  	
+  		<a href="#" onclick="myYACHTS()">Yachts</a>
+  		<a href="#" class = "active" onclick="myORDER()">Order Rental</a>
+  		<a href="#" onclick="myFAQ()">FAQ</a>
+  	</div>
   
   <p>What are you interested in?</p><br>
   <button type="submit" onclick="mySingle()">A specific yacht</button><br><br>

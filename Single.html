@@ -6,15 +6,25 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body>
+<body onload = "myBackgroundimg()">
   <header>Single</header><br>
 
   <div class= "navbar">
-  	<a href="#" onclick="myORDER()">Order Rental ></a>
+  	<a href="#" onclick="myORDER()">Order Rental</a>
+  	<b href="#">></b>
   	<a href="#" class = "active" onclick="mySingle()">Single Yacht</a>
   </div><br>
 
-  <form name="yachts" onsubmit="return validateForm()" method="post">  
+  <form name="yacht" onsubmit="return validateForm()" method="post">  
+   	Name*<br> 
+   	<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
+    
+    Phone*<br>
+    <input type = "tel" required name = "#" value="954-305-2814"><br><br>
+    
+    Email*<br>
+    <input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+    
     Type:<br>
     <select id = "types">      
       <option value = ""></option>
@@ -23,18 +33,37 @@
       <option value = "type3">Crewed</option>
     </select><br><br>
     
-    Destination*:<br>
-    <select required id = "dests">      
+    Destination*<br>
+    <select required id = "destination" >      
       <option value = ""></option>
       <option value = "dest1">Americas</option>
       <option value = "dest2">Caribbean</option>
       <option value = "dest3">Exotics</option>
       <option value = "dest4">Mediterranean</option>
+    </select>
+    <select id="place"></select><br><br>
+    
+    Date of Departure*<br>
+    <select required id = "mths">      
+      <option value = ""></option>
+      <option value = "mth1">January</option>
+      <option value = "mth2">February</option>
+      <option value = "mth3">March</option>
+    </select>
+    <select required id = "dy">      
+      <option value = ""></option>
+      <option value = "dy1">1</option>
+      <option value = "dy2">2</option>
+      <option value = "dy3">3</option>
+    </select>
+	<select required id = "yr">      
+      <option value = ""></option>
+      <option value = "yr1">2020</option>
+      <option value = "yr2">2021</option>
     </select><br><br>
     
-    Number of nights*:<br>
-    <select required id = "times">      
-      <option value = ""></option>
+    Number of days<br>
+    <select id = "times">      
       <option value = "time1">5</option>
       <option value = "time2">6</option>
       <option value = "time2">7</option>
@@ -43,8 +72,8 @@
       <option value = "time3">10</option>
     </select><br><br>
 
-	Passengers:<br>
-    <select required id = "nums">      
+	Number of Passengers<br>
+    <select id = "nums">      
       <option value = "num1">1</option>
       <option value = "num2">2</option>
       <option value = "num3">3</option>
@@ -52,19 +81,18 @@
       <option value = "num5">5</option>
     </select><br><br>
     
-    Budget*:<br>
-    <select required id = "budget">
-      <option value = ""></option>
-      <option value = "rent1">$5000 - 10000</option>
-      <option value = "rent2">$11000 - 20000</option>
-      <option value = "rent3">$21000 - 30000</option>
-      <option value = "rent4">$31000 - 40000</option>
-      <option value = "rent5">$41000 - 50000</option>
+    Budget:<br>
+    <select id = "budget">
+      <option value = "rent1">$1000</option>
+      <option value = "rent2">$2000</option>
+      <option value = "rent3">$4000</option>
+      <option value = "rent4">$7000</option>
+      <option value = "rent5">$10000</option>
     </select><br><br>
 
-    <input type = "submit" Value="Email Quote" id= "Quote">
+    <input type = "submit" Value="Submit Form">
   
   </form>
-   
+  
 </body>
 </html>

@@ -6,14 +6,22 @@
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 <title>FAQ</title>
 </head>
-<body>
+<body onload = "myBackgroundimg()">
   <header>FAQ</header><br>
   
-  <div class= "navbar">
-  	<a href="#" onclick="myHOME()">Home</a>
-  	<a href="#" onclick="myDEST()">Destination</a>
-  	<a href="#" onclick="myYACHTS()">Yachts</a>
-   	<a href="#" onclick="myORDER()">Order Rental</a>
+	<div class= "navbar">
+  	<a href="#" onclick="myHOME()"> Home </a>
+  	<div class="dropdown">
+  		<button class="dropbtn" onclick="myMenu()"> Destinations </button>
+  		<div class="dropdown-content" id="myDropDown">
+  			<a href="#" onclick="myAmericas()">Americas Yacht Charters</a>
+  			<a href="#" onclick="myCaribbean()">Caribbean Yacht Charters</a>
+  			<a href="#" onclick="myExotics()">Exotics Yacht Charters</a>
+  			<a href="#" onclick="myMediterranean()">Mediterranean Yacht Charters</a>
+  		</div>
+  	</div>
+  	<a href="#" onclick="myYACHTS()"> Yachts </a>
+  	<a href="#" onclick="myORDER()"> Order Rental </a>
   	<a href="#" class = "active" onclick="myFAQ()">FAQ</a>
   </div><br>
   
@@ -21,10 +29,10 @@
 	<b>2. How many people can  travel with you?</b> We recommend up at most 5 people.<br><br>
 	<b>3. Am I qualified to captain my own yacht?</b> That will depend on your sailing experience but if you feel 
 	that you will need help we will set you up with a skipper.<br><br>
-	<b>4. How old must you be to rent a yacht?</b> You must be 18 years or olders to rent a yacht.<br><br>
+	<b>4. How old must you be to rent a yacht?</b> You must be 18 years or older to rent a yacht.<br><br>
 	<b>5. Are children welcome?</b> Yes, children are welcome.<br><br>
 	<b>6. How do I book a vacation?</b> You can book your vacation online. Simple fill in your destination, dates 
-	and yacht on our website 24 hours a day.<br><br>
+	and yacht on our web-site 24 hours a day.<br><br>
 	<b>7. What documents are required?</b> You must present a valid passport unless you are a US citizen 
 	traveling within the US.<br><br>
 	<b>8. Is there Wi-Fi on board?</b> Yes, all our yachts come with free Wi-Fi.<br><br>
