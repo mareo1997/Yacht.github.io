@@ -201,4 +201,20 @@ function myMediterranean(){
 	window.open("Mediterranean.html", "_self")
 }
 
+function myYoutube(){
+	window.open("https://www.youtube.com/")
+}
+
+function myFacebook(){
+	window.open("https://www.facebook.com/")
+}
+
+function myFacebook(){
+	window.open("https://twitter.com/home")
+}
+
+function myCONTACT(){
+	window.open("Contact.html", "_self")
+}
+
 console.log(data)

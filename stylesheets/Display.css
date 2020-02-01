@@ -7,6 +7,7 @@ header{
 }
 
 .navbar{
+	z-index: 1;
 	overflow: hidden;
 	background-color: black;
 	font-family: Arial;
@@ -62,8 +63,6 @@ c{
   background-color: black;
 }
 
-
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -101,6 +100,7 @@ c{
 }
 
 body{
+	margin: 0;
 	background: white;
 	font-family: Arial;
 }
@@ -125,8 +125,8 @@ img {
 	height: 100%;
 	width: 50%;
 	position: fixed;
-	z-index: 1;
-	top: 0;
+	z-index: -1;
+	top: 10%;
 	overflow-x: hidden;
 	padding-top: 20px;
 }
@@ -155,5 +155,36 @@ img {
 	left: 50%;
 }
 
-.msgbox{
+footer{
+	text-align: left;
+	font-size: 25px;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
 }
