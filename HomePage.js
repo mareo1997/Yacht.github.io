@@ -24,7 +24,7 @@ function mySingle(){
 }
 
 function validateForm(){
-	window.open("Login.html")
+	window.open("index/index.html", "_self")
 }
 
 function mySail(){
