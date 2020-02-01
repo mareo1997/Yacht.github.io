@@ -12,16 +12,6 @@ header{
 	font-family: Arial;
 }
 
-.navbar b{
-	float: left;
-	font-size: 16px;  	
-	position: sticky;
-	text-align: center;
-	text-decoration: none;
-	padding: 14px 0px;
-	color: blue;
-}
-
 .navbar a{
 	float: left;
 	font-size: 16px;  	
@@ -32,12 +22,23 @@ header{
 	color: blue;
 }
 
+c{
+	float: left;
+	font-size: 16px;  	
+	position: sticky;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 0px;
+	color: blue;
+}
+
+
 .navbar a.active{ 
 	color: white;
 }
 
 .navbar a:hover{ 
-	background-color: white;
+	background-color: #ddd;
 }
 
 .navbar a.active:hover{ 
@@ -61,9 +62,7 @@ header{
   background-color: black;
 }
 
-.dropdown .dropbtn:hover {
-	background-color: white;
-}
+
 
 .dropdown-content {
   display: none;
@@ -87,7 +86,7 @@ header{
   background-color: #ddd;
 }
 
-.show {
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -109,6 +108,12 @@ body{
 img {
   width: 200px;
   height: 200px;
+}
+
+.anchor {
+	float: left
+	height: 30;
+	weight: 30;
 }
 
 .p{

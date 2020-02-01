@@ -11,7 +11,7 @@
 
   <div class= "navbar">
   	<a href="#" onclick="myORDER()">Order Rental</a>
-  	<b href="#">></b>
+  	<c href="#">></c>
   	<a href="#" class = "active" onclick="mySingle()">Single Yacht</a>
   </div><br>
 
@@ -34,7 +34,7 @@
     </select><br><br>
     
     Destination*<br>
-    <select required id = "destination" >      
+    <select required id = "destination" onchange="DESTCHANGE()">      
       <option value = ""></option>
       <option value = "dest1">Americas</option>
       <option value = "dest2">Caribbean</option>
@@ -49,12 +49,6 @@
       <option value = "mth1">January</option>
       <option value = "mth2">February</option>
       <option value = "mth3">March</option>
-    </select>
-    <select required id = "dy">      
-      <option value = ""></option>
-      <option value = "dy1">1</option>
-      <option value = "dy2">2</option>
-      <option value = "dy3">3</option>
     </select>
 	<select required id = "yr">      
       <option value = ""></option>

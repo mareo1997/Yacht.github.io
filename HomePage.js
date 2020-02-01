@@ -15,10 +15,6 @@ function myHOME(){
 	window.open("Home.html", "_self")
 }
 
-function myDEST(){
-	window.open("Destination.html", "_self")
-}
-
 function myORDER(){
 	window.open("Options.html", "_self")
 }
@@ -27,35 +23,65 @@ function mySingle(){
 	window.open("Single.html", "_self")
 }
 
-var destandplaces = {};
-destandplaces['dest1'] = ['Belize'];
-destandplaces['dest2'] = ['Jamaica'];
-destandplaces['dest3'] = ['Thailand'];
-destandplaces['dest4'] = ['Sea'];
-
-function DESTCHANGE(){
-	var destinationList = document.getElementById("destination");
-	var placeList = document.getElementById("place");
-	var selectdestination = destinationList.options[destinationList.selectedIndex].value;
-	while (placeList.options.length) {
-		placeList.remove(0);
-	}
-	var dest = destandplaces[selectdestination];
-	if (dest) {
-		var i;
-	    for (i = 0; i < dest.length; i++) {
-	      var destination = new Option(dest[i], i);
-	      placeList.options.add(destination);
-	    }
-	}
-}
-
-function myMulti(){
-	window.open("Multi.html", "_self")
-}
-
 function validateForm(){
 	window.open("Login.html")
+}
+
+function mySail(){
+	window.open("Sail.html", "_self")
+}
+
+function sailmore(){
+	var s = document.getElementById("s");
+	s.innerHTML = 
+		"Our top-performing fleet of Sailing yachts features an array of classic monohulls and spacious catamarans that were " +
+		"custom-designed and constructed by world-renowned yacht builders Beneteau and Robertson & Caine. With such a " +
+		"state-of-the-art sailing platform at your feet, and over 20 exquisite vacation destinations in your favor, the world is " +
+		"yours to discover. Whether you take command of the helm or hire a skilled skipper to navigate the journey, a Five-Star " +
+		"charter experience waits aboard your own premier Sailing yacht.<br><br>" +
+
+		"To ensure every Sailing passage with us is unique and unforgettable, all monohulls and catamarans come " +
+		"fully-equipped with a sleek modern design, spacious interior, and stylish onboard accomodations. With yachts featuring as " +
+		"many as 6 cabins, charter groups of up to 13 guests can enjoy a first-class sailing vacation without compromising onboard " +
+		"comfort. Line of sight navigation and cutting-edge technology ensure a safe and enjoyable charter experience that is second " +
+		"to none.";
+}
+
+function myPower(){
+	window.open("Power.html", "_self")
+}
+
+function powermore(){
+	var p = document.getElementById("p");
+	p.innerHTML= 
+		"Power across the water on a well-equipped, high-performance Power catamaran. The award-winning yacht builders at Robertson & " +
+		"Caine have built our spacious Power catamarans to be fuel-efficient, fast, stable and fun. Available in 14 destinations " +
+		"throughtout the Caribbean, Americas, Mediterranean, Indian Ocean and Far East, our Power Charters deliver speed and comfort " +
+		"so you can see more and arrive in style.<br><br>" +
+		
+		"A cutting-edge fleet comprised of custom-designed yachts with the most innovative features ensures an unrivaled Power charter " +
+		"experience during each unique passage with us. With Power catamarans ranging in size from 37' to 51', an " +
+		"unforgettable vacation awaits aboard the ultimate cruising platform that best suits the needs and preferences of your " +
+		"charter party. Enjoy a spacious layout, modern amenities, and easy maneuverability while cruising from point A to point B " +
+		"swiftly and comfortably.";
+}
+
+function myCrew(){
+	window.open("Crew.html", "_self")
+}
+
+function crewmore(){
+	var c = document.getElementById("c");
+	c.innerHTML= 
+		"Escape ordinary vacations and come discover one of a kind onboard luxury on your own first-class yacht. Indulge in the most " +
+		"blissful surroundings while an expert captain and personal gourmet chef provide a Five-Star charter experience for your " +
+		"entire group. With a resort-like vacation platform at your feet, and all-inclusive leisure in your favor, unforgettable " +
+		"moments on the water await.<br><br>" +
+		
+		"Step aboard one of our state-of-the-art yachts designed specifically for the ultimate Crewed vacation experience on the water. " +
+		"Our innovative fleet features a wide range of expertly-crafted yachts that deliver impeccable performance and resort-like " +
+		"accomodations. Explore some of the most exquisite destinations in the world while cutting-edge technology and stylish " +
+		"comfort provide a safe and smooth vacation on the water that is impossible to forget.";
 }
 
 function myFAQ(){
@@ -78,23 +104,6 @@ function myQUOTE(){
 	var f = x.selectedIndex;
 	var h = x.selectedIndex;
 	
-}
-
-function myMenu(){
-	document.getElementById("myDropDown").classList.toggle("show");
-}
-
-window.onclick = function(e) {
-	  if (!e.target.matches('.dropbtn')) {
-	  var myDropdown = document.getElementById("myDropdown");
-	    if (myDropdown.classList.contains('show')) {
-	      myDropdown.classList.remove('show');
-	    }
-	  }
-}
-
-function myAmericas(){
-	window.open("Americas.html", "_self")
 }
 
 function more1(){
@@ -158,22 +167,26 @@ function more3(){
 }
 
 function more4(){
-	var z = document.getElementById("exotic");
+	var z = document.getElementById("medi");
     z.innerHTML = 
 "Immerse yourself in scenic coastlines and storied histories on a yacht charter in the dazzling Mediterranean. Begin an Italian " +
 "adventure by casting off from the colorful harbor of Procida, a short trip from bustling Pozzuoli. Revel in the culture, cuisine, " +
 "and secluded anchorages that abound as you cruise through the Aegean Sea. Or, explore the many timeless treasures nestled " +
 "throughout the enchanting Dalmatian Islands.<br><br>" +
 
-"With seven Mediterranean charter bases, The Moorings provides ideal sailing locations to suit every taste preference. Protected " +
+"With seven Mediterranean charter bases, We provide ideal sailing locations to suit every taste preference. Protected " +
 "waters with short passages will lead you to quick day trips between islands while longer, open-sea crossings will help you reach " +
-"remote harbors unspoiled by time. Whether you choose to plan ahead or leave it to chance, you’ll find no end to what you can do in " +
+"remote harbors unspoiled by time. Whether you choose to plan ahead or leave it to chance, you'll find no end to what you can do in " +
 "this cruising paradise.<br><br>" +
 
-"First time visitors and seasoned sailors will find it hard to resist Greece’s captivating appeal, but Italy’s Amalfi coast offers a " +
-"culture just as rich and sights just as stunning. Split your days between sea and land while island-hopping in style along Croatia’s " +
+"First time visitors and seasoned sailors will find it hard to resist Greece's captivating appeal, but Italy's Amalfi coast offers a " +
+"culture just as rich and sights just as stunning. Split your days between sea and land while island-hopping in style along Croatia's " +
 "splendid Dalmation Coast, or indulge your senses in contemporary ports balanced by historic villages in Palma de Mallorca, Spain. No " +
-"matter where you undock in the Mediterranean, dream vacations become Five-Star escapes you’ll never forget."
+"matter where you undock in the Mediterranean, dream vacations become Five-Star escapes you'll never forget."
+}
+
+function myAmericas(){
+	window.open("Americas.html", "_self")
 }
 
 function myCaribbean(){
