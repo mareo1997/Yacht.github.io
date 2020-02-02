@@ -9,38 +9,130 @@
 <body onload = "myBackgroundimg()">
 	  
 	<div class= "navbar">
-  	<a href="#" onclick="myHOME()"> Home </a> 
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myAmericas()"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" class="active" onclick="myAmericas()">Americas Yacht Charters</a>
-  			<a href="#" onclick="myCaribbean()">Caribbean Yacht Charters</a>
-  			<a href="#" onclick="myExotics()">Exotics Yacht Charters</a>
-  			<a href="#" onclick="myMediterranean()">Mediterranean Yacht Charters</a>
+  		<a href="#" onclick="myHOME()"> Home </a> 
+  		<div class="dropdown">
+  			<button class="dropbtn" onclick="myAmericas()"> Destinations </button>
+  			<div class="dropdown-content">
+  				<a href="#" class="active" onclick="myAmericas()">Americas Yacht Charters</a>
+  				<a href="#" onclick="myCaribbean()">Caribbean Yacht Charters</a>
+  				<a href="#" onclick="myExotics()">Exotics Yacht Charters</a>
+  				<a href="#" onclick="myMediterranean()">Mediterranean Yacht Charters</a>
+  			</div>
   		</div>
-  	</div>
-	<div class="dropdown">
-  		<button class="dropbtn" onclick="mySail()"> Yachts </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="mySail()">Sail Yachts</a>
-  			<a href="#" onclick="myPower()">Power Yachts</a>
-  			<a href="#" onclick="myCrew()">Crewed Yachts</a>
+		<div class="dropdown">
+  			<button class="dropbtn" onclick="mySail()"> Yachts </button>
+  			<div class="dropdown-content">
+  				<a href="#" onclick="mySail()">Sail Yachts</a>
+  				<a href="#" onclick="myPower()">Power Yachts</a>
+  				<a href="#" onclick="myCrew()">Crewed Yachts</a>
+  			</div>
   		</div>
-  	</div>
-  	<a href="#" onclick="myORDER()"> Order Rental </a>
-  	<a href="#" onclick="myCONTACT()"> Contact Us </a>
-  	<a href="#" onclick="myFAQ()"> FAQ </a>
-  </div><br>
+  		<a href="#" onclick="myORDER()"> Order Rental </a>
+  		<a href="#" onclick="myCONTACT()"> Contact Us </a>
+  		<a href="#" onclick="myFAQ()"> FAQ </a>
+  	</div><br>
   
-  <header>Americas Yacht Charters</header><br>
+  	<header>Americas Yacht Charters</header><br>
 
+	<button class="open-button" onclick="openForm()">Get A Quote</button>
   
-  <p id="americas">
-  The Americas include an array of beautiful charter destinations. Sail the out-islands of the Bahamas and discover a sailor's 
-  paradise in the uncrowded Abacos or explore the 120-mile long archipelago of the Exumas, where you can visit the world-famous 
-  swimming pigs. Or, head to exotic Belize, which offers awe-inspiring natural wonders and waters that beckon for adventure.
-  <button class="read" onclick="more1()">Read More >></button>
-  </p>  
+  	<p id="americas">
+  	The Americas include an array of beautiful charter destinations. Sail the out-islands of the Bahamas and discover a sailor's 
+  	paradise in the uncrowded Abacos or explore the 120-mile long archipelago of the Exumas, where you can visit the world-famous 
+  	swimming pigs. Or, head to exotic Belize, which offers awe-inspiring natural wonders and waters that beckon for adventure.
+  	<button class="read" onclick="more1()">Read More >></button>
+  	</p>  
+  
+  	<div class="form-popup" id="myForm">
+  		<form class="form-container">
+    	<header>Get a Quote</header><br>
+
+    		   	Name*<br> 
+   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
+    
+    			Email*<br>
+    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+
+    			Phone<br>
+    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
+    		    			
+				Type:<br>
+    			<select class="sel" id = "types">      
+      				<option value = "type0">What ever's available</option>
+      				<option value = "type1">Sailing</option>
+      				<option value = "type2">Powered</option>
+      				<option value = "type3">Crewed</option>
+		 	   </select><br><br>
+		 	   
+	Destination*<br>
+    <select class="sel" required id = "destination">      
+      <option value = ""></option>
+      <optgroup label = "Americas">
+      	<option value="bel">Belize</option>      	
+      	<option value="bra">Brazil</option>      	
+      	<option value="bah">Bahamas</option>      	
+      </optgroup>
+      <optgroup label = "Caribbean">
+      	<option value="ant">Antigua</option>      	
+      	<option value="bvi">British Virgin Islands</option>      	
+      	<option value="mar">Martinique</option>   
+      </optgroup>
+      <optgroup label = "Exotics">      
+      	<option value="thai">Thailand</option>      	
+      	<option value="tah">Tahiti</option>      	
+      </optgroup>
+      <optgroup label = "Mediterranean">
+      	<option value="gre">Greece</option>      	
+      	<option value="ita">Italy</option>      	
+      	<option value="spa">Spain</option>   
+      </optgroup>
+    </select><br><br>
+    
+    Date of Departure*<br>
+    <select class="sel" required id = "mths">      
+      <option value = ""></option>
+      <option value = "mth1">January</option>
+      <option value = "mth2">February</option>
+      <option value = "mth3">March</option>
+    </select>
+	<select class="sel" required id = "yr">      
+      <option value = ""></option>
+      <option value = "yr1">2020</option>
+      <option value = "yr2">2021</option>
+    </select><br><br>
+    
+		 	   Number of days<br>
+    <select class="sel" id = "times">      
+      <option value = "time1">5</option>
+      <option value = "time2">6</option>
+      <option value = "time2">7</option>
+      <option value = "time2">8</option>
+      <option value = "time2">9</option>
+      <option value = "time3">10</option>
+    </select><br><br>
+    
+    Number of Passengers<br>
+    <select class="sel" id = "nums">      
+      <option value = "num1">1</option>
+      <option value = "num2">2</option>
+      <option value = "num3">3</option>
+      <option value = "num4">4</option>
+      <option value = "num5">5</option>
+    </select><br><br>
+    
+    Budget:<br>
+    <select class="sel" id = "budget">
+      <option value = "rent1">$1000</option>
+      <option value = "rent2">$2000</option>
+      <option value = "rent3">$4000</option>
+      <option value = "rent4">$7000</option>
+      <option value = "rent5">$10000</option>
+    </select><br><br>
+
+    			<button type="submit" class="btn">Submit</button>
+    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+  		</form>
+  		</div>
 
 </body>
 </html>

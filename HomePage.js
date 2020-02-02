@@ -95,16 +95,42 @@ function myBackgroundimg(){
 
 function myQUOTE(){
 	var a = document.getElementById("types");
-	var c = document.getElementById("dests");
 	var e = document.getElementById("times");
 	var g = document.getElementById("budget");
 	
 	var b = x.selectedIndex;
-	var d = x.selectedIndex;
 	var f = x.selectedIndex;
 	var h = x.selectedIndex;
 	
 }
+
+function a(){		
+	var x = document.getElementById("destination").selectedIndex;
+	var y = document.getElementById("destination").options;
+	document.getElementById("destination").selectedIndex = y[x].index;
+	var d = c.selectedIndex;	
+	document.getElementById("destination").selectedIndex = d
+}
+
+function myFilter() {
+	  document.getElementById("destination").classList.toggle("show");
+}
+
+	function filterFunction() {
+	  var input, filter, ul, li, a, i;
+	  input = document.getElementById("myInput");
+	  filter = input.value.toUpperCase();
+	  div = document.getElementById("myDropdown");
+	  a = div.getElementsByTagName("a");
+	  for (i = 0; i < a.length; i++) {
+	    txtValue = a[i].textContent || a[i].innerText;
+	    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	      a[i].style.display = "";
+	    } else {
+	      a[i].style.display = "none";
+	    }
+	  }
+	}
 
 function more1(){
 	var w = document.getElementById("americas");
@@ -209,12 +235,20 @@ function myFacebook(){
 	window.open("https://www.facebook.com/")
 }
 
-function myFacebook(){
+function myTwitter(){
 	window.open("https://twitter.com/home")
 }
 
 function myCONTACT(){
 	window.open("Contact.html", "_self")
+}
+
+function openForm() {
+	  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+	  document.getElementById("myForm").style.display = "none";
 }
 
 console.log(data)
