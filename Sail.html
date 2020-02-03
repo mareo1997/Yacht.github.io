@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sail</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
@@ -27,7 +29,6 @@
   			<a href="#" onclick="myCrew()">Crewed Yachts</a>
   		</div>
   	</div>
-  	<a href="#" onclick="myORDER()"> Order Rental </a>
   	<a href="#" onclick="myCONTACT()"> Contact Us </a>
   	<a href="#" onclick="myFAQ()"> FAQ </a>
   </div><br>
@@ -36,16 +37,66 @@
   
   <p id="s">
   Our top-performing fleet of Sailing yachts features an array of classic monohulls and spacious catamarans that were 
-  custom-designed and constructed by world-renowned yacht builders Beneteau and Robertson & Caine. With such a state-of-the-art 
+  custom-designed and constructed by world-renowned yacht builders Beneteau and Robertson and Caine. With such a state-of-the-art 
   sailing platform at your feet, and over 20 exquisite vacation destinations in your favor, the world is yours to discover. Whether 
   you take command of the helm or hire a skilled skipper to navigate the journey, a Five-Star charter experience waits aboard your 
   own premier Sailing yacht.
   <button class="read" onclick="sailmore()">Read More >></button>
   </p>  
   
-  <button class="open-button" onclick="openForm()">Get A Quote</button>
+  <section>  
+  		<article>
+    		<header>380 - 4 Cabin Catamaran</header>
+    		<p>
+    		<img src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/content_box/sail-catamaran-anchored-in-bvi-2880x1440-web.jpg?t=1HAgT0&itok=3KNHcquh&timestamp=1553265121">
+    		<img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/moorings_380_interior_4cabin.jpg?t=1HAjej&itok=KA0BP1lG&timestamp=1548434385">
+			<img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/380_1_1.jpg?t=1Iv1Y2&itok=DzDEXnvX&timestamp=1573592467">
+    		</p>  			
+  		</article>  
+  		<nav>
+    		<ul>
+      		<li><a href="#">Destination: Sicily</a></li>
+      		<li><a href="#">Max Passengers: 10</a></li>
+      		<li><a href="#">Toilets: 2</a><li>
+			<li><a href="#">Showers: 2</a><li>
+			<li><a href="#">Sail Area: 829 sq ft</a><li>
+			<li><a href="#">Water Capacity: 79 gal</a><li>
+			<li><a href="#">Engine: Yanmar 2 x 30HP</a><li>
+			<li><a href="#">Fuel Capacity: 52 gal.</a><li>
+      		<li><a href="#">Starting Price: $500.00</a><li>
+      		<li><button onclick="openForm()">Email Quote</button></li>
+    		</ul>
+  		</nav>
+	</section><br>
 	
-	  <div class="form-popup" id="myForm">
+	<section>  
+  		<article>
+    		<header>45.3 - 3 Cabin Monohull</header>
+    		<p>
+    		<img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/monohulls_gallery/Gallery/45.3/45-3_Gallery_Ext.jpg?t=1IDker&itok=rGydPleJ&timestamp=1575662454">
+    		<img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/45-3_deck_plan.jpg?t=1HAg7s&itok=goQTpYpO&timestamp=1477067229">
+    		<img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/tm_45.3_interior3_web.jpg?t=1IBPQP&itok=dmhJ8SSE&timestamp=1575308451">			
+    		</p>  			
+  		</article>  
+  		<nav>
+    		<ul>
+      		<li><a href="#">Destination: British Virgin Islands</a></li>
+      		<li><a href="#">Max Passengers: 10</a></li>
+      		<li><a href="#">Toilets: 3</a><li>
+			<li><a href="#">Showers: 4</a><li>
+			<li><a href="#">Sail Area: 1076 sq ft</a><li>
+			<li><a href="#">Water Capacity: 150 gal.</a><li>
+			<li><a href="#">Engine: Yanmar 57 hp CR Sail Drive</a><li>
+			<li><a href="#">Fuel Capacity: 53 gal.</a><li>
+      		<li><a href="#">Starting Price: $750.50</a><li>
+      		<li><button onclick="openForm()">Email Quote</button></li>
+    		</ul>
+  		</nav>
+	</section><br>
+  
+  	<button class="open-button" onclick="openForm()">Get A Quote</button>
+
+	<div class="form-popup" id="myForm">
   		<form class="form-container">
     	<header>Get a Quote</header><br>
 
