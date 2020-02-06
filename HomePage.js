@@ -204,4 +204,17 @@ function closeForm() {
 	  document.getElementById("myForm").style.display = "none";
 }
 
+function img101(){
+	  document.getElementById("box101").style.display = "block";
+}
+
+function span(){
+	  document.getElementsByClassName("close")[0];
+	  document.getElementById("box101").style.display = "none";
+}
+
+function box101(){
+	window.open("3900-3.html", "_self")
+}
+
 console.log(data)
