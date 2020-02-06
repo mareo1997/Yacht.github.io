@@ -2,86 +2,33 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Power</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
 <body onload = "myBackgroundimg()">
-	  
+
 	<div class= "navbar">
   	<a href="#" onclick="myHOME()"> Home </a>
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myAmericas()"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myAmericas()"> Americas Yacht Charters </a>
-  			<a href="#" onclick="myCaribbean()"> Caribbean Yacht Charters </a>
-  			<a href="#" onclick="myExotics()"> Exotics Yacht Charters </a>
-  			<a href="#" onclick="myMediterranean()"> Mediterranean Yacht Charters </a>
-  		</div>
-  	</div>
+  	<a class="c" href="#"> > </a>
 	<div class="dropdown">
   		<button class="dropbtn" onclick="mySail()"> Yachts </button>
   		<div class="dropdown-content">
   			<a href="#" onclick="mySail()"> Sail Yachts </a>
-  			<a href="#" class="active" onclick="myPower()"> Power Yachts </a>
+  			<a href="#" onclick="myPower()"> Power Yachts </a>
   			<a href="#" onclick="myCrew()"> Crewed Yachts </a>
   		</div>
-  	</div>
-   	<a href="#" onclick="myCONTACT()"> Contact Us </a>
-  	<a href="#" onclick="myFAQ()"> FAQ </a>
+  	</div>  	
+  	<a class="c" href="#"> > </a>
+  	<a href="#" onclick="mySail()"> Sail Yachts </a>
+  	<a class="c" href="#"> > </a>
+  	<a href="#" class="active" onclick="mySail()">35.2 - 2 Cabin Monohull</a>
   	</div><br>
-  
-	<header>Powered Yachts</header><br>
-    
-  	<p id="p">
-	Power across the water on a well-equipped, high-performance Power catamaran. The award-winning yacht builders at Robertson and Caine 
-	have built our spacious Power catamarans to be fuel-efficient, fast, stable and fun. Available in 14 destinations throughtout the 
-	Caribbean, Americas, Mediterranean, Indian Ocean and Far East, our Power Charters deliver speed and comfort so you can see more and 
-	arrive in style.<br>
-  	<button class="read" onclick="powermore()">Read More >></button>
-  	</p>
-  
- 	<div class="grid-container">
- 		<div class="grid-item">
- 		<header>394 PC - 4 Cabin Catamaran</header><br>
- 		<img onclick="img201()" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525">
- 		</div>
- 		<div class="grid-item">
- 		<header>514 PC - 4 Cabin Catamaran</header><br>
- 		<img onclick="img202()" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/514pc_card.jpg?t=1ICb39&itok=DJXGJMo2&timestamp=1575390034">
- 		</div>
- 	</div> 			
-  	
-  	<div id="box201" class="modal">
-  		<div class="modal-content">
-    	<span class="close" onclick="span()">&times;</span>
-    	<header>394 PC - 4 Cabin Catamaran</header><br>
-    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525"><br>
-    	<p>
-    	Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the Moorings 394 PC is a cutting edge design 
-    	that merges the best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck 
-    	levels with large functional living spaces, ease of handling, versatility and a range of design features and amenities to ensure a memorable on-board 
-    	experience.
-		</p><br>
-    	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box201()">Read More</button>
-		</div>
-	</div>
-	
-  	<div id="box202" class="modal">
-  		<div class="modal-content">
-    	<span class="close" onclick="span()">&times;</span>
-    	<header>514 PC - 4 Cabin Catamaran</header><br>
-    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525"><br>
-    	<p>
-		Custom designed for The Moorings by renowned yacht builders Robertson and Caine; the 514PC is the pinnacle of cruising perfection. Cruise with power 
-		from twin Yanmar 350hp diesel engines. Enjoy easy handling from the well-appointed helm station on the fly bridge.
-		</p><br>
-    	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box202()">Read More</button>
-		</div>
-	</div>
-  	
-  	<button class="open-button" onclick="openForm()">Get A Quote</button>
-	
+
+	<header>35.2 - 2 Cabin Monohull</header><br>
+
+	<button class="open-button" onclick="openForm()">Get A Quote</button>
+
 	<div class="form-popup" id="myForm">
   		<form class="form-container">
     	<header>Get a Quote</header><br>
@@ -171,7 +118,6 @@
     			<button type="submit" class="btn">Submit</button>
     			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
   		</form>
-  		</div>
-
+  	</div>
 </body>
 </html>

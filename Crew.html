@@ -29,20 +29,58 @@
   	</div>
   	<a href="#" onclick="myCONTACT()"> Contact Us </a>
   	<a href="#" onclick="myFAQ()"> FAQ </a>
-  </div><br>
-  	  <header>Crewed Yachts</header><br>
+  	</div><br>
+  	 
+	<header>Crewed Yachts</header><br>
   
+  	<p id="c">
+  	Escape ordinary vacations and come discover one of a kind onboard luxury on your own first-class yacht. Indulge in the most blissful 
+  	surroundings while an expert captain and personal gourmet chef provide a Five-Star charter experience for your entire group. With a 
+  	resort-like vacation platform at your feet, and all-inclusive leisure in your favor, unforgettable moments on the water await.<br>
+  	<button class="read" onclick="crewmore()">Read More >></button>
+  	</p>
+  	
+ 	<div class="grid-container">
+ 		<div class="grid-item">
+ 		<header>5800 Legacy - 6 Cabin Catamaran</header><br>
+ 		<img onclick="img301()" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109">
+ 		</div>
+ 		<div class="grid-item">
+ 		<header>5800 Master - 6 Cabins Catamaran</header><br>
+ 		<img onclick="img302()" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071">
+ 		</div> 		
+ 	</div> 			
   
-  <p id="c">
-  Escape ordinary vacations and come discover one of a kind onboard luxury on your own first-class yacht. Indulge in the most blissful 
-  surroundings while an expert captain and personal gourmet chef provide a Five-Star charter experience for your entire group. With a 
-  resort-like vacation platform at your feet, and all-inclusive leisure in your favor, unforgettable moments on the water await.
-  <button class="read" onclick="crewmore()">Read More >></button>
-  </p>  
-  
-  <button class="open-button" onclick="openForm()">Get A Quote</button>
+  	<div id="box101" class="modal">
+  		<div class="modal-content">
+    	<span class="close" onclick="span()">&times;</span>
+    	<header>5800 Legacy - 6 Cabin Catamaran</header><br>
+    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109"><br>
+    	<p>
+		Explore the islands in plush comfort aboard Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with 
+		private en-suite baths-and room for up to 10 guests.
+		</p><br>
+    	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box301()">Read More</button>
+		</div>
+	</div>
 	
-	  <div class="form-popup" id="myForm">
+	<div id="box102" class="modal">
+  		<div class="modal-content">
+    	<span class="close" onclick="span()">&times;</span>
+    	<header>5800 Master - 6 Cabins Catamaran</header><br>
+    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071"><br>
+    	<p>
+		Complete with your very own captain, gourmet chef and hostess, a Crewed charter aboard Crewed 5800 Master Edition treats you to a getaway at sea most 
+		can only dream of. This six-cabin Sail catamaran is our largest and newest, providing an equally spacious and exclusive cruising experience for up to 
+		10 guests.
+		</p><br>
+    	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box302()">Read More</button>
+		</div>
+	</div>
+  	
+	<button class="open-button" onclick="openForm()">Get A Quote</button>
+	
+	<div class="form-popup" id="myForm">
   		<form class="form-container">
     	<header>Get a Quote</header><br>
 

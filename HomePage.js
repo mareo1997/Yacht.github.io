@@ -205,16 +205,26 @@ function closeForm() {
 }
 
 function img101(){
-	  document.getElementById("box101").style.display = "block";
+	  var x = document.getElementByClassName("box");
+	  document.getElementById(x).style.display = "block";
+}
+
+function box101(){
+	window.open("3900-3.html", "_self")
+}
+
+function img102(){
+	  document.getElementById("box102").style.display = "block";
 }
 
 function span(){
 	  document.getElementsByClassName("close")[0];
 	  document.getElementById("box101").style.display = "none";
+	  document.getElementById("box102").style.display = "none";
 }
 
-function box101(){
-	window.open("3900-3.html", "_self")
+function box102(){
+	window.open("352-2.html", "_self")
 }
 
 console.log(data)

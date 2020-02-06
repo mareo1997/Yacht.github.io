@@ -24,7 +24,7 @@ header{
 	font-family: Arial;
 }
 
-.navbar a, .navbar c{
+.navbar a{
 	float: left;
 	font-size: 16px;  	
 	position: sticky;
@@ -32,6 +32,10 @@ header{
 	text-decoration: none;
 	padding: 14px 16px;
 	color: white;
+}
+
+.navbar a.c:hover{
+	background-color: black;
 }
 
 .navbar a.active{ 

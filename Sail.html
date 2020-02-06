@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,18 +14,18 @@
   	<div class="dropdown">
   		<button class="dropbtn" onclick="myAmericas()"> Destinations </button>
   		<div class="dropdown-content">
-  			<a href="#" onclick="myAmericas()">Americas Yacht Charters</a>
-  			<a href="#" onclick="myCaribbean()">Caribbean Yacht Charters</a>
-  			<a href="#" onclick="myExotics()">Exotics Yacht Charters</a>
-  			<a href="#" onclick="myMediterranean()">Mediterranean Yacht Charters</a>
+  			<a href="#" onclick="myAmericas()"> Americas Yacht Charters </a>
+  			<a href="#" onclick="myCaribbean()"> Caribbean Yacht Charters </a>
+  			<a href="#" onclick="myExotics()"> Exotics Yacht Charters </a>
+  			<a href="#" onclick="myMediterranean()"> Mediterranean Yacht Charters </a>
   		</div>
   	</div>
 	<div class="dropdown">
   		<button class="dropbtn" onclick="mySail()"> Yachts </button>
   		<div class="dropdown-content">
-  			<a href="#" class="active" onclick="mySail()">Sail Yachts</a>
-  			<a href="#" onclick="myPower()">Power Yachts</a>
-  			<a href="#" onclick="myCrew()">Crewed Yachts</a>
+  			<a href="#" class="active" onclick="mySail()"> Sail Yachts </a>
+  			<a href="#" onclick="myPower()"> Power Yachts </a>
+  			<a href="#" onclick="myCrew()"> Crewed Yachts </a>
   		</div>
   	</div>
   	<a href="#" onclick="myCONTACT()"> Contact Us </a>
@@ -39,16 +39,19 @@
   	custom-designed and constructed by world-renowned yacht builders Beneteau and Robertson and Caine. With such a state-of-the-art 
   	sailing platform at your feet, and over 20 exquisite vacation destinations in your favor, the world is yours to discover. Whether 
   	you take command of the helm or hire a skilled skipper to navigate the journey, a Five-Star charter experience waits aboard your 
-  	own premier Sailing yacht.
+  	own premier Sailing yacht.<br>
   	<button class="read" onclick="sailmore()">Read More >></button>
   	</p>  
  	
  	<div class="grid-container">
  		<div class="grid-item">
  		<header>3900 - 3 Cabin Catamaran</header><br>
- 		<img onclick="img101()" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/content_box/sail-catamaran-anchored-in-bvi-2880x1440-web.jpg?t=1HAgT0&itok=3KNHcquh&timestamp=1553265121">
+ 		<img onclick="img101()" class="box" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/content_box/sail-catamaran-anchored-in-bvi-2880x1440-web.jpg?t=1HAgT0&itok=3KNHcquh&timestamp=1553265121">
  		</div>
- 		<div class="grid-item"><img onclick="modal()" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Motorboat_at_Kankaria_lake.JPG"></div> 		
+ 		<div class="grid-item">
+ 		<header>35.2 - 2 Cabin Monohull</header><br>
+ 		<img onclick="img102()" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/gallery_35.2_exterior_4.jpg?t=1IvJk8&itok=wBCEBFhg&timestamp=1573845717">
+ 		</div> 		
  	</div> 			
   
   	<div id="box101" class="modal">
@@ -57,11 +60,23 @@
     	<header>3900 - 3 Cabin Catamaran</header><br>
     	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/content_box/sail-catamaran-anchored-in-bvi-2880x1440-web.jpg?t=1HAgT0&itok=3KNHcquh&timestamp=1553265121"><br>
     	<p>
-    	The 3900 was built by Robertson & Caine, and based upon the award-winning hull design, interior accommodation plan and helm station of 
+    	The 3900 was built by Robertson and Caine, and based upon the award-winning hull design, interior accommodation plan and helm station of 
     	their private model Leopard 38 - named Cruising World's Boat of the Year 2010 and Best Boat 2010 by SAIL magazine. With her generous 
     	sail plan and hull design, the Moorings 3900 offers high performance yet is highly practical and easy-to-use.
 		</p><br>
     	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box101()">Read More</button>
+		</div>
+	</div>
+	
+	<div id="box102" class="modal">
+  		<div class="modal-content">
+    	<span class="close" onclick="span()">&times;</span>
+    	<header>35.2 - 2 Cabin Monohull</header><br>
+    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/gallery_35.2_exterior_4.jpg?t=1IvJk8&itok=wBCEBFhg&timestamp=1573845717"><br>
+    	<p>
+		Exquisitely made by world-renowned boat builders Beneteau, the 35.2 sets the standard for premier 2-cabin monohulls.
+		</p><br>
+    	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box102()">Read More</button>
 		</div>
 	</div>
 		
@@ -71,93 +86,86 @@
   		<form class="form-container">
     	<header>Get a Quote</header><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
-
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
+    	Name*<br><input type = "text" required name = "name" value="Mareo Yapp"><br><br>    
+    	Email*<br><input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+    	Phone<br><input type = "tel" name = "#" value="954-305-2814"><br><br>
     		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
+		Type:<br>
+    		<select class="sel" id = "types">      
+      			<option value = "type0">What ever's available</option>
+      			<option value = "type1">Sailing</option>
+      			<option value = "type2">Powered</option>
+      			<option value = "type3">Crewed</option>
+	 	   </select><br><br>
 		 	   
-	Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
+		Destination*<br>
+    	<select class="sel" required id = "destination">      
+   		<option value = ""></option>
+      	<optgroup label = "Americas">
       	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
+   		<option value="bra">Brazil</option>      	
+   		<option value="bah">Bahamas</option>      	
+     	</optgroup>
+      	<optgroup label = "Caribbean">
       	<option value="ant">Antigua</option>      	
       	<option value="bvi">British Virgin Islands</option>      	
       	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
+      	</optgroup>
+      	<optgroup label = "Exotics">      
       	<option value="thai">Thailand</option>      	
       	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
+     	</optgroup>
+      	<optgroup label = "Mediterranean">
       	<option value="gre">Greece</option>      	
       	<option value="ita">Italy</option>      	
       	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
+      	</optgroup>
+    	</select><br><br>
     
-    Date of Departure*<br>
-    <select class="sel" required id = "mths">      
-      <option value = ""></option>
-      <option value = "mth1">January</option>
-      <option value = "mth2">February</option>
-      <option value = "mth3">March</option>
-    </select>
-	<select class="sel" required id = "yr">      
-      <option value = ""></option>
-      <option value = "yr1">2020</option>
-      <option value = "yr2">2021</option>
-    </select><br><br>
+    	Date of Departure*<br>
+    	<select class="sel" required id = "mths">      
+      	<option value = ""></option>
+      	<option value = "mth1">January</option>
+      	<option value = "mth2">February</option>
+      	<option value = "mth3">March</option>
+    	</select>
+		<select class="sel" required id = "yr">      
+      	<option value = ""></option>
+      	<option value = "yr1">2020</option>
+      	<option value = "yr2">2021</option>
+    	</select><br><br>
     
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
+		Number of days<br>
+    	<select class="sel" id = "times">      
+      	<option value = "time1">5</option>
+      	<option value = "time2">6</option>
+      	<option value = "time2">7</option>
+      	<option value = "time2">8</option>
+      	<option value = "time2">9</option>
+      	<option value = "time3">10</option>
+    	</select><br><br>
     
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
+    	Number of Passengers<br>
+    	<select class="sel" id = "nums">      
+      	<option value = "num1">1</option>
+      	<option value = "num2">2</option>
+      	<option value = "num3">3</option>
+      	<option value = "num4">4</option>
+      	<option value = "num5">5</option>
+    	</select><br><br>
     
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+    	Budget:<br>
+    	<select class="sel" id = "budget">
+      	<option value = "rent1">$1000</option>
+      	<option value = "rent2">$2000</option>
+      	<option value = "rent3">$4000</option>
+      	<option value = "rent4">$7000</option>
+      	<option value = "rent5">$10000</option>
+    	</select><br><br>
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  		</div>
-
-	
+    	<button type="submit" class="btn">Submit</button>
+    	<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+  	</form>
+  	</div>
 </body>
 </html>
