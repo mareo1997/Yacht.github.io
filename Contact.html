@@ -12,31 +12,31 @@
 <body onload = "myBackgroundimg()" >
 		
 	<div class= "navbar">
-  	<a href="#" onclick="myHOME()"> Home </a>
+  	<a href="#" onclick="myPage('home')"> Home </a>
   	<div class="dropdown">
-  		<button class="dropbtn" onclick="myAmericas()"> Destinations </button>
+  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
   		<div class="dropdown-content">
-  			<a href="#" onclick="myAmericas()">Americas Yacht Charters</a>
-  			<a href="#" onclick="myCaribbean()">Caribbean Yacht Charters</a>
-  			<a href="#" onclick="myExotics()">Exotics Yacht Charters</a>
-  			<a href="#" onclick="myMediterranean()">Mediterranean Yacht Charters</a>
+  			<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+  			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+  			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
   		</div>
   	</div>
 	<div class="dropdown">
-  		<button class="dropbtn" onclick="mySail()"> Yachts </button>
+  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
   		<div class="dropdown-content">
-  			<a href="#" onclick="mySail()">Sail Yachts</a>
-  			<a href="#" onclick="myPower()">Power Yachts</a>
-  			<a href="#" onclick="myCrew()">Crewed Yachts</a>
+  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
+  			<a href="#" onclick="myType('power')"> Power Yachts </a>
+  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
   		</div>
   	</div>
-  	<a href="#" class="active" onclick="myCONTACT()"> Contact Us </a>
-  	<a href="#" onclick="myFAQ()"> FAQ </a>
-  </div><br>
+  	<a href="#" class="active" onclick="myPage('contact')"> Contact Us </a>
+  	<a href="#" onclick="myPage('faq')"> FAQ </a>
+  	</div><br>
 	
 	<div class="split right">
 	
-	<div class="centered">
+		<div class="centered">
 		<header>Contact Info</header><br>
 		<p><b>
 			Yacht Charter Fleet<br>	
@@ -51,9 +51,9 @@
 			
 			<footer>
 			Share us on:
-			<a href="#" class="fa fa-facebook" onclick="myFacebook()"></a>
-			<a href="#" class="fa fa-twitter" onclick="myTwitter()"></a>
-			<a href="#" class="fa fa-youtube" onclick="myYoutube()"></a>
+			<a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
+			<a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
+			<a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
 			</footer>
 		</div>
 	</div>
@@ -74,7 +74,7 @@
 	
 	<button class="open-button" onclick="openForm()">Get A Quote</button>
 	
-	  <div class="form-popup" id="myForm">
+	<div class="form-popup" id="myForm">
   		<form class="form-container">
     	<header>Get a Quote</header><br>
 

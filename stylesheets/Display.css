@@ -136,6 +136,10 @@ img {
 	margin-left: auto;
  	margin-right: auto;
  }
+ 
+.gridimage{
+	cursor: pointer;
+}
 
 .anchor {
 	float: left;

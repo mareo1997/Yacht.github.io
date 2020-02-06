@@ -11,26 +11,26 @@
 <body onload = "myBackgroundimg()">
 	  
 	<div class= "navbar">
-  		<a href="#" onclick="myHOME()"> Home </a> 
-  		<div class="dropdown">
-  			<button class="dropbtn" onclick="myAmericas()"> Destinations </button>
-  			<div class="dropdown-content">
-  				<a href="#" class="active" onclick="myAmericas()">Americas Yacht Charters</a>
-  				<a href="#" onclick="myCaribbean()">Caribbean Yacht Charters</a>
-  				<a href="#" onclick="myExotics()">Exotics Yacht Charters</a>
-  				<a href="#" onclick="myMediterranean()">Mediterranean Yacht Charters</a>
-  			</div>
+  	<a href="#" onclick="myPage('home')"> Home </a>
+  	<div class="dropdown">
+  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+  		<div class="dropdown-content">
+  			<a href="#" class = "active" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+  			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+  			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
   		</div>
-		<div class="dropdown">
-  			<button class="dropbtn" onclick="mySail()"> Yachts </button>
-  			<div class="dropdown-content">
-  				<a href="#" onclick="mySail()">Sail Yachts</a>
-  				<a href="#" onclick="myPower()">Power Yachts</a>
-  				<a href="#" onclick="myCrew()">Crewed Yachts</a>
-  			</div>
+  	</div>
+	<div class="dropdown">
+  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+  		<div class="dropdown-content">
+  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
+  			<a href="#" onclick="myType('power')"> Power Yachts </a>
+  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
   		</div>
-  		<a href="#" onclick="myCONTACT()"> Contact Us </a>
-  		<a href="#" onclick="myFAQ()"> FAQ </a>
+  	</div>
+  	<a href="#" onclick="myPage('contact')"> Contact Us </a>
+  	<a href="#" class = "active" onclick="myPage('faq')">FAQ</a>
   	</div><br>
   
   	<header>Americas Yacht Charters</header><br>
@@ -40,11 +40,9 @@
   	<p id="americas">
   	The Americas include an array of beautiful charter destinations. Sail the out-islands of the Bahamas and discover a sailor's 
   	paradise in the uncrowded Abacos or explore the 120-mile long archipelago of the Exumas, where you can visit the world-famous 
-  	swimming pigs. Or, head to exotic Belize, which offers awe-inspiring natural wonders and waters that beckon for adventure.
-  	<button class="read" onclick="more1()">Read More >></button>
-  	</p>  
-  
-  	
+  	swimming pigs. Or, head to exotic Belize, which offers awe-inspiring natural wonders and waters that beckon for adventure.<br>
+  	<button class="read" onclick="readmore('americas')">Read More >></button>
+  	</p>  	
   
   	<div class="form-popup" id="myForm">
   		<form class="form-container">
