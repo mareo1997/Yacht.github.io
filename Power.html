@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Power</title>
+<title>Powered Yachts</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
@@ -23,7 +23,7 @@
   		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
   		<div class="dropdown-content">
   			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" class="active" onclick="myType('power')"> Power Yachts </a>
+  			<a href="#" class="active" onclick="myType('power')"> Powered Yachts </a>
   			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
   		</div>
   	</div>
@@ -44,11 +44,13 @@
  	<div class="grid-container">
  		<div class="grid-item">
  		<header>394 PC - 4 Cabin Catamaran</header><br>
- 		<img onclick="image(201)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525">
+ <img onclick="image(201)" class="gridimage" 
+ src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525">
  		</div>
  		<div class="grid-item">
  		<header>514 PC - 4 Cabin Catamaran</header><br>
- 		<img onclick="image(202)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/514pc_card.jpg?t=1ICb39&itok=DJXGJMo2&timestamp=1575390034">
+ <img onclick="image(202)" class="gridimage" 
+ src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/514pc_card.jpg?t=1ICb39&itok=DJXGJMo2&timestamp=1575390034">
  		</div>
  	</div> 			
   	
@@ -56,7 +58,8 @@
   		<div class="modal-content">
     	<span class="close" onclick="span(201)">&times;</span>
     	<header>394 PC - 4 Cabin Catamaran</header><br>
-    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525"><br>
+<img class="img3" 
+src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525"><br>
     	<p>
     	Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the Moorings 394 PC is a cutting edge design 
     	that merges the best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck 
@@ -71,7 +74,8 @@
   		<div class="modal-content">
     	<span class="close" onclick="span(202)">&times;</span>
     	<header>514 PC - 4 Cabin Catamaran</header><br>
-    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525"><br>
+<img class="img3" 
+src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/514pc_card.jpg?t=1ICb39&itok=DJXGJMo2&timestamp=1575390034"><br>
     	<p>
 		Custom designed for The Moorings by renowned yacht builders Robertson and Caine; the 514PC is the pinnacle of cruising perfection. Cruise with power 
 		from twin Yanmar 350hp diesel engines. Enjoy easy handling from the well-appointed helm station on the fly bridge.
@@ -127,18 +131,9 @@
       </optgroup>
     </select><br><br>
     
-    Date of Departure*<br>
-    <select class="sel" required id = "mths">      
-      <option value = ""></option>
-      <option value = "mth1">January</option>
-      <option value = "mth2">February</option>
-      <option value = "mth3">March</option>
-    </select>
-	<select class="sel" required id = "yr">      
-      <option value = ""></option>
-      <option value = "yr1">2020</option>
-      <option value = "yr2">2021</option>
-    </select><br><br>
+				Date of Departure*<br>
+    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+
     
 		 	   Number of days<br>
     <select class="sel" id = "times">      

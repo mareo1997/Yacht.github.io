@@ -4,7 +4,7 @@
 <meta charset="ISO-8859-1">
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
-<title>FAQ</title>
+<title>Frequently Asked Questions</title>
 </head>
 <body onload = "myBackgroundimg()">
   
@@ -23,7 +23,7 @@
   		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
   		<div class="dropdown-content">
   			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Power Yachts </a>
+  			<a href="#" onclick="myType('power')"> Powered Yachts </a>
   			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
   		</div>
   	</div>
@@ -31,7 +31,7 @@
   	<a href="#" class = "active" onclick="myPage('faq')">FAQ</a>
   	</div><br>
   
-	<header>FAQ</header><br>
+	<header>Frequently Asked Questions</header><br>
   
   
 <p>	<b>1. What kind of yachts are available?</b> That's up to you we offer sail, electrical and manned boats.<br><br>
@@ -94,18 +94,9 @@
       </optgroup>
     </select><br><br>
     
-    Date of Departure*<br>
-    <select class="sel" required id = "mths">      
-      <option value = ""></option>
-      <option value = "mth1">January</option>
-      <option value = "mth2">February</option>
-      <option value = "mth3">March</option>
-    </select>
-	<select class="sel" required id = "yr">      
-      <option value = ""></option>
-      <option value = "yr1">2020</option>
-      <option value = "yr2">2021</option>
-    </select><br><br>
+				Date of Departure*<br>
+    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+
     
 		 	   Number of days<br>
     <select class="sel" id = "times">      

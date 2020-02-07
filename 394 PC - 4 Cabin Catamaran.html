@@ -2,78 +2,65 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta name="viewport" content="width-device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src = "HomePage.js"></script>
-<script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>Contact Us</title>
 </head>
-<body onload = "myBackgroundimg()" >
-		
+<body onload = "myBackgroundimg()">
+
 	<div class= "navbar">
   	<a href="#" onclick="myPage('home')"> Home </a>
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
-  		</div>
-  	</div>
+  	<a class="c" href="#"> > </a>
 	<div class="dropdown">
-  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+  		<button class="dropbtn" onclick="myType('power')"> Yachts </button>
   		<div class="dropdown-content">
   			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Power Yachts </a>
+  			<a href="#" onclick="myType('power')"> Powered Yachts </a>
   			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
   		</div>
   	</div>
-  	<a href="#" class="active" onclick="myPage('contact')"> Contact Us </a>
-  	<a href="#" onclick="myPage('faq')"> FAQ </a>
+  	<a class="c" href="#"> > </a>
+  	<a href="#" onclick="myType('power')"> Powered Yachts </a>
+  	<a class="c" href="#"> > </a>
+  	<a href="#" class="active" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
   	</div><br>
+
+	<header>394 PC - 4 Cabin Catamaran</header><br>
 	
-	<div class="split right">
+	<p>
+	Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the 394 PC is a cutting edge design that merges the 
+	best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck levels with large 
+	functional living spaces, ease of handling, versatility and a range of design features and amenities to ensure a memorable on-board experience.<br><br>
+
+	On the flybridge, a centrally positioned helm station offers excellent visibility on all corners of the yacht for ease of maneuvering. Powered by two 110 
+	hp Yanmar diesel engines, the 394 PC offers excellent fuel efficiency. She features air conditioning, generator, upgraded electronics, and 
+	everything necessary for comfortable cruising.<br><br>
+
+	This 394PC features a special alternative accommodation plan with a 4-cabin/2-head design. Two large double cabins with a shared bath fill each hull. 
+	There's generous headroom throughout and substantial storage capacity provided by under-bunk lockers.<br><br>
+	</p>
 	
-		<div class="centered">
-		<header>Contact Info</header><br>
-		<p><b>
-			Yacht Charter Fleet<br>	
-			<i class="fas fa-phone">(305)954-4862</i><br>
-			CONTACTUS@yachtcharterfleet.com<br><br>
-	
-			South Pointe Pier<br>
-			1 Washington Ave<br>
-			Miami Beach<br>
-			FL, 33139<br>
-			</b></p>
-			
-			<footer>
-			Share us on:
-			<a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
-			<a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
-			<a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
-			</footer>
-		</div>
-	</div>
-	
-	<div class="split left">
-		<header>Contact Us</header><br>
-		
-		<p>Our company lives to help any and all potential customers with any questions they may have!</p><br>
-		
-		<form name="contact" onsubmit="return validateForm()" method="post">
-			Email*<br> 
-			<input type = "email" required name = "@" size="35"><br><br>
-			Message<br> 
-			<input type="text" name = "msg" placeholder="How can we help you?" maxlength="100" size="65"><br><br>				
-			<input type="submit" class="centered2" value="Submit">
-		</form>
-	</div>
+	<section>  
+  		<article>    		
+    		<img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/394pc_deck_plan_0.jpg?t=1HAnzT&itok=kZx4gKlm&timestamp=1476823236">    		 			
+  		</article>  
+  		<nav>
+    		<ul>
+      		<li><a href="#">Destination: Brazil</a></li>
+      		<li><a href="#">Max Passengers: 9</a></li>
+      		<li><a href="#">Toilets: 2</a></li>
+      		<li><a href="#">Showers: 3</a></li>
+      		<li><a href="#">Length Overall: 41'3"</a></li>
+      		<li><a href="#">Water Capacity: 216 gal.</a></li>
+      		<li><a href="#">Engine: 2 x Yanmar 100 hp</a></li>
+      		<li><a href="#">Fuel Capacity: 211 gal.</a></li>
+      		<li><button onclick="openForm()">Email Quote</button></li>
+    		</ul>
+  		</nav>
+	</section><br>
 	
 	<button class="open-button" onclick="openForm()">Get A Quote</button>
-	
+
 	<div class="form-popup" id="myForm">
   		<form class="form-container">
     	<header>Get a Quote</header><br>
@@ -95,7 +82,7 @@
       				<option value = "type3">Crewed</option>
 		 	   </select><br><br>
 		 	   
-	Destination*<br>
+				Destination*<br>
     <select class="sel" required id = "destination">      
       <option value = ""></option>
       <optgroup label = "Americas">
@@ -121,7 +108,6 @@
     
 				Date of Departure*<br>
     			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
-
     
 		 	   Number of days<br>
     <select class="sel" id = "times">      
@@ -154,7 +140,6 @@
     			<button type="submit" class="btn">Submit</button>
     			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
   		</form>
-  		</div>
-		
+  	</div>
 </body>
 </html>

@@ -13,7 +13,7 @@ $('#time').html(data.time)
 
 function myPage(open){
 	if(open == 'home'){
-		window.open("Home.html", "_self")
+		window.open("Home Page.html", "_self")
 	}else if(open == 'contact'){		
 		window.open("Contact.html", "_self")
 	}else if(open == 'faq'){
@@ -183,22 +183,22 @@ function image(x){
 
 function box(y){
 	if(y == "101"){
-		window.open("3900-3.html", "_self")
+		window.open("3900 - 3 Cabin Catamaran.html", "_self")
 	}
 	else if(y == "102"){
-		window.open("352-2.html", "_self")
+		window.open("35.2 - 2 Cabin Monohull.html", "_self")
 	}
 	else if(y == "201"){
-		window.open("394PC-4.html", "_self")
+		window.open("394 PC - 4 Cabin Catamaran.html", "_self")
 	}
 	else if(y == "202"){
-		window.open("514PC-4.html", "_self")
+		window.open("514 PC - 4 Cabin Catamaran.html", "_self")
 	}
 	else if(y == "301"){
-		window.open("5800Legacy-6.html", "_self")
+		window.open("5800 Legacy - 6 Cabin Catamaran.html", "_self")
 	}
 	else if(y == "302"){
-		window.open("5800Master-6.html", "_self")
+		window.open("5800 Master - 6 Cabins Catamaran.html", "_self")
 	}
 }
 

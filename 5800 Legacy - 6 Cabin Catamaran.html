@@ -9,35 +9,52 @@
 <body onload = "myBackgroundimg()">
 
 	<div class= "navbar">
-  	<a href="#" onclick="myHOME()"> Home </a>
+  	<a href="#" onclick="myPage('home')"> Home </a>
   	<a class="c" href="#"> > </a>
 	<div class="dropdown">
-  		<button class="dropbtn" onclick="myPower()"> Yachts </button>
+  		<button class="dropbtn" onclick="myType('crew')"> Yachts </button>
   		<div class="dropdown-content">
-  			<a href="#" onclick="mySail()"> Sail Yachts </a>
-  			<a href="#" onclick="myPower()"> Power Yachts </a>
-  			<a href="#" onclick="myCrew()"> Crewed Yachts </a>
+  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
+  			<a href="#" onclick="myType('power')"> Powered Yachts </a>
+  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
   		</div>
-  	</div>  	
+  	</div>
   	<a class="c" href="#"> > </a>
-  	<a href="#" onclick="myPower()"> Power Yachts </a>
+  	<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
   	<a class="c" href="#"> > </a>
-  	<a href="#" class="active" onclick="mySail()">394 PC - 4 Cabin Catamaran</a>
+  	<a href="#" class="active" onclick="box(301)">5800 Legacy - 6 Cabin Catamaran</a>
   	</div><br>
 
-	<header>394 PC - 4 Cabin Catamaran</header><br>
+	<header>5800 Legacy - 6 Cabin Catamaran</header><br>
 	
 	<p>
+	Explore the islands in plush comfort aboard The Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with 
+	private en-suite baths-and room for up to 10 guests.<br><br>
 
+	Wake up to breathtaking waterfront vistas and roam about the gorgeously spacious floor plan both inside and out. When you're ready, meet with the captain 
+	who will help you plan the day's adventure and kick back as your personal chef whips up gourmet meals for everyone aboard.<br><br>
+
+	The 5800 Legacy Edition set the standard with an innovative split-level accommodation plan featuring two roomy cabins on the main deck and four more 
+	(including crew quarters) below. The saloon features a large dining table with plush wrap-around seating and a wet bar. Step outside the saloon to dine 
+	in the sweeping aft cockpit as the hostess caters to your every need and you kick back on teak outdoor furniture. Or, venture up to the fly bridge and 
+	enjoy a 360-degree view your tropical surroundings with stylish lounge seating, a wet bar/refrigerator and grill to help your crew craft a bevy of 
+	palate-pleasing cocktails and open-air dining.<br><br>
 	</p>
 	
 	<section>  
   		<article>    		
-    		<img class="img2" src="">    		 			
+    		<img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/5800_cy_legacy_deck_plan_0.jpg?t=1HAlur&itok=SpBOhCH4&timestamp=1477080566">    		 			
   		</article>  
   		<nav>
     		<ul>
-      		<li><a href="#"></a></li>
+      		<li><a href="#">Destination: British Virgin Islands</a></li>
+      		<li><a href="#">Max Passengers: 9</a></li>
+      		<li><a href="#">Toilets: 2</a></li>
+      		<li><a href="#">Showers: 3</a></li>
+      		<li><a href="#">Length Overall: 41'3"</a></li>
+      		<li><a href="#">Water Capacity: 216 gal.</a></li>
+      		<li><a href="#">Engine: 2 x Yanmar 100 hp</a></li>
+      		<li><a href="#">Fuel Capacity: 211 gal.</a></li>
       		<li><button onclick="openForm()">Email Quote</button></li>
     		</ul>
   		</nav>
@@ -66,7 +83,7 @@
       				<option value = "type3">Crewed</option>
 		 	   </select><br><br>
 		 	   
-	Destination*<br>
+				Destination*<br>
     <select class="sel" required id = "destination">      
       <option value = ""></option>
       <optgroup label = "Americas">
@@ -90,18 +107,8 @@
       </optgroup>
     </select><br><br>
     
-    Date of Departure*<br>
-    <select class="sel" required id = "mths">      
-      <option value = ""></option>
-      <option value = "mth1">January</option>
-      <option value = "mth2">February</option>
-      <option value = "mth3">March</option>
-    </select>
-	<select class="sel" required id = "yr">      
-      <option value = ""></option>
-      <option value = "yr1">2020</option>
-      <option value = "yr2">2021</option>
-    </select><br><br>
+				Date of Departure*<br>
+    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
     
 		 	   Number of days<br>
     <select class="sel" id = "times">      
