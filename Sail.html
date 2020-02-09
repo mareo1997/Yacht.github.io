@@ -7,7 +7,7 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body class="bg" onload = "myBackgroundimg()">
+<body id="body" onload = "myBackgroundimg()">
 	  
 	<div class= "navbar">
   	<a href="#" onclick="myPage('home')"> Home </a>
@@ -30,18 +30,28 @@
   	</div>
   	<a href="#" onclick="myPage('contact')"> Contact Us </a>
   	<a href="#" onclick="myPage('faq')"> FAQ </a>
+  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
   	</div><br>
   
   	<header>Sail Yachts</header><br>
   
-  	<p id="sail">
+  	<p>
   	Our top-performing fleet of Sailing yachts features an array of classic monohulls and spacious catamarans that were 
   	custom-designed and constructed by world-renowned yacht builders Beneteau and Robertson and Caine. With such a state-of-the-art 
   	sailing platform at your feet, and over 20 exquisite vacation destinations in your favor, the world is yours to discover. Whether 
   	you take command of the helm or hire a skilled skipper to navigate the journey, a Five-Star charter experience waits aboard your 
-  	own premier Sailing yacht.<br>
-  	<button class="read" onclick="readmore('sail')">Read More >></button>
-  	</p>  
+  	own premier Sailing yacht.
+  	<button id="readsail" class="read" onclick="readmore('sail')">Read More >></button>
+  	</p>
+  	
+  	<div class="hide" id="sail">
+  	<p>
+  	To ensure every Sailing passage with us is unique and unforgettable, all monohulls and catamarans come fully-equipped with a sleek modern design, 
+  	spacious interior, and stylish onboard accommodations. With yachts featuring as many as 6 cabins, charter groups of up to 13 guests can enjoy a 
+  	first-class sailing vacation without compromising onboard comfort. Line of sight navigation and cutting-edge technology ensure a safe and enjoyable 
+  	charter experience that is second to none.
+  	</p>
+  	</div>
  	
  	<div class="grid-container">
  		<div class="grid-item">

@@ -6,7 +6,7 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body class="bg" onload = "myBackgroundimg()">
+<body id="body" onload="myBackgroundimg()">
 	  
 	<div class= "navbar">
   	<a href="#" onclick="myPage('home')"> Home </a>
@@ -16,7 +16,7 @@
   			<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
   			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
   			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+  			<a href="#" onclick="myDestination('medi')"> Mediterranreadpowerean Yacht Charters </a>
   		</div>
   	</div>
 	<div class="dropdown">
@@ -29,17 +29,27 @@
   	</div>
   	<a href="#" onclick="myPage('contact')"> Contact Us </a>
   	<a href="#" onclick="myPage('faq')"> FAQ </a>
+  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
   	</div><br>
   
 	<header>Powered Yachts</header><br>
     
-  	<p id="power">
+  	<p>
 	Power across the water on a well-equipped, high-performance Power catamaran. The award-winning yacht builders at Robertson and Caine 
-	have built our spacious Power catamarans to be fuel-efficient, fast, stable and fun. Available in 14 destinations throughtout the 
+	have built our spacious Power catamarans to be fuel-efficient, fast, stable and fun. Available in 14 destinations throughout the 
 	Caribbean, Americas, Mediterranean, Indian Ocean and Far East, our Power Charters deliver speed and comfort so you can see more and 
-	arrive in style.<br>
-  	<button class="read" onclick="readmore('power')">Read More >></button>
+	arrive in style.
+  	<button id="readpower" class="read" onclick="readmore('power')">Read More >></button>
   	</p>
+  	
+  	<div id="power" class="hide">
+  	<p>
+  	A cutting-edge fleet comprised of custom-designed yachts with the most innovative features ensures an unrivaled Power charter experience during each 
+  	unique passage with us. With Power catamarans ranging in size from 37' to 51', an unforgettable vacation awaits aboard the ultimate cruising platform 
+  	that best suits the needs and preferences of your charter party. Enjoy a spacious layout, modern amenities, and easy maneuverability while cruising from 
+  	point A to point B swiftly and comfortably.
+  	</p>
+  	</div>
   
  	<div class="grid-container">
  		<div class="grid-item">
