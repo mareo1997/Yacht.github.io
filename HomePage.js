@@ -1,15 +1,4 @@
 // Try edit message
-const data = {
-  message: 'Yacht Charter Fleet',
-  type: 'Type',
-  dest: 'Destination',
-  time: 'Number of nights',
-}
-
-$('#msg').html(data.message)
-$('#type').html(data.type)
-$('#dest').html(data.dest)
-$('#time').html(data.time)
 
 function myPage(open){
 	if(open == 'home'){
@@ -86,6 +75,18 @@ function mySocial(open){
 	}
 }
 
+var dbConnection = SQL.connect({
+	Driver: ""
+})
+
+var db = openDatabase();
+
+var con = mysql.createConnection({
+	host: "localhost",
+	user: "myusername",
+	password: "mypassword"
+});
+
 function openForm() {
 	  document.getElementById("myForm").style.display = "block";
 }
@@ -134,5 +135,3 @@ function editor(){
 		  document.getElementById("edit").innerHTML = "View as Customer";
 	  }
 }
-
-console.log(data)
