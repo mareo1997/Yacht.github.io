@@ -2,7 +2,6 @@
 
 body{
   	margin: 0;
-	background: white;
 	font-family: Arial;
 }
 
@@ -20,9 +19,16 @@ body{
   background-size: cover;
 }
 
-body p{
-	font-size: 16px;
+p{
+	font-size: 20px;
+	font-family: Arial;
 	padding: 20px;
+}
+
+.textbox{
+	background-color: white;
+	font-family: Arial;
+	opacity: .8;
 }
 
 .hide{
@@ -36,7 +42,7 @@ body p{
 header{
 	text-align: center;
 	font-family: Arial;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 .navbar{
@@ -218,11 +224,12 @@ footer{
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
+  opacity: 1.0;
+
 }
 
-
 .fa:hover {
-    opacity: 0.7;
+    opacity: 1.0;
 }
 
 .fa-facebook {

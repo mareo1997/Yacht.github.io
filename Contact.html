@@ -12,65 +12,69 @@
 <body id="body" onload = "myBackgroundimg()">
 		
 	<div class= "navbar">
-  	<a href="#" onclick="myPage('home')"> Home </a>
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+  		<a href="#" onclick="myPage('home')"> Home </a>
+  		<div class="dropdown">
+  			<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+  			<div class="dropdown-content">
+  				<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+  				<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+  				<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+  				<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+  			</div>
   		</div>
-  	</div>
-	<div class="dropdown">
-  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Power Yachts </a>
-  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+		<div class="dropdown">
+  			<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+  			<div class="dropdown-content">
+  				<a href="#" onclick="myType('sail')"> Sail Yachts </a>
+  				<a href="#" onclick="myType('power')"> Power Yachts </a>
+  				<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+  			</div>
   		</div>
-  	</div>
-  	<a href="#" class="active" onclick="myPage('contact')"> Contact Us </a>
-  	<a href="#" onclick="myPage('faq')"> FAQ </a>
-  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+  		<a href="#" class="active" onclick="myPage('contact')"> Contact Us </a>
+  		<a href="#" onclick="myPage('faq')"> FAQ </a>
+  		<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
   	</div><br>
 	
 	<div class="split right">
-	
 		<div class="centered">
-		<header>Contact Info</header><br>
-		<p><b>
-			Yacht Charter Fleet<br>	
-			<i class="fas fa-phone">(305)954-4862</i><br>
-			CONTACTUS@yachtcharterfleet.com<br><br>
+			<header>Contact Info</header><br>
+				<div class="textbox">
+					<p><b>	
+						Yacht Charter Fleet<br>	
+						<i class="fas fa-phone">(305)954-4862</i><br>
+						CONTACTUS@yachtcharterfleet.com<br><br>
 	
-			South Pointe Pier<br>
-			1 Washington Ave<br>
-			Miami Beach<br>
-			FL, 33139<br>
-			</b></p>
+						South Pointe Pier<br>
+						1 Washington Ave<br>
+						Miami Beach<br>
+						FL, 33139<br>
+					</b></p>
 			
 			<footer>
-			Share us on:
-			<a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
-			<a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
-			<a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
+				Share us on:
+				<a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
+				<a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
+				<a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
 			</footer>
+			</div>
 		</div>
 	</div>
 	
 	<div class="split left">
 		<header>Contact Us</header><br>
-		
-		<p>Our company lives to help any and all potential customers with any questions they may have!</p><br>
-		
-		<form name="contact" onsubmit="return validateForm()" method="post">
-			Email*<br> 
-			<input type = "email" required name = "@" size="35"><br><br>
-			Message<br> 
-			<input type="text" name = "msg" placeholder="How can we help you?" maxlength="100" size="65"><br><br>				
-			<input type="submit" class="centered2" value="Submit">
-		</form>
+			<div class="textbox">	
+				<p>Our company lives to help any and all potential customers with any questions they may have!<br>		
+				<form name="contact" onsubmit="return validateForm()" method="post">
+					Email*<br> 
+					<input type = "email" required name = "@" size="35"><br>
+					<br>
+					Message<br> 
+					<input type="text" name = "msg" placeholder="How can we help you?" maxlength="100" size="65"><br>
+					<br>				
+					<input type="submit" class="centered2" value="Submit">
+				</form>
+				</p>
+			</div>
 	</div>
 	
 	<button class="open-button" onclick="openForm()">Get A Quote</button>
