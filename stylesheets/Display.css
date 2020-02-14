@@ -29,6 +29,7 @@ p{
 	background-color: white;
 	font-family: Arial;
 	opacity: .8;
+	margin: 0px 20px;
 }
 
 .hide{
@@ -323,7 +324,7 @@ footer{
 }
 
 .grid-container {
-  margin: 5;
+  margin: 0px 20px;
   display: grid;
   grid-template-columns: auto auto;
   background-color: #2196F3;
