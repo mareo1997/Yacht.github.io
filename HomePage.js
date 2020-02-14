@@ -126,12 +126,39 @@ function span(z){
 }
 
 function editor(){
-	  var x = document.getElementById("body");
+	  var x = document.getElementById("body");	  
 	  if (x.contentEditable == "true") {
 		  x.contentEditable = "false";
-		  document.getElementById("edit").innerHTML = "View as Administrator";
+		  document.getElementById("edit").innerHTML = "Viewing as User";
 	  }else if(x.contentEditable = "false"){
 		  x.contentEditable = "true";
-		  document.getElementById("edit").innerHTML = "View as Customer";
+		  document.getElementById("edit").innerHTML = "Viewing as Administrator";
 	  }
+}
+
+function saveEdits() {
+  //get the editable element
+  var editElem = document.getElementById("edit");
+  //get the edited element content
+  var userVersion = editElem.HTML;
+  //save the content to local storage
+  localStorage.userEdits = userVersion;
+  //write a confirmation to the user
+  document.getElementById("update").innerHTML="Edits saved!";
+}
+
+function checkEdits() {
+  //find out if the user has previously saved edits
+  if(localStorage.userEdits!=null)
+    document.getElementById("edit").HTML = localStorage.userEdits;
+}
+
+function reminder(){
+	document.getElementById("myForm").style.display = "none";	
+	var timestamp = new Date();
+	var yr = timestamp.getFullYear();
+	var mth = timestamp.getMonth();
+	var dy = timestamp.getDate();
+	var remind = new Date(yr, mth, dy, 18);
+	alert("reminder sent");
 }
