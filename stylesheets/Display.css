@@ -64,7 +64,11 @@ header{
 }
 
 .navbar a.b{
-	float: right;
+    float: right;
+ }
+
+.d{
+    display: none;
 }
 
 .navbar a.c:hover{

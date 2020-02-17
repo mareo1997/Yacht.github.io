@@ -6,144 +6,145 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body id="body" onload = "myBackgroundimg()">
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <a class="c" href="#"> > </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('power')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a class="c" href="#"> > </a>
+            <a href="#" onclick="myType('power')"> Powered Yachts </a>
+            <a class="c" href="#"> > </a>
+            <a href="#" class="active" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
 
-	<div class= "navbar">
-  	<a href="#" onclick="myPage('home')"> Home </a>
-  	<a class="c" href="#"> > </a>
-	<div class="dropdown">
-  		<button class="dropbtn" onclick="myType('power')"> Yachts </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Powered Yachts </a>
-  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
-  		</div>
-  	</div>
-  	<a class="c" href="#"> > </a>
-  	<a href="#" onclick="myType('power')"> Powered Yachts </a>
-  	<a class="c" href="#"> > </a>
-  	<a href="#" class="active" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
-  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
-  	</div><br>
+        <header>394 PC - 4 Cabin Catamaran</header>
+        <br>
 
-	<header>394 PC - 4 Cabin Catamaran</header>
-	<br>
-	
-	<div class="textbox">
-	<p>
-	Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the 394 PC is a cutting edge design that merges the 
-	best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck levels with large 
-	functional living spaces, ease of handling, versatility and a range of design features and amenities to ensure a memorable on-board experience.<br>
-	<br>
-	On the flybridge, a centrally positioned helm station offers excellent visibility on all corners of the yacht for ease of maneuvering. Powered by two 110 
-	hp Yanmar diesel engines, the 394 PC offers excellent fuel efficiency. She features air conditioning, generator, upgraded electronics, and 
-	everything necessary for comfortable cruising.<br>
-	<br>
-	This 394PC features a special alternative accommodation plan with a 4-cabin/2-head design. Two large double cabins with a shared bath fill each hull. 
-	There's generous headroom throughout and substantial storage capacity provided by under-bunk lockers.
-	</p>
-	</div>
-	
-	<section>  
-  		<article>    		
-    		<img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/394pc_deck_plan_0.jpg?t=1HAnzT&itok=kZx4gKlm&timestamp=1476823236">    		 			
-  		</article>  
-  		<nav>
-    		<ul>
-      		<li><a href="#">Destination: Brazil</a></li>
-      		<li><a href="#">Max Passengers: 9</a></li>
-      		<li><a href="#">Toilets: 2</a></li>
-      		<li><a href="#">Showers: 3</a></li>
-      		<li><a href="#">Length Overall: 41'3"</a></li>
-      		<li><a href="#">Water Capacity: 216 gal.</a></li>
-      		<li><a href="#">Engine: 2 x Yanmar 100 hp</a></li>
-      		<li><a href="#">Fuel Capacity: 211 gal.</a></li>
-      		<li><button onclick="openForm()">Email Quote</button></li>
-    		</ul>
-  		</nav>
-	</section><br>
-	
-	<button class="open-button" onclick="openForm()">Get A Quote</button>
+        <div class="textbox">
+            <p>
+                Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the 394 PC is a cutting edge design that merges the
+                best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck levels with large
+                functional living spaces, ease of handling, versatility and a range of design features and amenities to ensure a memorable on-board experience.<br>
+                <br>
+                On the flybridge, a centrally positioned helm station offers excellent visibility on all corners of the yacht for ease of maneuvering. Powered by two 110
+                hp Yanmar diesel engines, the 394 PC offers excellent fuel efficiency. She features air conditioning, generator, upgraded electronics, and
+                everything necessary for comfortable cruising.<br>
+                <br>
+                This 394PC features a special alternative accommodation plan with a 4-cabin/2-head design. Two large double cabins with a shared bath fill each hull.
+                There's generous headroom throughout and substantial storage capacity provided by under-bunk lockers.
+            </p>
+        </div>
 
-	<div class="form-popup" id="myForm">
-  		<form class="form-container">
-    	<header>Get a Quote</header><br>
+        <section>
+            <article>
+                <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/394pc_deck_plan_0.jpg?t=1HAnzT&itok=kZx4gKlm&timestamp=1476823236">
+            </article>
+            <nav>
+                <ul>
+                    <li><a href="#">Destination: Brazil</a></li>
+                    <li><a href="#">Max Passengers: 9</a></li>
+                    <li><a href="#">Toilets: 2</a></li>
+                    <li><a href="#">Showers: 3</a></li>
+                    <li><a href="#">Length Overall: 41'3"</a></li>
+                    <li><a href="#">Water Capacity: 216 gal.</a></li>
+                    <li><a href="#">Engine: 2 x Yanmar 100 hp</a></li>
+                    <li><a href="#">Fuel Capacity: 211 gal.</a></li>
+                    <li><button onclick="openForm()">Email Quote</button></li>
+                </ul>
+            </nav>
+        </section><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
 
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
-    		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
-		 	   
-				Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
-      	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
-      	<option value="ant">Antigua</option>      	
-      	<option value="bvi">British Virgin Islands</option>      	
-      	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
-      	<option value="thai">Thailand</option>      	
-      	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
-      	<option value="gre">Greece</option>      	
-      	<option value="ita">Italy</option>      	
-      	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
-    
-				Date of Departure*<br>
-    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
-    
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
-    
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
-    
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  	</div>
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

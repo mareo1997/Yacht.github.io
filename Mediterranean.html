@@ -6,144 +6,145 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body id="body" onload = "myBackgroundimg()">
-	  
-	<div class= "navbar">
-  	<a href="#" onclick="myPage('home')"> Home </a>
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  			<a href="#" class = "active" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
-  		</div>
-  	</div>
-	<div class="dropdown">
-  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Powered Yachts </a>
-  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
-  		</div>
-  	</div>
-  	<a href="#" onclick="myPage('contact')"> Contact Us </a>
-  	<a href="#" onclick="myPage('faq')">FAQ</a>
-  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
-  	</div><br>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" class="active" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
 
-	<header>Mediterranean Yacht Charters</header><br>
-  
-  	<div class="textbox">
-	<p>
-  	Immerse yourself in scenic coastlines and storied histories on a yacht charter in the dazzling Mediterranean. Begin an Italian 
-  	adventure by casting off from the colorful harbor of Procida, a short trip from bustling Pozzuoli. Revel in the culture, cuisine, 
-  	and secluded anchorages that abound as you cruise through the Aegean Sea. Or, explore the many timeless treasures nestled 
-  	throughout the enchanting Dalmatian Islands.
-  	<button class="read" id="readmedi" onclick="readmore('medi')">Read More >></button>
-  	</p>  
-  	
-  	<div class="hide" id="medi">
-  	<p>	
-  	With seven Mediterranean charter bases, We provide ideal sailing locations to suit every taste preference. Protected waters with short passages will lead 
-  	you to quick day trips between islands while longer, open-sea crossings will help you reach remote harbors unspoiled by time. Whether you choose to plan 
-  	ahead or leave it to chance, you'll find no end to what you can do in this cruising paradise.<br>
-	<br>
-	First time visitors and seasoned sailors will find it hard to resist Greece's captivating appeal, but Italy's Amalfi coast offers a culture just as rich 
-	and sights just as stunning. Split your days between sea and land while island-hopping in style along Croatia's splendid Dalmatian Coast, or indulge your 
-	senses in contemporary ports balanced by historic villages in Palma de Mallorca, Spain. No matter where you undock in the Mediterranean, dream vacations 
-	become Five-Star escapes you'll never forget.
-	</p>
-	</div>
-  	</div>
-  	
-	<img class="map" 
-src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1875,w_2783,x_0,y_1703/v1554745367/shape/mentalfloss/555882-istock-464902922.jpg?itok=rRKn0uUH">
-	<br><br>
-  
-  	<button class="open-button" onclick="openForm()">Get A Quote</button>
-	
-	<div class="form-popup" id="myForm">
-  		<form class="form-container">
-    	<header>Get a Quote</header><br>
+        <header>Mediterranean Yacht Charters</header><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+        <div class="textbox">
+            <p>
+                Immerse yourself in scenic coastlines and storied histories on a yacht charter in the dazzling Mediterranean. Begin an Italian
+                adventure by casting off from the colorful harbor of Procida, a short trip from bustling Pozzuoli. Revel in the culture, cuisine,
+                and secluded anchorages that abound as you cruise through the Aegean Sea. Or, explore the many timeless treasures nestled
+                throughout the enchanting Dalmatian Islands.
+                <button class="read" id="readmedi" onclick="readmore('medi')">Read More >></button>
+            </p>
 
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
-    		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
-		 	   
-	Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
-      	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
-      	<option value="ant">Antigua</option>      	
-      	<option value="bvi">British Virgin Islands</option>      	
-      	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
-      	<option value="thai">Thailand</option>      	
-      	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
-      	<option value="gre">Greece</option>      	
-      	<option value="ita">Italy</option>      	
-      	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
-    
-				Date of Departure*<br>
-    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+            <div class="hide" id="medi">
+                <p>
+                    With seven Mediterranean charter bases, We provide ideal sailing locations to suit every taste preference. Protected waters with short passages will lead
+                    you to quick day trips between islands while longer, open-sea crossings will help you reach remote harbors unspoiled by time. Whether you choose to plan
+                    ahead or leave it to chance, you'll find no end to what you can do in this cruising paradise.<br>
+                    <br>
+                    First time visitors and seasoned sailors will find it hard to resist Greece's captivating appeal, but Italy's Amalfi coast offers a culture just as rich
+                    and sights just as stunning. Split your days between sea and land while island-hopping in style along Croatia's splendid Dalmatian Coast, or indulge your
+                    senses in contemporary ports balanced by historic villages in Palma de Mallorca, Spain. No matter where you undock in the Mediterranean, dream vacations
+                    become Five-Star escapes you'll never forget.
+                </p>
+            </div>
+        </div>
 
-    
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
-    
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
-    
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+        <img class="map"
+             src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1875,w_2783,x_0,y_1703/v1554745367/shape/mentalfloss/555882-istock-464902922.jpg?itok=rRKn0uUH">
+        <br><br>
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  		</div>
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>

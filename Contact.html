@@ -9,157 +9,161 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Contact Us</title>
 </head>
-<body id="body" onload = "myBackgroundimg()">
-		
-	<div class= "navbar">
-  		<a href="#" onclick="myPage('home')"> Home </a>
-  		<div class="dropdown">
-  			<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  			<div class="dropdown-content">
-  				<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  				<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  				<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  				<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
-  			</div>
-  		</div>
-		<div class="dropdown">
-  			<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
-  			<div class="dropdown-content">
-  				<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  				<a href="#" onclick="myType('power')"> Power Yachts </a>
-  				<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
-  			</div>
-  		</div>
-  		<a href="#" class="active" onclick="myPage('contact')"> Contact Us </a>
-  		<a href="#" onclick="myPage('faq')"> FAQ </a>
-  		<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
-  	</div><br>
-	
-	<div class="split right">
-		<div class="centered">
-			<header>Contact Info</header><br>
-				<div class="textbox">
-					<p><b>	
-						Yacht Charter Fleet<br>	
-						<i class="fas fa-phone">(305)954-4862</i><br>
-						CONTACTUS@yachtcharterfleet.com<br><br>
-	
-						South Pointe Pier<br>
-						1 Washington Ave<br>
-						Miami Beach<br>
-						FL, 33139<br>
-					</b></p>
-			
-			<footer>
-				Share us on:
-				<a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
-				<a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
-				<a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
-			</footer>
-			</div>
-		</div>
-	</div>
-	
-	<div class="split left">
-		<header>Contact Us</header><br>
-			<div class="textbox">	
-				<p>Our company lives to help any and all potential customers with any questions they may have!<br>		
-				<form name="contact" onsubmit="return validateForm()" method="post">
-					Email*<br> 
-					<input type = "email" required name = "@" size="35"><br>
-					<br>
-					Message<br> 
-					<input type="text" name = "msg" placeholder="How can we help you?" maxlength="100" size="65"><br>
-					<br>				
-					<input type="submit" class="centered2" value="Submit">
-				</form>
-				</p>
-			</div>
-	</div>
-	
-	<button class="open-button" onclick="openForm()">Get A Quote</button>
-	
-	<div class="form-popup" id="myForm">
-  		<form class="form-container">
-    	<header>Get a Quote</header><br>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Power Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" class="active" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')"> FAQ </a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+        <div class="split right">
+            <div class="centered">
+                <header>Contact Info</header><br>
+                <div class="textbox">
+                    <p>
+                        <b>
+                            Yacht Charter Fleet<br>
+                            <i class="fas fa-phone">(305)954-4862</i><br>
+                            CONTACTUS@yachtcharterfleet.com<br><br>
 
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
-    		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
-		 	   
-	Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
-      	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
-      	<option value="ant">Antigua</option>      	
-      	<option value="bvi">British Virgin Islands</option>      	
-      	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
-      	<option value="thai">Thailand</option>      	
-      	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
-      	<option value="gre">Greece</option>      	
-      	<option value="ita">Italy</option>      	
-      	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
-    
-				Date of Departure*<br>
-    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+                            South Pointe Pier<br>
+                            1 Washington Ave<br>
+                            Miami Beach<br>
+                            FL, 33139<br>
+                        </b>
+                    </p>
 
-    
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
-    
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
-    
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+                    <footer>
+                        Share us on:
+                        <a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
+                        <a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
+                        <a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
+                    </footer>
+                </div>
+            </div>
+        </div>
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  		</div>
-		
+        <div class="split left">
+            <header>Contact Us</header><br>
+            <div class="textbox">
+                <p>
+                    Our company lives to help any and all potential customers with any questions they may have!<br>
+                    <form name="contact" onsubmit="return validateForm()" method="post">
+                        Email*<br>
+                        <input type="email" required name="@" size="35"><br>
+                        <br>
+                        Message<br>
+                        <input type="text" name="msg" placeholder="How can we help you?" maxlength="100" size="65"><br>
+                        <br>
+                        <input type="submit" class="centered2" value="Submit">
+                    </form>
+                </p>
+            </div>
+        </div>
+
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -40,6 +40,11 @@ function myBackgroundimg(){
 	document.body.style.backgroundImage = "url('https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg')";
 }
 
+function start() {
+   myBackgroundimg();
+}
+window.onload = start;
+
 function readmore(more){
 	if(more == 'sail'){
 		document.getElementById("readsail").style.display= "none";
@@ -126,31 +131,18 @@ function span(z){
 }
 
 function editor(){
-	  var x = document.getElementById("body");	  
+    var x = document.getElementById("body");
 	  if (x.contentEditable == "true") {
 		  x.contentEditable = "false";
 		  document.getElementById("edit").innerHTML = "Viewing as User";
 	  }else if(x.contentEditable = "false"){
-		  x.contentEditable = "true";
-		  document.getElementById("edit").innerHTML = "Viewing as Administrator";
+          x.contentEditable = "true";
+          document.getElementById("edit").innerHTML = "Viewing as Administrator";
 	  }
 }
 
-function saveEdits() {
-  //get the editable element
-  var editElem = document.getElementById("edit");
-  //get the edited element content
-  var userVersion = editElem.HTML;
-  //save the content to local storage
-  localStorage.userEdits = userVersion;
-  //write a confirmation to the user
-  document.getElementById("update").innerHTML="Edits saved!";
-}
-
-function checkEdits() {
-  //find out if the user has previously saved edits
-  if(localStorage.userEdits!=null)
-    document.getElementById("edit").HTML = localStorage.userEdits;
+function () {
+    "Dear NAME, "
 }
 
 function reminder(){
@@ -159,6 +151,12 @@ function reminder(){
 	var yr = timestamp.getFullYear();
 	var mth = timestamp.getMonth();
 	var dy = timestamp.getDate();
-	var remind = new Date(yr, mth, dy, 18);
-	alert("reminder sent");
+    var remind = new Date(yr, mth, dy, 18);
+    reminderemail();
+}
+
+function reminderemail() {
+    alert(
+        "Dear <Name>," + +
+        "This is an reminder about your quote for a <boat>");
 }
