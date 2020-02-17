@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Powered Yachts</title>
+<script type="text/javascript" src = "HomePage.js"></script>
+<link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
+</head>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" onclick="myDestination('medi')"> Mediterranreadpowerean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" class="active" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')"> FAQ </a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
+
+        <header>Powered Yachts</header><br>
+
+        <div class="textbox">
+            <p>
+                Power across the water on a well-equipped, high-performance Power catamaran. The award-winning yacht builders at Robertson and Caine
+                have built our spacious Power catamarans to be fuel-efficient, fast, stable and fun. Available in 14 destinations throughout the
+                Caribbean, Americas, Mediterranean, Indian Ocean and Far East, our Power Charters deliver speed and comfort so you can see more and
+                arrive in style.
+                <button id="readpower" class="read" onclick="readmore('power')">Read More >></button>
+            </p>
+
+            <div id="power" class="hide">
+                <p>
+                    A cutting-edge fleet comprised of custom-designed yachts with the most innovative features ensures an unrivaled Power charter experience during each
+                    unique passage with us. With Power catamarans ranging in size from 37' to 51', an unforgettable vacation awaits aboard the ultimate cruising platform
+                    that best suits the needs and preferences of your charter party. Enjoy a spacious layout, modern amenities, and easy maneuverability while cruising from
+                    point A to point B swiftly and comfortably.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <header>394 PC - 4 Cabin Catamaran</header><br>
+                <img onclick="image(201)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525">
+            </div>
+            <div class="grid-item">
+                <header>514 PC - 4 Cabin Catamaran</header><br>
+                <img onclick="image(202)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/514pc_card.jpg?t=1ICb39&itok=DJXGJMo2&timestamp=1575390034">
+            </div>
+        </div><br><br>
+
+        <div id="201" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(201)">&times;</span>
+                <header>394 PC - 4 Cabin Catamaran</header><br>
+                <img class="img3"
+                     src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/394pc_card.jpg?t=1HAgo7&itok=HLrafA7j&timestamp=1478881525"><br>
+                <p>
+                    Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the Moorings 394 PC is a cutting edge design
+                    that merges the best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck
+                    levels with large functional living spaces, ease of handling, versatility and a range of design features and amenities to ensure a memorable on-board
+                    experience.
+                </p><br>
+                <button class="box1" onclick="openForm(201)">Get Quote</button> <button class="box2" onclick="box(201)">Read More</button>
+            </div>
+        </div>
+
+        <div id="202" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(202)">&times;</span>
+                <header>514 PC - 4 Cabin Catamaran</header><br>
+                <img class="img3"
+                     src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/514pc_card.jpg?t=1ICb39&itok=DJXGJMo2&timestamp=1575390034"><br>
+                <p>
+                    Custom designed for The Moorings by renowned yacht builders Robertson and Caine; the 514PC is the pinnacle of cruising perfection. Cruise with power
+                    from twin Yanmar 350hp diesel engines. Enjoy easy handling from the well-appointed helm station on the fly bridge.
+                </p><br>
+                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(202)">Read More</button>
+            </div>
+        </div>
+
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>    
+    </div>
+
+</body>
+</html>

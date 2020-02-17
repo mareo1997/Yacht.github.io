@@ -1,37 +1,435 @@
 @charset "ISO-8859-1";
 
+body{
+  	margin: 0;
+	font-family: Arial;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg");
+  
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p{
+	font-size: 20px;
+	font-family: Arial;
+	padding: 20px;
+}
+
+.textbox{
+	background-color: white;
+	font-family: Arial;
+	opacity: .8;
+	margin: 0px 20px;
+}
+
+.hide{
+	display: none;
+}
+
+.hidden{
+	display: block;
+}
+
 header{
 	text-align: center;
 	font-family: Arial;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 .navbar{
+	z-index: 1;
 	overflow: hidden;
-	background: black;
-	padding: 14px 16px;
+	background-color: black;
+	font-family: Arial;
 }
 
 .navbar a{
-	font-family: Arial;
-	position: sticky;		
-}
-
-.navbar a.active{ 
+	float: left;
+	font-size: 16px;  	
+	position: sticky;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
 	color: white;
 }
 
-body{
-	background: white;
-	font-family: Arial;
+.navbar a.b{
+    float: right;
+ }
+
+.d{
+    display: none;
 }
 
-img {
-  width: 200px;
-  height: 200px;
+.navbar a.c:hover{
+	background-color: black;
 }
 
-.p{
-	font-family: Times New Roman;
-	font-size: 16px;	
+.navbar a.active{ 
+	color: red;
+}
+
+.navbar a:hover{ 
+	background-color: #ddd;
+}
+
+.navbar a.active:hover{ 
+	color: red;
+}
+
+.dropdown{
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  margin: 0;
+  color: white;
+  background-color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: white;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.read{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0;
+  color: blue;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.box1{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0;
+  float: left;
+  color: blue;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.box2{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0;
+  float: right;
+  color: blue;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.img3{
+	display: block;	
+	margin-left: auto;
+ 	margin-right: auto;
+ }
+
+.map{
+	width: 500px;
+	height: 500px;
+	display: block;	
+	margin-left: auto;
+ 	margin-right: auto;
+}
+ 
+.gridimage{
+	cursor: pointer;
+}
+
+.anchor {
+	float: left;
+	height: 30;
+	weight: 30;
+}
+
+.split{
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: -1;
+	top: 9%;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+.left{
+	left: 0;
+}
+
+.right{
+	right: 0;
+}
+
+.centered{
+	position: absolute;
+	text-align: center;
+	left: 25%;
+}
+
+.centered2{
+	position: absolute;
+	text-align: center;
+	left: 50%;
+}
+
+footer{
+	text-align: left;
+	font-size: 25px;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  opacity: 1.0;
+
+}
+
+.fa:hover {
+    opacity: 1.0;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+.fit{
+	overflow: auto;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  overflow: auto;
+  
+}
+
+/* Add styles to the form container */
+.form-container {
+  height: 470px;
+  width: 280px;
+  padding: 10px;
+  background-color: white;
+  overflow: auto;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=email], .form-container input[type=tel], .form-container input[type=date], .form-container .sel {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=email]:focus, .form-container input[type=date], .form-container input[type=tel]:focus, .form-container .sel:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.grid-container {
+  margin: 0px 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  overflow: auto;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 20px;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 350px;
+  background: #ccc;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a{
+	text-decoration: none;
+	color: black;	
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: 350px;
+  background-color: #f1f1f1;
+}
+
+.img2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 300px;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
 }

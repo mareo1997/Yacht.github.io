@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Americas Yacht Charters</title>
 <script type="text/javascript" src = "HomePage.js"></script>
+<script type="text/javascript" src = "js/jquery.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
-<title>Frequently Asked Questions</title>
 </head>
 <body>
     <div id="body">
@@ -13,7 +16,7 @@
             <div class="dropdown">
                 <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" class="active" onclick="myDestination('americas')"> Americas Yacht Charters </a>
                     <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
                     <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
                     <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
@@ -28,27 +31,35 @@
                 </div>
             </div>
             <a href="#" onclick="myPage('contact')"> Contact Us </a>
-            <a href="#" class="active" onclick="myPage('faq')">FAQ</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
         </div><br>
 
-        <header>Frequently Asked Questions</header><br>
+        <header>Americas Yacht Charters</header><br>
 
         <div class="textbox">
             <p>
-                <b>1. What kind of yachts are available?</b> That's up to you we offer sail, electrical and manned boats.<br><br>
-                <b>2. How many people can  travel with you?</b> We recommend up at most 5 people.<br><br>
-                <b>3. Am I qualified to captain my own yacht?</b> That will depend on your sailing experience but if you feel
-                that you will need help we will set you up with a skipper.<br><br>
-                <b>4. How old must you be to rent a yacht?</b> You must be 18 years or older to rent a yacht.<br><br>
-                <b>5. Are children welcome?</b> Yes, children are welcome.<br><br>
-                <b>6. How do I book a vacation?</b> You can book your vacation online. Simple fill in your destination, dates
-                and yacht on our web-site 24 hours a day.<br><br>
-                <b>7. What documents are required?</b> You must present a valid passport unless you are a US citizen
-                traveling within the US.<br><br>
-                <b>8. Is there Wi-Fi on board?</b> Yes, all our yachts come with free Wi-Fi.<br><br>
+                The Americas include an array of beautiful charter destinations. Sail the out-islands of the Bahamas and discover a sailor's
+                paradise in the uncrowded Abacos or explore the 120-mile long archipelago of the Exumas, where you can visit the world-famous
+                swimming pigs. Or, head to exotic Belize, which offers awe-inspiring natural wonders and waters that beckon for adventure.
+                <button id="readamericas" class="read" onclick="readmore('americas')">Read More >></button>
             </p>
+
+            <div class="hide" id="americas">
+                <p>
+                    The charter passages of the Americas provide visitors with both serene jaunts and vibrant city attractions. Belize's ideal location
+                    in Central America allows visitors to bask in warm temperatures accompanied by coastal island breezes. Feast your eyes on lush
+                    exotic scenery, explore ancient Mayan ruins, and discover natural underwater beauty at its finest while snorkeling or diving along
+                    the second largest barrier reef in the world.<br>
+                    <br>
+                    The ''off-the-beaten-path'' Abacos and Exumas deliver a Bahamas vacation unlike any other, featuring uncrowded beaches, laid-back
+                    vibes, and ultimate tranquility on the water. Cruise throughout isolated cays and magnificent coral reefs, where civilization feels
+                    far away but paradise feels like the norm.
+                </p>
+            </div>
         </div>
+
+        <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/N%26SAmerica-pol.jpg/230px-N%26SAmerica-pol.jpg"><br><br>
 
         <button class="open-button" onclick="openForm()">Get A Quote</button>
 
@@ -129,11 +140,10 @@
                     <option value="rent5">$10000</option>
                 </select><br><br>
 
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" class="btn" setInterval()>Submit</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
             </form>
         </div>
-    </div>
-
+</div>
 </body>
 </html>
