@@ -41,7 +41,7 @@ function myBackgroundimg(){
 }
 
 function start() {
-   myBackgroundimg();
+    myBackgroundimg();
 }
 window.onload = start;
 
@@ -80,20 +80,8 @@ function mySocial(open){
 	}
 }
 
-var dbConnection = SQL.connect({
-	Driver: ""
-})
-
-var db = openDatabase();
-
-var con = mysql.createConnection({
-	host: "localhost",
-	user: "myusername",
-	password: "mypassword"
-});
-
 function openForm() {
-	  document.getElementById("myForm").style.display = "block";
+    window.open("Quote.html", "_self");
 }
 
 function closeForm(){
@@ -141,8 +129,21 @@ function editor(){
 	  }
 }
 
-function () {
-    "Dear NAME, "
+function email() {
+    var fname = document.getElementById("fullname");
+    var typeselect = document.getElementById("types").selectedIndex;
+    var typeoption = document.getElementById("types").options;
+    var destselect = document.getElementById("destination").selectedIndex;
+    var destoption = document.getElementById("destination").options;
+    var timeselect = document.getElementById("times").selectedIndex;
+    var timeoption = document.getElementById("times").options;
+    alert(
+        "Dear " + fname.value + ",\n" +
+        "Your request for a " + typeoption[typeselect].text +
+        " going towards the " + destoption[destselect].text +
+        " for " + timeoption[timeselect].text +
+        " nights will cost around $5000.00"
+    );
 }
 
 function reminder(){
@@ -152,11 +153,22 @@ function reminder(){
 	var mth = timestamp.getMonth();
 	var dy = timestamp.getDate();
     var remind = new Date(yr, mth, dy, 18);
-    reminderemail();
+    setInterval(reminderemail(), 5000);
 }
 
 function reminderemail() {
+    var fname = document.getElementById("fullname");
+    var typeselect = document.getElementById("types").selectedIndex;
+    var typeoption = document.getElementById("types").options;
+    var destselect = document.getElementById("destination").selectedIndex;
+    var destoption = document.getElementById("destination").options;
+    var timeselect = document.getElementById("times").selectedIndex;
+    var timeoption = document.getElementById("times").options;
     alert(
-        "Dear <Name>," + +
-        "This is an reminder about your quote for a <boat>");
+        "Dear " + fname.value + ",\n" +
+        "This is an reminder that your request for a " + typeoption[typeselect].text +
+        " going towards the " + destoption[destselect].text +
+        " for " + timeoption[timeselect].text +
+        " nights will cost around $5000.00"
+    );
 }
