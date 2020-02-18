@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Caribbean Yacht Charters</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
-<title>Frequently Asked Questions</title>
 </head>
 <body>
     <div id="body">
@@ -14,7 +14,7 @@
                 <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
                 <div class="dropdown-content">
                     <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" class="active" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
                     <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
                     <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
                 </div>
@@ -28,27 +28,36 @@
                 </div>
             </div>
             <a href="#" onclick="myPage('contact')"> Contact Us </a>
-            <a href="#" class="active" onclick="myPage('faq')">FAQ</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
         </div><br>
 
-        <header>Frequently Asked Questions</header><br>
+        <header>Caribbean Yacht Charters</header><br>
 
         <div class="textbox">
             <p>
-                <b>1. What kind of yachts are available?</b> That's up to you we offer sail, electrical and manned boats.<br><br>
-                <b>2. How many people can  travel with you?</b> We recommend up at most 5 people.<br><br>
-                <b>3. Am I qualified to captain my own yacht?</b> That will depend on your sailing experience but if you feel
-                that you will need help we will set you up with a skipper.<br><br>
-                <b>4. How old must you be to rent a yacht?</b> You must be 18 years or older to rent a yacht.<br><br>
-                <b>5. Are children welcome?</b> Yes, children are welcome.<br><br>
-                <b>6. How do I book a vacation?</b> You can book your vacation online. Simple fill in your destination, dates
-                and yacht on our web-site 24 hours a day.<br><br>
-                <b>7. What documents are required?</b> You must present a valid passport unless you are a US citizen
-                traveling within the US.<br><br>
-                <b>8. Is there Wi-Fi on board?</b> Yes, all our yachts come with free Wi-Fi.<br><br>
+                Cruise the calm waters of the Caribbean, where the British Virgin Islands grant easy, line-of-sight navigation and trade winds keep your course steady.
+                Follow the sun to St. Lucia and drop anchor to take in the warm glow of the sunset. Find out how Grenada lives up to its nickname ''The Spice Island of
+                the Caribbean''. Spend your days shopping on the beautiful streets of St. Thomas. Immerse yourself in the unspoiled paradise of Puerto Rico's Spanish
+                Virgin Islands. Or, rekindle your love for open water adventure in Antigua's first-rate sailing wonderland.
+                <button id="readcaribbean" class="read" onclick="readmore('caribbean')">Read More >></button>
             </p>
+
+            <div class="hide" id="caribbean">
+
+                <p>
+                    Discover the blissful white sands of the world-class Caribbean islands from the deck of your private state-of-the-art yacht. Look out over the
+                    jade-colored sea and breath in the rejuvenating air fringed with the sweet aroma distinct to these outlying islands. Each charter day waits with new
+                    surprises of hidden-away eateries, sunken caves, and rich history.<br>
+                    <br>
+                    Sailors with all levels of expertise will find accommodating waterways that make for some of the most enjoyable sailing experiences. Cruise through
+                    protected anchorages and into full-service marinas where your voyage is king. The ever-enchanting Caribbean opens a world of possibilities, both onshore
+                    and off, with hidden coves, warm island culture, beachside dining, and unrivaled snorkeling and diving conditions.
+                </p>
+            </div>
         </div>
+
+        <img class="map" src="https://i.insider.com/54861269eab8eabe2e249c04?width=1136&format=jpeg"><br><br>
 
         <button class="open-button" onclick="openForm()">Get A Quote</button>
 
@@ -134,6 +143,5 @@
             </form>
         </div>
     </div>
-
 </body>
 </html>

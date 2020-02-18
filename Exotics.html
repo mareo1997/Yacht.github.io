@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Exotics Yacht Charters</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
-<title>Frequently Asked Questions</title>
 </head>
 <body>
     <div id="body">
@@ -15,7 +15,7 @@
                 <div class="dropdown-content">
                     <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
                     <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" class="active" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
                     <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
                 </div>
             </div>
@@ -23,31 +23,43 @@
                 <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
                 <div class="dropdown-content">
                     <a href="#" onclick="myType('sail')"> Sail Yachts </a>
-                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('power')"> Power Yachts </a>
                     <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
                 </div>
             </div>
             <a href="#" onclick="myPage('contact')"> Contact Us </a>
-            <a href="#" class="active" onclick="myPage('faq')">FAQ</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
         </div><br>
 
-        <header>Frequently Asked Questions</header><br>
+        <header>Exotic Yacht Charters</header><br>
 
         <div class="textbox">
             <p>
-                <b>1. What kind of yachts are available?</b> That's up to you we offer sail, electrical and manned boats.<br><br>
-                <b>2. How many people can  travel with you?</b> We recommend up at most 5 people.<br><br>
-                <b>3. Am I qualified to captain my own yacht?</b> That will depend on your sailing experience but if you feel
-                that you will need help we will set you up with a skipper.<br><br>
-                <b>4. How old must you be to rent a yacht?</b> You must be 18 years or older to rent a yacht.<br><br>
-                <b>5. Are children welcome?</b> Yes, children are welcome.<br><br>
-                <b>6. How do I book a vacation?</b> You can book your vacation online. Simple fill in your destination, dates
-                and yacht on our web-site 24 hours a day.<br><br>
-                <b>7. What documents are required?</b> You must present a valid passport unless you are a US citizen
-                traveling within the US.<br><br>
-                <b>8. Is there Wi-Fi on board?</b> Yes, all our yachts come with free Wi-Fi.<br><br>
+                Choose your cruising wonderland, each with its own magical allure, in some of the world's most exotic sailing destinations. The Far East beckons with
+                Thailand's sparkling beachfront resorts and skyscraping limestone spires rising from an emerald sea. The South Pacific awaits with its breathtaking
+                collage of palm-fringed beaches and colorful coral reefs-blended with the warmest of hospitality. While the Seychelles offer a unique paradise of
+                otherworldly, secluded isles, giant tortoises and rare sea birds. Whatever your choice, these far-off islands will tempt you to return again and again.
+                <button id="readexotic" class="read" onclick="readmore('exotic')">Read More >></button>
             </p>
+
+            <div class="hide" id="exotic">
+                <p>
+                    Nowhere else has a tropical destination been so sought after than the waters of the South Pacific. While exploring this sprawling area of diverse
+                    islands, you will find yourself drawn to Tahiti's pristine diving conditions, Bora Bora's famous lagoon, and the beautiful temples of Tonga.<br>
+                    <br>
+                    The Indian Ocean offers a bounty of breathtaking sights, but none quite like The Seychelles, a group of granite and coral islands off the coast of East
+                    Africa. Cruise through azure waters to experience an untouched landscape filled with vibrant flora, exotic wildlife and geological formations like the
+                    Aldabra, the world's largest raised coral atoll.<br>
+                    <br>
+                    A Thailand yacht charter is a voyage to a tropical wonderland, where stone pinnacles rise from an emerald-colored sea, and strange open-air caves await
+                    exploration. Experience the exotic shores aboard a kayak or stand up paddle board amongst colorful coral and vibrant fish. Or, head inland to try the
+                    acclaimed local cuisine.<br>
+                    <br>
+                    Come aboard and escape the ordinary. Something extraordinary awaits in any of these premier exotic destinations.
+                </p>
+
+            </div>
         </div>
 
         <button class="open-button" onclick="openForm()">Get A Quote</button>

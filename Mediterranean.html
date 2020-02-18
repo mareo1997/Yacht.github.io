@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>Mediterranean Yacht Charters</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
-<title>Frequently Asked Questions</title>
 </head>
 <body>
     <div id="body">
@@ -16,7 +16,7 @@
                     <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
                     <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
                     <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                    <a href="#" class="active" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
                 </div>
             </div>
             <div class="dropdown">
@@ -28,27 +28,38 @@
                 </div>
             </div>
             <a href="#" onclick="myPage('contact')"> Contact Us </a>
-            <a href="#" class="active" onclick="myPage('faq')">FAQ</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
         </div><br>
 
-        <header>Frequently Asked Questions</header><br>
+        <header>Mediterranean Yacht Charters</header><br>
 
         <div class="textbox">
             <p>
-                <b>1. What kind of yachts are available?</b> That's up to you we offer sail, electrical and manned boats.<br><br>
-                <b>2. How many people can  travel with you?</b> We recommend up at most 5 people.<br><br>
-                <b>3. Am I qualified to captain my own yacht?</b> That will depend on your sailing experience but if you feel
-                that you will need help we will set you up with a skipper.<br><br>
-                <b>4. How old must you be to rent a yacht?</b> You must be 18 years or older to rent a yacht.<br><br>
-                <b>5. Are children welcome?</b> Yes, children are welcome.<br><br>
-                <b>6. How do I book a vacation?</b> You can book your vacation online. Simple fill in your destination, dates
-                and yacht on our web-site 24 hours a day.<br><br>
-                <b>7. What documents are required?</b> You must present a valid passport unless you are a US citizen
-                traveling within the US.<br><br>
-                <b>8. Is there Wi-Fi on board?</b> Yes, all our yachts come with free Wi-Fi.<br><br>
+                Immerse yourself in scenic coastlines and storied histories on a yacht charter in the dazzling Mediterranean. Begin an Italian
+                adventure by casting off from the colorful harbor of Procida, a short trip from bustling Pozzuoli. Revel in the culture, cuisine,
+                and secluded anchorages that abound as you cruise through the Aegean Sea. Or, explore the many timeless treasures nestled
+                throughout the enchanting Dalmatian Islands.
+                <button class="read" id="readmedi" onclick="readmore('medi')">Read More >></button>
             </p>
+
+            <div class="hide" id="medi">
+                <p>
+                    With seven Mediterranean charter bases, We provide ideal sailing locations to suit every taste preference. Protected waters with short passages will lead
+                    you to quick day trips between islands while longer, open-sea crossings will help you reach remote harbors unspoiled by time. Whether you choose to plan
+                    ahead or leave it to chance, you'll find no end to what you can do in this cruising paradise.<br>
+                    <br>
+                    First time visitors and seasoned sailors will find it hard to resist Greece's captivating appeal, but Italy's Amalfi coast offers a culture just as rich
+                    and sights just as stunning. Split your days between sea and land while island-hopping in style along Croatia's splendid Dalmatian Coast, or indulge your
+                    senses in contemporary ports balanced by historic villages in Palma de Mallorca, Spain. No matter where you undock in the Mediterranean, dream vacations
+                    become Five-Star escapes you'll never forget.
+                </p>
+            </div>
         </div>
+
+        <img class="map"
+             src="https://images2.minutemediacdn.com/image/upload/c_crop,h_1875,w_2783,x_0,y_1703/v1554745367/shape/mentalfloss/555882-istock-464902922.jpg?itok=rRKn0uUH">
+        <br><br>
 
         <button class="open-button" onclick="openForm()">Get A Quote</button>
 

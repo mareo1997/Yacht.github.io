@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sail Yachts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src = "HomePage.js"></script>
+<link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
+</head>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" class="active" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')"> FAQ </a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
+
+        <header>Sail Yachts</header><br>
+
+        <div class="textbox">
+            <p>
+                Our top-performing fleet of Sailing yachts features an array of classic monohulls and spacious catamarans that were
+                custom-designed and constructed by world-renowned yacht builders Beneteau and Robertson and Caine. With such a state-of-the-art
+                sailing platform at your feet, and over 20 exquisite vacation destinations in your favor, the world is yours to discover. Whether
+                you take command of the helm or hire a skilled skipper to navigate the journey, a Five-Star charter experience waits aboard your
+                own premier Sailing yacht.
+                <button id="readsail" class="read" onclick="readmore('sail')">Read More >></button>
+            </p>
+
+            <div class="hide" id="sail">
+                <p>
+                    To ensure every Sailing passage with us is unique and unforgettable, all monohulls and catamarans come fully-equipped with a sleek modern design,
+                    spacious interior, and stylish onboard accommodations. With yachts featuring as many as 6 cabins, charter groups of up to 13 guests can enjoy a
+                    first-class sailing vacation without compromising onboard comfort. Line of sight navigation and cutting-edge technology ensure a safe and enjoyable
+                    charter experience that is second to none.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <header>3900 - 3 Cabin Catamaran</header><br>
+                <img onclick="image(101)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/content_box/sail-catamaran-anchored-in-bvi-2880x1440-web.jpg?t=1HAgT0&itok=3KNHcquh&timestamp=1553265121">
+            </div>
+            <div class="grid-item">
+                <header>35.2 - 2 Cabin Monohull</header><br>
+                <img onclick="image(102)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/gallery_35.2_exterior_4.jpg?t=1IvJk8&itok=wBCEBFhg&timestamp=1573845717">
+            </div>
+        </div><br><br>
+
+        <div id="101" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(101)">&times;</span>
+                <header>3900 - 3 Cabin Catamaran</header><br>
+                <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/content_box/sail-catamaran-anchored-in-bvi-2880x1440-web.jpg?t=1HAgT0&itok=3KNHcquh&timestamp=1553265121"><br>
+                <p>
+                    The 3900 was built by Robertson and Caine, and based upon the award-winning hull design, interior accommodation plan and helm station of
+                    their private model Leopard 38 - named Cruising World's Boat of the Year 2010 and Best Boat 2010 by SAIL magazine. With her generous
+                    sail plan and hull design, the Moorings 3900 offers high performance yet is highly practical and easy-to-use.
+                </p><br>
+                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(101)">Read More</button>
+            </div>
+        </div>
+
+        <div id="102" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(102)">&times;</span>
+                <header>35.2 - 2 Cabin Monohull</header><br>
+                <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/gallery_35.2_exterior_4.jpg?t=1IvJk8&itok=wBCEBFhg&timestamp=1573845717"><br>
+                <p>
+                    Exquisitely made by world-renowned boat builders Beneteau, the 35.2 sets the standard for premier 2-cabin monohulls.
+                </p><br>
+                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(102)">Read More</button>
+            </div>
+        </div>
+
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br><input type="text" required name="name" value="Mareo Yapp"><br><br>
+                Email*<br><input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+                Phone<br><input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

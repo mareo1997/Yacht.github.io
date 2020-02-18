@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src = "HomePage.js"></script>
+<link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
+</head>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <a class="c" href="#"> > </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a class="c" href="#"> > </a>
+            <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+            <a class="c" href="#"> > </a>
+            <a href="#" class="active" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+            <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
+        </div><br>
+
+        <header>35.2 - 2 Cabin Monohull</header>
+        <br>
+
+        <div class="textbox">
+            <p>
+                Exquisitely made by world-renowned boat builders Beneteau, the 35.2 sets the standard for premier 2-cabin monohulls.<br>
+                <br>
+                Superior speed, trusted stability, and spacious accommodations make the 35.2 an idyllic charter platform for sailors of all kinds. The signature chined
+                hull and twin rudders equip this traditional vessel with incredible versatility under sail, while still offering exceptional on-board comfort throughout
+                the spacious living areas.<br>
+                <br>
+                Thoughtfully designed for up to six guests, this classically refined sailing yacht features an optimised layout that includes a convertible saloon with
+                fold-away chart table, an extended L-shaped galley complete with Italian espresso maker, and an easily-accessible private owner's cabin. Twin helm
+                stations and a wider cockpit allow for visibility and comfort while underway.<br>
+                <br>
+                The 35.2 seamlessly pairs classic craftsmanship with modern design, for a clean-lined, easy-to-handle vessel, that doesn't sacrifice comfort, style, or
+                performance.
+            </p>
+        </div>
+
+        <section>
+            <article>
+                <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/moorings_35_2_deckplan_rebranded.jpg?t=1HAka9&itok=klhOyUux&timestamp=1491592881">
+            </article>
+            <nav>
+                <ul>
+                    <li><a href="#">Destination: Greece</a></li>
+                    <li><a href="#">Max Passengers: 6</a></li>
+                    <li><a href="#">Toilets: 1</a></li>
+                    <li><a href="#">Showers: 2</a></li>
+                    <li><a href="#">Length Overall: 34'3"</a></li>
+                    <li><a href="#">Sail Area: 581 sq ft</a></li>
+                    <li><a href="#">Water Capacity: 87 gal.</a></li>
+                    <li><a href="#">Engine: Yanmar 30 HP</a></li>
+                    <li><a href="#">Fuel Capacity: 34 gal.</a></li>
+                    <li><button onclick="openForm()">Email Quote</button></li>
+                </ul>
+            </nav>
+        </section><br>
+
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

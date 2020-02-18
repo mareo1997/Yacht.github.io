@@ -10,7 +10,7 @@ Rent DECIMAL(5,0)
 
 INSERT INTO Yacht 
 VALUES
-('1', 'Anne', 'Sailing', 'Americas', 5, 3000);
+('1', 'Anne', 'Sailing', 'Americas', 5, 1000);
 INSERT INTO Yacht 
 VALUES
 ('2', 'Belle', 'Sailing', 'Caribbean', 7, 5000);
