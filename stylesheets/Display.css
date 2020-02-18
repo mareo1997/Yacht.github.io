@@ -290,7 +290,53 @@ footer{
   overflow: auto;
 }
 
+.container {
+    align-content: center;
+    opacity: .8;
+    padding: 10px;
+    background-color: white;
+    overflow: auto;
+    font-size: 20px;
+    font-family: Arial;
+}
+
 /* Full-width input fields */
+.container input[type=text], .container input[type=email], .container input[type=tel], .container input[type=date], .container .sel {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.container input[type=text]:focus, .container input[type=email]:focus, .container input[type=date], .container input[type=tel]:focus, .container .sel:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 1;
+}
+
+/* Add a red background color to the cancel button */
+.container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
 .form-container input[type=text], .form-container input[type=email], .form-container input[type=tel], .form-container input[type=date], .form-container .sel {
   width: 80%;
   padding: 15px;
@@ -314,18 +360,20 @@ footer{
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
+  opacity: 1;
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
 
 .grid-container {
   margin: 0px 20px;

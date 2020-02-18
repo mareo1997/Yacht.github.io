@@ -36,12 +36,17 @@ function validateForm(){
 	window.open("index/index.html", "_self")
 }
 
+function myQuote(){
+	window.open("Quote.html", "_self")
+}
+
 function myBackgroundimg(){
 	document.body.style.backgroundImage = "url('https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg')";
 }
 
 function start() {
-   myBackgroundimg();
+    myBackgroundimg();
+	date();
 }
 window.onload = start;
 
@@ -79,18 +84,6 @@ function mySocial(open){
 		window.open("https://www.youtube.com/")
 	}
 }
-
-var dbConnection = SQL.connect({
-	Driver: ""
-})
-
-var db = openDatabase();
-
-var con = mysql.createConnection({
-	host: "localhost",
-	user: "myusername",
-	password: "mypassword"
-});
 
 function openForm() {
 	  document.getElementById("myForm").style.display = "block";
@@ -141,8 +134,60 @@ function editor(){
 	  }
 }
 
-function () {
-    "Dear NAME, "
+function email() {
+    var fname = document.getElementById("fullname");
+    var typeselect = document.getElementById("types").selectedIndex;
+    var typeoption = document.getElementById("types").options;
+    var destselect = document.getElementById("destination").selectedIndex;
+    var destoption = document.getElementById("destination").options;
+    var timeselect = document.getElementById("times").selectedIndex;
+    var timeoption = document.getElementById("times").options;
+    alert(
+        "Dear " + fname.value + ",\n" +
+        "Your request for a " + typeoption[typeselect].text +
+        " going towards the " + destoption[destselect].text +
+        " for " + timeoption[timeselect].text +
+        " nights will cost around $5000.00"
+    );
+}
+
+function date(){
+	var timestamp = new Date();
+	var yr = timestamp.getFullYear();
+	var month = new Array();
+	month[0] = "January";
+	month[1] = "February";
+	month[2] = "March";
+	month[3] = "April";
+	month[4] = "May";
+	month[5] = "June";
+	month[6] = "July";
+	month[7] = "August";
+	month[8] = "September";
+	month[9] = "October";
+	month[10] = "November";
+	month[11] = "December";
+	var i;
+	var renew = 0;
+	for(i=0;i<13;i++){
+		if(updatemonth == "December"){
+			var renew = 12;
+			yr = yr + 1;
+			var update = new Date()
+			var updatemonth = month[update.getMonth() + i - renew]
+			var select = document.getElementById("date");
+			var option = document.createElement("option");
+			option.text = updatemonth + " " + yr;
+			select.add(option);
+		}else{
+			var update = new Date()
+			var updatemonth = month[update.getMonth() + i - renew]
+			var select = document.getElementById("date");
+			var option = document.createElement("option");
+			option.text = updatemonth + " " + yr;
+			select.add(option);
+		}
+	}
 }
 
 function reminder(){
@@ -152,11 +197,23 @@ function reminder(){
 	var mth = timestamp.getMonth();
 	var dy = timestamp.getDate();
     var remind = new Date(yr, mth, dy, 18);
-    reminderemail();
+    setInterval(reminderemail(), 5000);
 }
 
 function reminderemail() {
+    var fname = document.getElementById("fullname");
+    var typeselect = document.getElementById("types").selectedIndex;
+    var typeoption = document.getElementById("types").options;
+    var destselect = document.getElementById("destination").selectedIndex;
+    var destoption = document.getElementById("destination").options;
+    var timeselect = document.getElementById("times").selectedIndex;
+    var timeoption = document.getElementById("times").options;
     alert(
-        "Dear <Name>," + +
-        "This is an reminder about your quote for a <boat>");
+        "Dear " + fname.value + ",\n" +
+        "This is an reminder that your request for a " + typeoption[typeselect].text +
+        " going towards the " + destoption[destselect].text +
+        " for " + timeoption[timeselect].text +
+        " nights will cost around $5000.00"
+    );
 }
+
