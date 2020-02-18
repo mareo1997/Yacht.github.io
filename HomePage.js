@@ -45,8 +45,8 @@ function myBackgroundimg(){
 }
 
 function start() {
-	date();
     myBackgroundimg();
+	date();
 }
 window.onload = start;
 
@@ -168,26 +168,26 @@ function date(){
 	month[10] = "November";
 	month[11] = "December";
 	var i;
-	var k = 0;
+	var renew = 0;
 	for(i=0;i<13;i++){
 		if(updatemonth == "December"){
-			var k = 12;
+			var renew = 12;
+			yr = yr + 1;
 			var update = new Date()
-			var updatemonth = month[update.getMonth() + i - k]
+			var updatemonth = month[update.getMonth() + i - renew]
 			var select = document.getElementById("date");
 			var option = document.createElement("option");
-			option.text = updatemonth;
+			option.text = updatemonth + " " + yr;
 			select.add(option);
 		}else{
 			var update = new Date()
-			var updatemonth = month[update.getMonth() + i - k]
+			var updatemonth = month[update.getMonth() + i - renew]
 			var select = document.getElementById("date");
 			var option = document.createElement("option");
-			option.text = updatemonth;
+			option.text = updatemonth + " " + yr;
 			select.add(option);
 		}
 	}
-
 }
 
 function reminder(){

@@ -4,7 +4,7 @@
 	<meta charset="ISO-8859-1">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Get a Quote</title>
+	<title>Build a Quote</title>
 	<script type="text/javascript" src="HomePage.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/Display.css">
@@ -36,7 +36,7 @@
 		</div><br>
 
 		<form class="container">
-			<header>Get a Quote</header>
+			<header>Build a Quote</header>
 			<br>
 			Name*<br><input type="text" required id="fullname" value="Mareo Yapp"><br>
 			<br>
@@ -76,8 +76,9 @@
 					</optgroup>
 				</select><br>
 				<br>
-			Date of Departure*<br>
-				<input type="date" name="mdy" value="04/17/2020"><br>
+                Date of Departure*<br>
+                <select class="sel" id="date">
+				</select><br>
 				<br>
 			Number of days<br>
 				<select class="sel" id="times">
