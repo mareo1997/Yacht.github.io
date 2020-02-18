@@ -85,7 +85,7 @@ function mySocial(open){
 }
 
 function openForm() {
-    window.open("Quote.html", "_self");
+	  document.getElementById("myForm").style.display = "block";
 }
 
 function closeForm(){
