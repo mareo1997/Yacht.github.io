@@ -6,145 +6,146 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body id="body" onload = "myBackgroundimg()">
-	  
-	<div class= "navbar">
-  	<a href="#" onclick="myPage('home')"> Home </a>
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  			<a href="#" class = "active" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
-  		</div>
-  	</div>
-	<div class="dropdown">
-  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Power Yachts </a>
-  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
-  		</div>
-  	</div>
-  	<a href="#" onclick="myPage('contact')"> Contact Us </a>
-  	<a href="#" onclick="myPage('faq')">FAQ</a>
-  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
-  	</div><br>
-  
-	<header>Exotic Yacht Charters</header><br>
-  
-	<div class="textbox">
-	<p>
-  	Choose your cruising wonderland, each with its own magical allure, in some of the world's most exotic sailing destinations. The Far East beckons with 
-  	Thailand's sparkling beachfront resorts and skyscraping limestone spires rising from an emerald sea. The South Pacific awaits with its breathtaking 
-  	collage of palm-fringed beaches and colorful coral reefs-blended with the warmest of hospitality. While the Seychelles offer a unique paradise of 
-  	otherworldly, secluded isles, giant tortoises and rare sea birds. Whatever your choice, these far-off islands will tempt you to return again and again.
-  	<button id="readexotic" class="read" onclick="readmore('exotic')">Read More >></button>
-  	</p>  
-  	
-  	<div class="hide" id="exotic">  	
-  	<p>
-  	Nowhere else has a tropical destination been so sought after than the waters of the South Pacific. While exploring this sprawling area of diverse 
-  	islands, you will find yourself drawn to Tahiti's pristine diving conditions, Bora Bora's famous lagoon, and the beautiful temples of Tonga.<br>
-  	<br>
-	The Indian Ocean offers a bounty of breathtaking sights, but none quite like The Seychelles, a group of granite and coral islands off the coast of East 
-	Africa. Cruise through azure waters to experience an untouched landscape filled with vibrant flora, exotic wildlife and geological formations like the 
-	Aldabra, the world's largest raised coral atoll.<br>
-  	<br>
-	A Thailand yacht charter is a voyage to a tropical wonderland, where stone pinnacles rise from an emerald-colored sea, and strange open-air caves await 
-	exploration. Experience the exotic shores aboard a kayak or stand up paddle board amongst colorful coral and vibrant fish. Or, head inland to try the 
-	acclaimed local cuisine.<br>
-	<br>
-	Come aboard and escape the ordinary. Something extraordinary awaits in any of these premier exotic destinations.
-	</p>
-	
-	</div>
-	</div>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" class="active" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Power Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
 
-	<button class="open-button" onclick="openForm()">Get A Quote</button>
-	
-	<div class="form-popup" id="myForm">
-  		<form class="form-container">
-    	<header>Get a Quote</header><br>
+        <header>Exotic Yacht Charters</header><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+        <div class="textbox">
+            <p>
+                Choose your cruising wonderland, each with its own magical allure, in some of the world's most exotic sailing destinations. The Far East beckons with
+                Thailand's sparkling beachfront resorts and skyscraping limestone spires rising from an emerald sea. The South Pacific awaits with its breathtaking
+                collage of palm-fringed beaches and colorful coral reefs-blended with the warmest of hospitality. While the Seychelles offer a unique paradise of
+                otherworldly, secluded isles, giant tortoises and rare sea birds. Whatever your choice, these far-off islands will tempt you to return again and again.
+                <button id="readexotic" class="read" onclick="readmore('exotic')">Read More >></button>
+            </p>
 
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
-    		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
-		 	   
-	Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
-      	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
-      	<option value="ant">Antigua</option>      	
-      	<option value="bvi">British Virgin Islands</option>      	
-      	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
-      	<option value="thai">Thailand</option>      	
-      	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
-      	<option value="gre">Greece</option>      	
-      	<option value="ita">Italy</option>      	
-      	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
-    
-    	Date of Departure*<br>
-    	<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+            <div class="hide" id="exotic">
+                <p>
+                    Nowhere else has a tropical destination been so sought after than the waters of the South Pacific. While exploring this sprawling area of diverse
+                    islands, you will find yourself drawn to Tahiti's pristine diving conditions, Bora Bora's famous lagoon, and the beautiful temples of Tonga.<br>
+                    <br>
+                    The Indian Ocean offers a bounty of breathtaking sights, but none quite like The Seychelles, a group of granite and coral islands off the coast of East
+                    Africa. Cruise through azure waters to experience an untouched landscape filled with vibrant flora, exotic wildlife and geological formations like the
+                    Aldabra, the world's largest raised coral atoll.<br>
+                    <br>
+                    A Thailand yacht charter is a voyage to a tropical wonderland, where stone pinnacles rise from an emerald-colored sea, and strange open-air caves await
+                    exploration. Experience the exotic shores aboard a kayak or stand up paddle board amongst colorful coral and vibrant fish. Or, head inland to try the
+                    acclaimed local cuisine.<br>
+                    <br>
+                    Come aboard and escape the ordinary. Something extraordinary awaits in any of these premier exotic destinations.
+                </p>
 
-    
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
-    
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
-    
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+            </div>
+        </div>
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  		</div>
-  		
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

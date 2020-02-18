@@ -9,140 +9,60 @@
 <script type="text/javascript" src = "js/jquery.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body id="body" onload="myBackgroundimg()">
-	  
-	<div class= "navbar">
-  	<a href="#" onclick="myPage('home')"> Home </a>
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" class = "active" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  			<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
-  		</div>
-  	</div>
-	<div class="dropdown">
-  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Powered Yachts </a>
-  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
-  		</div>
-  	</div>
-  	<a href="#" onclick="myPage('contact')"> Contact Us </a>
-  	<a href="#" onclick="myPage('faq')">FAQ</a>
-  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
-  	</div><br>
-  
-  	<header>Americas Yacht Charters</header><br>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" class="active" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
 
-	<div class="textbox">
-  	<p>
-  	The Americas include an array of beautiful charter destinations. Sail the out-islands of the Bahamas and discover a sailor's 
-  	paradise in the uncrowded Abacos or explore the 120-mile long archipelago of the Exumas, where you can visit the world-famous 
-  	swimming pigs. Or, head to exotic Belize, which offers awe-inspiring natural wonders and waters that beckon for adventure.
-  	<button id="readamericas" class="read" onclick="readmore('americas')">Read More >></button>
-  	
-  	<div class="hide" id="americas">
-  	<p>
-  	The charter passages of the Americas provide visitors with both serene jaunts and vibrant city attractions. Belize's ideal location
-	in Central America allows visitors to bask in warm temperatures accompanied by coastal island breezes. Feast your eyes on lush
-	exotic scenery, explore ancient Mayan ruins, and discover natural underwater beauty at its finest while snorkeling or diving along
-	the second largest barrier reef in the world.<br>
-	<br>
-	The ''off-the-beaten-path'' Abacos and Exumas deliver a Bahamas vacation unlike any other, featuring uncrowded beaches, laid-back
-	vibes, and ultimate tranquility on the water. Cruise throughout isolated cays and magnificent coral reefs, where civilization feels
-	far away but paradise feels like the norm.
-  	</p>
-	</div>
-  	</div>
-  	
-  	<img class="map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/N%26SAmerica-pol.jpg/230px-N%26SAmerica-pol.jpg"><br><br>
-  	
-	<button class="open-button" onclick="myQuote()">Get A Quote</button>
-  	
-  	<div class="form-popup" id="myForm">
-  		<form class="form-container">
-    	<header>Get a Quote</header><br>
+        <header>Americas Yacht Charters</header><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+        <div class="textbox">
+            <p>
+                The Americas include an array of beautiful charter destinations. Sail the out-islands of the Bahamas and discover a sailor's
+                paradise in the uncrowded Abacos or explore the 120-mile long archipelago of the Exumas, where you can visit the world-famous
+                swimming pigs. Or, head to exotic Belize, which offers awe-inspiring natural wonders and waters that beckon for adventure.
+                <button id="readamericas" class="read" onclick="readmore('americas')">Read More >></button>
+            </p>
 
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
-    		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
-		 	   
-	Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
-      	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
-      	<option value="ant">Antigua</option>      	
-      	<option value="bvi">British Virgin Islands</option>      	
-      	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
-      	<option value="thai">Thailand</option>      	
-      	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
-      	<option value="gre">Greece</option>      	
-      	<option value="ita">Italy</option>      	
-      	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
-    
-				Date of Departure*<br>
-    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+            <div class="hide" id="americas">
+                <p>
+                    The charter passages of the Americas provide visitors with both serene jaunts and vibrant city attractions. Belize's ideal location
+                    in Central America allows visitors to bask in warm temperatures accompanied by coastal island breezes. Feast your eyes on lush
+                    exotic scenery, explore ancient Mayan ruins, and discover natural underwater beauty at its finest while snorkeling or diving along
+                    the second largest barrier reef in the world.<br>
+                    <br>
+                    The ''off-the-beaten-path'' Abacos and Exumas deliver a Bahamas vacation unlike any other, featuring uncrowded beaches, laid-back
+                    vibes, and ultimate tranquility on the water. Cruise throughout isolated cays and magnificent coral reefs, where civilization feels
+                    far away but paradise feels like the norm.
+                </p>
+            </div>
+        </div>
 
-    
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
-    
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
-    
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+        <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/N%26SAmerica-pol.jpg/230px-N%26SAmerica-pol.jpg"><br><br>
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  		</div>
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
 
+</div>
 </body>
 </html>

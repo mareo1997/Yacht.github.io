@@ -64,7 +64,11 @@ header{
 }
 
 .navbar a.b{
-	float: right;
+    float: right;
+ }
+
+.d{
+    display: none;
 }
 
 .navbar a.c:hover{
@@ -286,9 +290,19 @@ footer{
   overflow: auto;
 }
 
+.container {
+    align-content: center;
+    opacity: .8;
+    padding: 10px;
+    background-color: white;
+    overflow: auto;
+    font-size: 20px;
+    font-family: Arial;
+}
+
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=email], .form-container input[type=tel], .form-container input[type=date], .form-container .sel {
-  width: 80%;
+.container input[type=text], .container input[type=email], .container input[type=tel], .container input[type=date], .container .sel {
+  width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -296,13 +310,13 @@ footer{
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=email]:focus, .form-container input[type=date], .form-container input[type=tel]:focus, .form-container .sel:focus{
+.container input[type=text]:focus, .container input[type=email]:focus, .container input[type=date], .container input[type=tel]:focus, .container .sel:focus{
   background-color: #ddd;
   outline: none;
 }
 
 /* Set a style for the submit/login button */
-.form-container .btn {
+.container .btn {
   background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
@@ -314,12 +328,12 @@ footer{
 }
 
 /* Add a red background color to the cancel button */
-.form-container .cancel {
+.container .cancel {
   background-color: red;
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.container .btn:hover, .open-button:hover {
   opacity: 1;
 }
 

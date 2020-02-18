@@ -6,142 +6,142 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body id="body" onload="myBackgroundimg()">
-	  
-	<div class= "navbar">
-  	<a href="#" onclick="myPage('home')"> Home </a>
-  	<div class="dropdown">
-  		<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  			<a href="#" class = "active" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  			<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  			<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
-  		</div>
-  	</div>
-	<div class="dropdown">
-  		<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
-  		<div class="dropdown-content">
-  			<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  			<a href="#" onclick="myType('power')"> Powered Yachts </a>
-  			<a href="#" onclick="myType('crew')"> Crewed Yachts </a>
-  		</div>
-  	</div>
-  	<a href="#" onclick="myPage('contact')"> Contact Us </a>
-  	<a href="#" onclick="myPage('faq')">FAQ</a>
-  	<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
-  	</div><br>
-  	
-	<header>Caribbean Yacht Charters</header><br>
-	
-	<div class="textbox">
-  	<p>
-  	Cruise the calm waters of the Caribbean, where the British Virgin Islands grant easy, line-of-sight navigation and trade winds keep your course steady. 
-  	Follow the sun to St. Lucia and drop anchor to take in the warm glow of the sunset. Find out how Grenada lives up to its nickname ''The Spice Island of 
-  	the Caribbean''. Spend your days shopping on the beautiful streets of St. Thomas. Immerse yourself in the unspoiled paradise of Puerto Rico's Spanish 
-  	Virgin Islands. Or, rekindle your love for open water adventure in Antigua's first-rate sailing wonderland.
-  	<button id="readcaribbean" class="read" onclick="readmore('caribbean')">Read More >></button>
-  	</p>
-  	
-  	<div class="hide" id="caribbean">
-  	
-  	<p>
-  	Discover the blissful white sands of the world-class Caribbean islands from the deck of your private state-of-the-art yacht. Look out over the 
-  	jade-colored sea and breath in the rejuvenating air fringed with the sweet aroma distinct to these outlying islands. Each charter day waits with new 
-  	surprises of hidden-away eateries, sunken caves, and rich history.<br>
-	<br>
-	Sailors with all levels of expertise will find accommodating waterways that make for some of the most enjoyable sailing experiences. Cruise through 
-	protected anchorages and into full-service marinas where your voyage is king. The ever-enchanting Caribbean opens a world of possibilities, both onshore 
-	and off, with hidden coves, warm island culture, beachside dining, and unrivaled snorkeling and diving conditions.
-  	</p>
-  	</div>
-  	</div>
-  	
-  	<img class="map" src="https://i.insider.com/54861269eab8eabe2e249c04?width=1136&format=jpeg"><br><br>
-  	  
-  	<button class="open-button" onclick="openForm()">Get A Quote</button>
-  	
-  	<div class="form-popup" id="myForm">
-  		<form class="form-container">
-    	<header>Get a Quote</header><br>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" class="active" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+        <header>Caribbean Yacht Charters</header><br>
 
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
-    		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
-		 	   
-	Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
-      	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
-      	<option value="ant">Antigua</option>      	
-      	<option value="bvi">British Virgin Islands</option>      	
-      	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
-      	<option value="thai">Thailand</option>      	
-      	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
-      	<option value="gre">Greece</option>      	
-      	<option value="ita">Italy</option>      	
-      	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
-    
-				Date of Departure*<br>
-    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+        <div class="textbox">
+            <p>
+                Cruise the calm waters of the Caribbean, where the British Virgin Islands grant easy, line-of-sight navigation and trade winds keep your course steady.
+                Follow the sun to St. Lucia and drop anchor to take in the warm glow of the sunset. Find out how Grenada lives up to its nickname ''The Spice Island of
+                the Caribbean''. Spend your days shopping on the beautiful streets of St. Thomas. Immerse yourself in the unspoiled paradise of Puerto Rico's Spanish
+                Virgin Islands. Or, rekindle your love for open water adventure in Antigua's first-rate sailing wonderland.
+                <button id="readcaribbean" class="read" onclick="readmore('caribbean')">Read More >></button>
+            </p>
 
-    
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
-    
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
-    
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+            <div class="hide" id="caribbean">
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  		</div>
+                <p>
+                    Discover the blissful white sands of the world-class Caribbean islands from the deck of your private state-of-the-art yacht. Look out over the
+                    jade-colored sea and breath in the rejuvenating air fringed with the sweet aroma distinct to these outlying islands. Each charter day waits with new
+                    surprises of hidden-away eateries, sunken caves, and rich history.<br>
+                    <br>
+                    Sailors with all levels of expertise will find accommodating waterways that make for some of the most enjoyable sailing experiences. Cruise through
+                    protected anchorages and into full-service marinas where your voyage is king. The ever-enchanting Caribbean opens a world of possibilities, both onshore
+                    and off, with hidden coves, warm island culture, beachside dining, and unrivaled snorkeling and diving conditions.
+                </p>
+            </div>
+        </div>
 
+        <img class="map" src="https://i.insider.com/54861269eab8eabe2e249c04?width=1136&format=jpeg"><br><br>
+
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

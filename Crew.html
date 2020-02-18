@@ -6,172 +6,173 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body id="body" onload="myBackgroundimg()">
-	  
-	<div class= "navbar">
-  		<a href="#" onclick="myPage('home')"> Home </a>
-  		<div class="dropdown">
-  			<button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
-  			<div class="dropdown-content">
-  				<a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-  				<a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-  				<a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-  				<a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
-  			</div>
-  		</div>
-		<div class="dropdown">
-  			<button class="dropbtn" onclick="myType('sail')"> Yachts </button>
-  			<div class="dropdown-content">
-  				<a href="#" onclick="myType('sail')"> Sail Yachts </a>
-  				<a href="#" onclick="myType('power')"> Powered Yachts </a>
-  				<a href="#" class="active" onclick="myType('crew')"> Crewed Yachts </a>
-  			</div>
-  		</div>
-  		<a href="#" onclick="myPage('contact')"> Contact Us </a>
-  		<a href="#" onclick="myPage('faq')"> FAQ </a>
-  		<a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
-  	</div><br>
-  	 
-	<header>Crewed Yachts</header><br>
-	
-	<div class="textbox">
-  	<p>
-  	Escape ordinary vacations and come discover one of a kind onboard luxury on your own first-class yacht. Indulge in the most blissful surroundings while 
-  	an expert captain and personal gourmet chef provide a Five-Star charter experience for your entire group. With a resort-like vacation platform at your 
-  	feet, and all-inclusive leisure in your favor, unforgettable moments on the water await.
-  	<button id="readcrew" class="read" onclick="readmore('crew')">Read More >></button>
-  	</p>
-  	
-  	<div id="crew" class="hide">
-  	<p>
-  	Step aboard one of our state-of-the-art yachts designed specifically for the ultimate Crewed vacation experience on the water. Our innovative fleet 
-  	features a wide range of expertly-crafted yachts that deliver impeccable performance and resort-like accommodations. Explore some of the most exquisite 
-  	destinations in the world while cutting-edge technology and stylish comfort provide a safe and smooth vacation on the water that is impossible to forget.
-  	</p>
-  	</div>
-	</div>
-  	
- 	<div class="grid-container">
- 		<div class="grid-item">
- 		<header>5800 Legacy - 6 Cabin Catamaran</header><br>
- 		<img onclick="image(301)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109">
- 		</div>
- 		<div class="grid-item">
- 		<header>5800 Master - 6 Cabins Catamaran</header><br>
- 		<img onclick="image(302)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071">
- 		</div> 		
- 	</div><br><br> 			
-  
-  	<div id="301" class="modal">
-  		<div class="modal-content">
-    	<span class="close" onclick="span(301)">&times;</span>
-    	<header>5800 Legacy - 6 Cabin Catamaran</header><br>
-    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109"><br>
-    	<p>
-		Explore the islands in plush comfort aboard Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with 
-		private en-suite baths-and room for up to 10 guests.
-		</p><br>
-    	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(301)">Read More</button>
-		</div>
-	</div>
-	
-	<div id="302" class="modal">
-  		<div class="modal-content">
-    	<span class="close" onclick="span(302)">&times;</span>
-    	<header>5800 Master - 6 Cabins Catamaran</header><br>
-    	<img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071"><br>
-    	<p>
-		Complete with your very own captain, gourmet chef and hostess, a Crewed charter aboard Crewed 5800 Master Edition treats you to a getaway at sea most 
-		can only dream of. This six-cabin Sail catamaran is our largest and newest, providing an equally spacious and exclusive cruising experience for up to 
-		10 guests.
-		</p><br>
-    	<button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(302)">Read More</button>
-		</div>
-	</div>
-  	
-	<button class="open-button" onclick="openForm()">Get A Quote</button>
-	
-	<div class="form-popup" id="myForm">
-  		<form class="form-container">
-    	<header>Get a Quote</header><br>
+<body>
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')"> Home </a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
+                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
+                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
+                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
+                    <a href="#" class="active" onclick="myType('crew')"> Crewed Yachts </a>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')"> Contact Us </a>
+            <a href="#" onclick="myPage('faq')"> FAQ </a>
+            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+        </div><br>
 
-    		   	Name*<br> 
-   				<input type = "text" required name = "name" value="Mareo Yapp"><br><br>
-    
-    			Email*<br>
-    			<input type = "email" required name = "@" value="mareo1997@gmail.com"><br><br>
+        <header>Crewed Yachts</header><br>
 
-    			Phone<br>
-    			<input type = "tel" name = "#" value="954-305-2814"><br><br>
-    		    			
-				Type:<br>
-    			<select class="sel" id = "types">      
-      				<option value = "type0">What ever's available</option>
-      				<option value = "type1">Sailing</option>
-      				<option value = "type2">Powered</option>
-      				<option value = "type3">Crewed</option>
-		 	   </select><br><br>
-		 	   
-	Destination*<br>
-    <select class="sel" required id = "destination">      
-      <option value = ""></option>
-      <optgroup label = "Americas">
-      	<option value="bel">Belize</option>      	
-      	<option value="bra">Brazil</option>      	
-      	<option value="bah">Bahamas</option>      	
-      </optgroup>
-      <optgroup label = "Caribbean">
-      	<option value="ant">Antigua</option>      	
-      	<option value="bvi">British Virgin Islands</option>      	
-      	<option value="mar">Martinique</option>   
-      </optgroup>
-      <optgroup label = "Exotics">      
-      	<option value="thai">Thailand</option>      	
-      	<option value="tah">Tahiti</option>      	
-      </optgroup>
-      <optgroup label = "Mediterranean">
-      	<option value="gre">Greece</option>      	
-      	<option value="ita">Italy</option>      	
-      	<option value="spa">Spain</option>   
-      </optgroup>
-    </select><br><br>
-    
-				Date of Departure*<br>
-    			<input type = "date" name = "mdy" value="04/17/2020"><br><br>
+        <div class="textbox">
+            <p>
+                Escape ordinary vacations and come discover one of a kind onboard luxury on your own first-class yacht. Indulge in the most blissful surroundings while
+                an expert captain and personal gourmet chef provide a Five-Star charter experience for your entire group. With a resort-like vacation platform at your
+                feet, and all-inclusive leisure in your favor, unforgettable moments on the water await.
+                <button id="readcrew" class="read" onclick="readmore('crew')">Read More >></button>
+            </p>
 
-    
-		 	   Number of days<br>
-    <select class="sel" id = "times">      
-      <option value = "time1">5</option>
-      <option value = "time2">6</option>
-      <option value = "time2">7</option>
-      <option value = "time2">8</option>
-      <option value = "time2">9</option>
-      <option value = "time3">10</option>
-    </select><br><br>
-    
-    Number of Passengers<br>
-    <select class="sel" id = "nums">      
-      <option value = "num1">1</option>
-      <option value = "num2">2</option>
-      <option value = "num3">3</option>
-      <option value = "num4">4</option>
-      <option value = "num5">5</option>
-    </select><br><br>
-    
-    Budget:<br>
-    <select class="sel" id = "budget">
-      <option value = "rent1">$1000</option>
-      <option value = "rent2">$2000</option>
-      <option value = "rent3">$4000</option>
-      <option value = "rent4">$7000</option>
-      <option value = "rent5">$10000</option>
-    </select><br><br>
+            <div id="crew" class="hide">
+                <p>
+                    Step aboard one of our state-of-the-art yachts designed specifically for the ultimate Crewed vacation experience on the water. Our innovative fleet
+                    features a wide range of expertly-crafted yachts that deliver impeccable performance and resort-like accommodations. Explore some of the most exquisite
+                    destinations in the world while cutting-edge technology and stylish comfort provide a safe and smooth vacation on the water that is impossible to forget.
+                </p>
+            </div>
+        </div>
 
-    			<button type="submit" class="btn">Submit</button>
-    			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  		</form>
-  		</div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <header>5800 Legacy - 6 Cabin Catamaran</header><br>
+                <img onclick="image(301)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109">
+            </div>
+            <div class="grid-item">
+                <header>5800 Master - 6 Cabins Catamaran</header><br>
+                <img onclick="image(302)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071">
+            </div>
+        </div><br><br>
+
+        <div id="301" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(301)">&times;</span>
+                <header>5800 Legacy - 6 Cabin Catamaran</header><br>
+                <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109"><br>
+                <p>
+                    Explore the islands in plush comfort aboard Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with
+                    private en-suite baths-and room for up to 10 guests.
+                </p><br>
+                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(301)">Read More</button>
+            </div>
+        </div>
+
+        <div id="302" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(302)">&times;</span>
+                <header>5800 Master - 6 Cabins Catamaran</header><br>
+                <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071"><br>
+                <p>
+                    Complete with your very own captain, gourmet chef and hostess, a Crewed charter aboard Crewed 5800 Master Edition treats you to a getaway at sea most
+                    can only dream of. This six-cabin Sail catamaran is our largest and newest, providing an equally spacious and exclusive cruising experience for up to
+                    10 guests.
+                </p><br>
+                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(302)">Read More</button>
+            </div>
+        </div>
+
+        <button class="open-button" onclick="openForm()">Get A Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <header>Get a Quote</header><br>
+
+                Name*<br>
+                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+
+                Email*<br>
+                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+
+                Phone<br>
+                <input type="tel" name="#" value="954-305-2814"><br><br>
+
+                Type:<br>
+                <select class="sel" id="types">
+                    <option value="type0">What ever's available</option>
+                    <option value="type1">Sailing</option>
+                    <option value="type2">Powered</option>
+                    <option value="type3">Crewed</option>
+                </select><br><br>
+
+                Destination*<br>
+                <select class="sel" required id="destination">
+                    <option value=""></option>
+                    <optgroup label="Americas">
+                        <option value="bel">Belize</option>
+                        <option value="bra">Brazil</option>
+                        <option value="bah">Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option value="ant">Antigua</option>
+                        <option value="bvi">British Virgin Islands</option>
+                        <option value="mar">Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option value="thai">Thailand</option>
+                        <option value="tah">Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option value="gre">Greece</option>
+                        <option value="ita">Italy</option>
+                        <option value="spa">Spain</option>
+                    </optgroup>
+                </select><br><br>
+
+                Date of Departure*<br>
+                <input type="date" name="mdy" value="04/17/2020"><br><br>
+
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                </select><br><br>
+
+                Budget:<br>
+                <select class="sel" id="budget">
+                    <option value="rent1">$1000</option>
+                    <option value="rent2">$2000</option>
+                    <option value="rent3">$4000</option>
+                    <option value="rent4">$7000</option>
+                    <option value="rent5">$10000</option>
+                </select><br><br>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
