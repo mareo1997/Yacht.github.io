@@ -36,6 +36,10 @@ function validateForm(){
 	window.open("index/index.html", "_self")
 }
 
+function myQuote(){
+	window.open("Quote.html", "_self")
+}
+
 function myBackgroundimg(){
 	document.body.style.backgroundImage = "url('https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg')";
 }
