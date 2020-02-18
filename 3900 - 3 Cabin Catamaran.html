@@ -74,17 +74,15 @@
                     <li>
                     <li><a href="#">Starting Price: $500.00</a>
                     <li>
-                    <li><button onclick="openForm()">Email Quote</button></li>
+                    <li><button onclick="openForm()">Get a Quote</button></li>
                 </ul>
             </nav>
         </section><br>
 
-        <button class="open-button" onclick="openForm()">Get A Quote</button>
-
         <div class="form-popup" id="myForm">
             <form class="form-container">
-                <header>Get a Quote</header><br>
-
+                <header>Get a Quote</header>
+				<br>
                 Name*<br>
                 <input type="text" required name="name" value="Mareo Yapp"><br><br>
 
@@ -94,42 +92,10 @@
                 Phone<br>
                 <input type="tel" name="#" value="954-305-2814"><br><br>
 
-                Type:<br>
-                <select class="sel" id="types">
-                    <option value="type0">What ever's available</option>
-                    <option value="type1">Sailing</option>
-                    <option value="type2">Powered</option>
-                    <option value="type3">Crewed</option>
-                </select><br><br>
-
-                Destination*<br>
-                <select class="sel" required id="destination">
-                    <option value=""></option>
-                    <optgroup label="Americas">
-                        <option value="bel">Belize</option>
-                        <option value="bra">Brazil</option>
-                        <option value="bah">Bahamas</option>
-                    </optgroup>
-                    <optgroup label="Caribbean">
-                        <option value="ant">Antigua</option>
-                        <option value="bvi">British Virgin Islands</option>
-                        <option value="mar">Martinique</option>
-                    </optgroup>
-                    <optgroup label="Exotics">
-                        <option value="thai">Thailand</option>
-                        <option value="tah">Tahiti</option>
-                    </optgroup>
-                    <optgroup label="Mediterranean">
-                        <option value="gre">Greece</option>
-                        <option value="ita">Italy</option>
-                        <option value="spa">Spain</option>
-                    </optgroup>
-                </select><br><br>
-
                 Date of Departure*<br>
-                <input type="date" name="mdy" value="04/17/2020"><br><br>
-
-
+                <select class="sel" id="date">
+				</select><br>
+				<br>
                 Number of days<br>
                 <select class="sel" id="times">
                     <option value="time1">5</option>
@@ -158,7 +124,7 @@
                     <option value="rent5">$10000</option>
                 </select><br><br>
 
-                <button type="button" class="btn" onclick="setInterval(reminder,3000)">Submit</button>
+                <button type="button" class="btn" >Submit</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
             </form>
         </div>

@@ -45,6 +45,7 @@ function myBackgroundimg(){
 }
 
 function start() {
+	date();
     myBackgroundimg();
 }
 window.onload = start;
@@ -150,6 +151,45 @@ function email() {
     );
 }
 
+function date(){
+	var timestamp = new Date();
+	var yr = timestamp.getFullYear();
+	var month = new Array();
+	month[0] = "January";
+	month[1] = "February";
+	month[2] = "March";
+	month[3] = "April";
+	month[4] = "May";
+	month[5] = "June";
+	month[6] = "July";
+	month[7] = "August";
+	month[8] = "September";
+	month[9] = "October";
+	month[10] = "November";
+	month[11] = "December";
+	var i;
+	var k = 0;
+	for(i=0;i<13;i++){
+		if(updatemonth == "December"){
+			var k = 12;
+			var update = new Date()
+			var updatemonth = month[update.getMonth() + i - k]
+			var select = document.getElementById("date");
+			var option = document.createElement("option");
+			option.text = updatemonth;
+			select.add(option);
+		}else{
+			var update = new Date()
+			var updatemonth = month[update.getMonth() + i - k]
+			var select = document.getElementById("date");
+			var option = document.createElement("option");
+			option.text = updatemonth;
+			select.add(option);
+		}
+	}
+
+}
+
 function reminder(){
 	document.getElementById("myForm").style.display = "none";	
 	var timestamp = new Date();
@@ -176,3 +216,4 @@ function reminderemail() {
         " nights will cost around $5000.00"
     );
 }
+
