@@ -482,7 +482,7 @@ article {
   }
 }
 
-a, a:link, a:visited {
+e, e:link, e:visited {
   color: black;
   padding-right: 10px;
   text-align: left; 
@@ -490,7 +490,7 @@ a, a:link, a:visited {
   display: inline-block;
 }
 
-a:active,a:hover {
+e:active,e:hover {
   color: black;
   text-align: left; 
   text-decoration: underline;
@@ -716,21 +716,21 @@ body {
  background-image: url("Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg");
  background-color: #cccccc;
 }
-*/
+
 
 body, html {
   height: 100%;
 }
 
 .bg { 
-  /* The image used */
+  // The image used
   background-image: url("Gentech.jpg");
 
-  /* Full height */
+  // Full height
   height: 100%; 
 
-  /* Center and scale the image nicely */
+  // Center and scale the image nicely
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+*/
