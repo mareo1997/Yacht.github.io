@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="body">
-        <div class="navbar">
+      <div class="navbar">
             <a href="#" class="active" onclick="myPage('home')"> Home </a>
             <div class="dropdown">
                 <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
@@ -31,93 +31,118 @@
             <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
         </div><br>
+<!--
+	<div class="header">
+		<img src= "158463acfc822c5c08274e7e28d1e325.png" class="logo"> </img>
+		<a href="#" onclick="myHOME()">Home</a>
+		
+		
+		<a href="#" onclick="myDEST()">Destinations</a>
+	  	<a href="#">Yachts</a>
+	   	<a href="#">Order Rental</a>
+		<a href="FAQ.html">FAQ</a>
+		<a href="Login.html">Login</a>
+		<h> 1-800-CONTACT </h>
+	</div>
+-->
+  	<!--
+ 	<img src="Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg" alt='Yacht for Rent'>
+	-->
+            <header>Yacht Charter Fleet</header><br>
 
-        <header>Yacht Charter Fleet</header><br>
+ 	<div class="textbox">
+	 	<div class="benefits_header">
+	 		<b> Benefits of chartering a yacht with us </b>
+	 	</div>
+	 	
 
-        <button class="open-button" onclick="openForm()">Get A Quote</button>
+	 	<div class="benefits-left-third">
+	 		<b> Customer Service </b>
+	 		<p> Best Custommer Service in the industry </p>
+	 	</div>
 
-        <div class="form-popup" id="myForm">
-            <form class="form-container">
-                <header>Get a Quote</header><br>
+	 	<div class="benefits-center-third">
+	 		<b> Five Star Rating </b>
+	 		<p> 5 Star Reviews on all platforms</p>
+	 	</div>
 
-                Name*<br>
-                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+	 	<div class="benefits-right-third">
+	 		<b> Year Long Trips </b>
+	 		<p> The most routes and most dates available</p>
+	 	</div>
 
-                Email*<br>
-                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+	 	<div class="yacht-grid-left-details">
+	 		<b> Sail Yacht </b>
+	 	</div>
 
-                Phone<br>
-                <input type="tel" name="#" value="954-305-2814"><br><br>
+	 	<div class="yacht-grid-center-details">
+	 		<b> Power Yacht </b>
+	 	</div>
+		
+	 	<div class="yacht-grid-right-details">
+	 		<b> Crew Yacht </b>
+	 	</div>
 
-                Type:<br>
-                <select class="sel" id="types">
-                    <option value="type0">What ever's available</option>
-                    <option value="type1">Sailing</option>
-                    <option value="type2">Powered</option>
-                    <option value="type3">Crewed</option>
-                </select><br><br>
+	 	<div class="yacht-grid-left-extra-details">
+	 		<br>
+	 		<p>8 Passengers</p>
+	 		<p> Includes: Captain, Mate, Water, Sodas & Ice. </p>
+	 	</div>
 
-                Destination*<br>
-                <select class="sel" required id="destination">
-                    <option value=""></option>
-                    <optgroup label="Americas">
-                        <option value="bel">Belize</option>
-                        <option value="bra">Brazil</option>
-                        <option value="bah">Bahamas</option>
-                    </optgroup>
-                    <optgroup label="Caribbean">
-                        <option value="ant">Antigua</option>
-                        <option value="bvi">British Virgin Islands</option>
-                        <option value="mar">Martinique</option>
-                    </optgroup>
-                    <optgroup label="Exotics">
-                        <option value="thai">Thailand</option>
-                        <option value="tah">Tahiti</option>
-                    </optgroup>
-                    <optgroup label="Mediterranean">
-                        <option value="gre">Greece</option>
-                        <option value="ita">Italy</option>
-                        <option value="spa">Spain</option>
-                    </optgroup>
-                </select><br><br>
+		<div class="yacht-learn-more-button-left">
+			<p> Learn More </p>
+		</div> 	
 
-                Date of Departure*<br>
-                <input type="date" name="mdy" value="04/17/2020"><br><br>
+		<div class="yacht-grid-center-extra-details">
+	 		<br>
+	 		<p>15 Passengers</p>
+	 		<p>Includes: Captain, Mate, Fuel, & Water. </p>
+	 	</div>
+
+	 	<div class="yacht-learn-more-button-center">
+			<p> Learn More </p>
+		</div> 	
+
+		<div class="yacht-grid-right-extra-details">
+	 		<br>
+	 		<p>25 Passengers</p>
+	 		<p>Includes: Captain, Mate, Fuel, Water, Sodas, Ice & Champagne. </p>
+	 	</div>
+
+	 	<div class="yacht-learn-more-button-right">
+			<p> Learn More </p>
+		</div> 	
+	</div>
+ 	<!--
+	<div class="benefits_left1">
+ 		<b> Customer Service <span class="tab"> Five Star Rating</span> </b>
+ 	</div>
+	<div class="benefits_center1">
+ 		<b> Five Star Rating </b>
+ 	</div>
+ 	<div class="benefits_right1">
+ 		<b> Year Long Trips </b>
+ 	</div>
+ 	<div class="benefits_left2">
+ 		<b> Experience </b>
+ 	</div>
+ 	<div class="benefits_center2">
+ 		<b> Best Routes </b>
+ 	</div>
+ 	<div class="benefits_right2">
+ 		<b> Speical Gifts </b>
+ 	</div>
+-->
 
 
-                Number of days<br>
-                <select class="sel" id="times">
-                    <option value="time1">5</option>
-                    <option value="time2">6</option>
-                    <option value="time2">7</option>
-                    <option value="time2">8</option>
-                    <option value="time2">9</option>
-                    <option value="time3">10</option>
-                </select><br><br>
+	<div style="text-align: center">
+		<button> CONTACT US </button>
+	</div>
+      
+              <button class="open-button" onclick="myQuote()">Build a Quote</button>
 
-                Number of Passengers<br>
-                <select class="sel" id="nums">
-                    <option value="num1">1</option>
-                    <option value="num2">2</option>
-                    <option value="num3">3</option>
-                    <option value="num4">4</option>
-                    <option value="num5">5</option>
-                </select><br><br>
 
-                Budget:<br>
-                <select class="sel" id="budget">
-                    <option value="rent1">$1000</option>
-                    <option value="rent2">$2000</option>
-                    <option value="rent3">$4000</option>
-                    <option value="rent4">$7000</option>
-                    <option value="rent5">$10000</option>
-                </select><br><br>
 
-                <button type="submit" class="btn">Submit</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-            </form>
-        </div>
-    </div>
 
-</body>
+  </body>
 </html>
