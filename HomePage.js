@@ -134,22 +134,6 @@ function editor(){
 	  }
 }
 
-function email() {
-    var fname = document.getElementById("fullname");
-    var typeselect = document.getElementById("types").selectedIndex;
-    var typeoption = document.getElementById("types").options;
-    var destselect = document.getElementById("destination").selectedIndex;
-    var destoption = document.getElementById("destination").options;
-    var timeselect = document.getElementById("times").selectedIndex;
-    var timeoption = document.getElementById("times").options;
-    alert(
-        "Dear " + fname.value + ",\n" +
-        "Your request for a " + typeoption[typeselect].text +
-        " going towards the " + destoption[destselect].text +
-        " for " + timeoption[timeselect].text +
-        " nights will cost around $5000.00"
-    );
-}
 
 function date(){
 	var timestamp = new Date();
@@ -189,31 +173,3 @@ function date(){
 		}
 	}
 }
-
-function reminder(){
-	document.getElementById("myForm").style.display = "none";	
-	var timestamp = new Date();
-	var yr = timestamp.getFullYear();
-	var mth = timestamp.getMonth();
-	var dy = timestamp.getDate();
-    var remind = new Date(yr, mth, dy, 18);
-    setInterval(reminderemail(), 5000);
-}
-
-function reminderemail() {
-    var fname = document.getElementById("fullname");
-    var typeselect = document.getElementById("types").selectedIndex;
-    var typeoption = document.getElementById("types").options;
-    var destselect = document.getElementById("destination").selectedIndex;
-    var destoption = document.getElementById("destination").options;
-    var timeselect = document.getElementById("times").selectedIndex;
-    var timeoption = document.getElementById("times").options;
-    alert(
-        "Dear " + fname.value + ",\n" +
-        "This is an reminder that your request for a " + typeoption[typeselect].text +
-        " going towards the " + destoption[destselect].text +
-        " for " + timeoption[timeselect].text +
-        " nights will cost around $5000.00"
-    );
-}
-
