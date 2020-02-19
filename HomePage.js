@@ -53,13 +53,13 @@ window.onload = start;
 function readmore(more){
 	if(more == 'sail'){
 		document.getElementById("readsail").style.display= "none";
-		document.getElementById("sail").style.display= "block";
+		document.getElementById(more).style.display= "block";
 	}else if(more == 'power'){
 		document.getElementById("readpower").style.display= "none";
-		document.getElementById("power").style.display= "block";
+		document.getElementById(more).style.display= "block";
 	}else if(more == 'crew'){
 		document.getElementById("readcrew").style.display= "none";
-		document.getElementById("crew").style.display= "block";
+		document.getElementById(more).style.display= "block";
 	}else if(more == 'americas'){
 		document.getElementById("readamericas").style.display= "none";
 		document.getElementById(more).style.display= "block";
@@ -73,6 +73,31 @@ function readmore(more){
 		document.getElementById("readmedi").style.display= "none";
 		document.getElementById(more).style.display= "block";		
 	}
+}
+
+function readless(less){
+  if(less == 'americas'){
+		document.getElementById(less).style.display= "none";
+        document.getElementById("readamericas").style.display= "block";
+  }else if(less == 'caribbean'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readcaribbean").style.display= "block";
+  }else if(less == 'exotic'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readexotic").style.display= "block";
+  }else if(less == 'medi'){
+		document.getElementById(less).style.display= "none";
+        document.getElementById("readmedi").style.display= "block";
+  }else if(less == 'sail'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readsail").style.display= "block";
+  }else if(less == 'power'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readpower").style.display= "block";
+  }else if(less == 'crew'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readcrew").style.display= "block";
+  }
 }
 
 function mySocial(open){
@@ -134,6 +159,22 @@ function editor(){
 	  }
 }
 
+function email() {
+    var fname = document.getElementById("fullname");
+    var typeselect = document.getElementById("types").selectedIndex;
+    var typeoption = document.getElementById("types").options;
+    var destselect = document.getElementById("destination").selectedIndex;
+    var destoption = document.getElementById("destination").options;
+    var timeselect = document.getElementById("times").selectedIndex;
+    var timeoption = document.getElementById("times").options;
+    alert(
+        "Dear " + fname.value + ",\n" +
+        "Your request for a " + typeoption[typeselect].text +
+        " going towards the " + destoption[destselect].text +
+        " for " + timeoption[timeselect].text +
+        " nights will cost around $5000.00"
+    );
+}
 
 function date(){
 	var timestamp = new Date();
@@ -172,4 +213,31 @@ function date(){
 			select.add(option);
 		}
 	}
+}
+
+function reminder(){
+	document.getElementById("myForm").style.display = "none";	
+	var timestamp = new Date();
+	var yr = timestamp.getFullYear();
+	var mth = timestamp.getMonth();
+	var dy = timestamp.getDate();
+    var remind = new Date(yr, mth, dy, 18);
+    setInterval(reminderemail(), 5000);
+}
+
+function reminderemail() {
+    var fname = document.getElementById("fullname");
+    var typeselect = document.getElementById("types").selectedIndex;
+    var typeoption = document.getElementById("types").options;
+    var destselect = document.getElementById("destination").selectedIndex;
+    var destoption = document.getElementById("destination").options;
+    var timeselect = document.getElementById("times").selectedIndex;
+    var timeoption = document.getElementById("times").options;
+    alert(
+        "Dear " + fname.value + ",\n" +
+        "This is an reminder that your request for a " + typeoption[typeselect].text +
+        " going towards the " + destoption[destselect].text +
+        " for " + timeoption[timeselect].text +
+        " nights will cost around $5000.00"
+    );
 }
