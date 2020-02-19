@@ -53,13 +53,13 @@ window.onload = start;
 function readmore(more){
 	if(more == 'sail'){
 		document.getElementById("readsail").style.display= "none";
-		document.getElementById("sail").style.display= "block";
+		document.getElementById(more).style.display= "block";
 	}else if(more == 'power'){
 		document.getElementById("readpower").style.display= "none";
-		document.getElementById("power").style.display= "block";
+		document.getElementById(more).style.display= "block";
 	}else if(more == 'crew'){
 		document.getElementById("readcrew").style.display= "none";
-		document.getElementById("crew").style.display= "block";
+		document.getElementById(more).style.display= "block";
 	}else if(more == 'americas'){
 		document.getElementById("readamericas").style.display= "none";
 		document.getElementById(more).style.display= "block";
@@ -73,6 +73,31 @@ function readmore(more){
 		document.getElementById("readmedi").style.display= "none";
 		document.getElementById(more).style.display= "block";		
 	}
+}
+
+function readless(less){
+  if(less == 'americas'){
+		document.getElementById(less).style.display= "none";
+        document.getElementById("readamericas").style.display= "block";
+  }else if(less == 'caribbean'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readcaribbean").style.display= "block";
+  }else if(less == 'exotic'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readexotic").style.display= "block";
+  }else if(less == 'medi'){
+		document.getElementById(less).style.display= "none";
+        document.getElementById("readmedi").style.display= "block";
+  }else if(less == 'sail'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readsail").style.display= "block";
+  }else if(less == 'power'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readpower").style.display= "block";
+  }else if(less == 'crew'){
+		document.getElementById(less).style.display= "none";
+		document.getElementById("readcrew").style.display= "block";
+  }
 }
 
 function mySocial(open){
@@ -216,4 +241,3 @@ function reminderemail() {
         " nights will cost around $5000.00"
     );
 }
-

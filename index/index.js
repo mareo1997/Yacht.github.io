@@ -11,4 +11,5 @@ function SendEmail(){
 		}).then(
 			message => alert("mail sent successfully")
 		);
+	})
 }
