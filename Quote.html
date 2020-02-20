@@ -38,11 +38,11 @@
 		<form class="container" id="quote">
 			<header>Build a Quote</header>
 			<br>
-			Name*<br><input type="text" required id="fullname" value="Mareo Yapp"><br>
+			Name*<br><input type="text" required id="fullname"><br>
 			<br>
-			Email*<br><input type="email" required name="@" value="mareo1997@gmail.com"><br>
+			Email*<br><input type="email" required name="@"><br>
 			<br>
-			Phone<br><input type="tel" name="#" value="954-305-2814"><br>
+			Phone<br><input type="tel" name="#"><br>
 			<br>
 			Type:<br>
 			<select class="sel" id="types">
@@ -97,7 +97,12 @@
 					<option value="num3">3</option>
 					<option value="num4">4</option>
 					<option value="num5">5</option>
-				</select><br>
+					<option value="num1">6</option>
+					<option value="num2">7</option>
+					<option value="num3">8</option>
+					<option value="num4">9</option>
+					<option value="num5">10</option>				
+                </select><br>
 				<br>
 			Budget:<br>
 				<select class="sel" id="budget">
@@ -109,7 +114,7 @@
 				</select><br>
 				<br>
 				<input type="submit" class="btn" value="Submit">
-                <input type="button" class="btn cancel" onclick="resetForm()" value="Cancel">
+                <input type="button" class="btn cancel" onclick="resetForm()" value="Reset">
 			</form>
 	</div>
 </body>

@@ -51,7 +51,7 @@
                     spacious interior, and stylish onboard accommodations. With yachts featuring as many as 6 cabins, charter groups of up to 13 guests can enjoy a
                     first-class sailing vacation without compromising onboard comfort. Line of sight navigation and cutting-edge technology ensure a safe and enjoyable
                     charter experience that is second to none.<br>
-                    <button class="read" onclick="readless('sail')"><< Show Less</button>                    
+                    <button class="read" onclick="readless('sail')"><< Show Less</button>
                 </p>
             </div>
         </div>
@@ -70,30 +70,74 @@
         <div id="101" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="span(101)">&times;</span>
-                <header>3900 - 3 Cabin Catamaran</header><br>
+                <header id="1.01">3900 - 3 Cabin Catamaran</header><br>
                 <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/content_box/sail-catamaran-anchored-in-bvi-2880x1440-web.jpg?t=1HAgT0&itok=3KNHcquh&timestamp=1553265121"><br>
                 <p>
                     The 3900 was built by Robertson and Caine, and based upon the award-winning hull design, interior accommodation plan and helm station of
                     their private model Leopard 38 - named Cruising World's Boat of the Year 2010 and Best Boat 2010 by SAIL magazine. With her generous
                     sail plan and hull design, the Moorings 3900 offers high performance yet is highly practical and easy-to-use.
                 </p><br>
-                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(101)">Read More</button>
+                <button class="box1" onclick="openForm(1.01)">Get Quote</button> <button class="box2" onclick="box(101)">Read More</button>
             </div>
         </div>
 
         <div id="102" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="span(102)">&times;</span>
-                <header>35.2 - 2 Cabin Monohull</header><br>
+                <header id="1.02">35.2 - 2 Cabin Monohull</header><br>
                 <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/gallery_35.2_exterior_4.jpg?t=1IvJk8&itok=wBCEBFhg&timestamp=1573845717"><br>
                 <p>
                     Exquisitely made by world-renowned boat builders Beneteau, the 35.2 sets the standard for premier 2-cabin monohulls.
                 </p><br>
-                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(102)">Read More</button>
+                <button class="box1" onclick="openForm(1.02)">Get Quote</button> <button class="box2" onclick="box(102)">Read More</button>
             </div>
         </div>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
-    </div>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" id="formcontent">
+                <header>Get a Quote</header><br>
+                Name*<br><input type="text" required name="name"><br><br>
+
+                Email*<br><input type="email" required name="@"><br><br>
+
+                Phone<br><input type="tel" name="#"><br><br>
+
+                Boat<br><select class="sel" id="boatname"></select><br><br>
+
+                Date of Departure*<br>
+                <select class="sel" id="date"></select><br>
+                <br>
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                    <option value="num1">6</option>
+                    <option value="num2">7</option>
+                    <option value="num3">8</option>
+                    <option value="num4">9</option>
+                    <option value="num5">10</option>
+                </select><br><br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
+            </form>
+        </div>
+
+        </div>
 </body>
 </html>
