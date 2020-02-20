@@ -171,21 +171,37 @@ function editor(){
 	  }
 }
 
-function email() {
-    var fname = document.getElementById("fullname");
-    var typeselect = document.getElementById("types").selectedIndex;
-    var typeoption = document.getElementById("types").options;
-    var destselect = document.getElementById("destination").selectedIndex;
-    var destoption = document.getElementById("destination").options;
-    var timeselect = document.getElementById("times").selectedIndex;
-    var timeoption = document.getElementById("times").options;
-    alert(
-        "Dear " + fname.value + ",\n" +
-        "Your request for a " + typeoption[typeselect].text +
-        " going towards the " + destoption[destselect].text +
-        " for " + timeoption[timeselect].text +
-        " nights will cost around $5000.00"
-    );
+function openModal() {
+    document.getElementById("gallery").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+    document.getElementById("gallery").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slideshow");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
 }
 
 function date(){
@@ -225,6 +241,23 @@ function date(){
 			select.add(option);
 		}
 	}
+}
+
+function email() {
+    var fname = document.getElementById("fullname");
+    var typeselect = document.getElementById("types").selectedIndex;
+    var typeoption = document.getElementById("types").options;
+    var destselect = document.getElementById("destination").selectedIndex;
+    var destoption = document.getElementById("destination").options;
+    var timeselect = document.getElementById("times").selectedIndex;
+    var timeoption = document.getElementById("times").options;
+    alert(
+        "Dear " + fname.value + ",\n" +
+        "Your request for a " + typeoption[typeselect].text +
+        " going towards the " + destoption[destselect].text +
+        " for " + timeoption[timeselect].text +
+        " nights will cost around $5000.00"
+    );
 }
 
 function reminder(){
