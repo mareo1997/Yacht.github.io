@@ -6,7 +6,7 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body>
+<body class="bg">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')"> Home </a>
@@ -47,7 +47,7 @@
                     Step aboard one of our state-of-the-art yachts designed specifically for the ultimate Crewed vacation experience on the water. Our innovative fleet
                     features a wide range of expertly-crafted yachts that deliver impeccable performance and resort-like accommodations. Explore some of the most exquisite
                     destinations in the world while cutting-edge technology and stylish comfort provide a safe and smooth vacation on the water that is impossible to forget.<br>
-                    <button class="read" onclick="readless('crew')"><< Show Less</button>                    
+                    <button class="read" onclick="readless('crew')"><< Show Less</button>
                 </p>
             </div>
         </div>
@@ -91,8 +91,8 @@
         </div>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
-      
-      <div class="form-popup" id="myForm">
+
+        <div class="form-popup" id="myForm">
             <form class="form-container" id="formcontent">
                 <header>Get a Quote</header><br>
                 Name*<br><input type="text" required name="name"><br><br>
@@ -100,15 +100,13 @@
                 Email*<br><input type="email" required name="@"><br><br>
 
                 Phone<br><input type="tel" name="#"><br><br>
-               
+
                 Boat<br>
-                <select class="sel" id="boatname">
-				</select><br>
-                <br>              
+                <select class="sel" id="boatname"></select><br>
+                <br>
                 Date of Departure*<br>
-                <select class="sel" id="date">
-				</select><br>
-				<br>              
+                <select class="sel" id="date"></select><br>
+                <br>
                 Number of days<br>
                 <select class="sel" id="times">
                     <option value="time1">5</option>
@@ -121,18 +119,18 @@
                 <br>
                 Number of Passengers<br>
                 <select class="sel" id="nums">
-					<option value="num1">1</option>
-					<option value="num2">2</option>
-					<option value="num3">3</option>
-					<option value="num4">4</option>
-					<option value="num5">5</option>
-					<option value="num1">6</option>
-					<option value="num2">7</option>
-					<option value="num3">8</option>
-					<option value="num4">9</option>
-					<option value="num5">10</option>
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                    <option value="num1">6</option>
+                    <option value="num2">7</option>
+                    <option value="num3">8</option>
+                    <option value="num4">9</option>
+                    <option value="num5">10</option>
                 </select><br>
-                <br>             
+                <br>
                 <input type="submit" class="btn" value="Submit">
                 <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
             </form>
