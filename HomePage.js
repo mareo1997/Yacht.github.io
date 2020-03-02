@@ -2,7 +2,7 @@
 
 function myPage(open){
 	if(open == 'home'){
-		window.open("Home Page.html", "_self")
+		window.open("index.html", "_self")
 	}else if(open == 'contact'){		
 		window.open("Contact.html", "_self")
 	}else if(open == 'faq'){
@@ -244,7 +244,7 @@ function date(){
 	}
 }
 
-function email() {
+/*function email() {
     var fname = document.getElementById("fullname");
     var typeselect = document.getElementById("types").selectedIndex;
     var typeoption = document.getElementById("types").options;
@@ -286,4 +286,4 @@ function reminderemail() {
         " for " + timeoption[timeselect].text +
         " nights will cost around $5000.00"
     );
-}
+}*/
