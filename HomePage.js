@@ -10,6 +10,10 @@ function myPage(open){
 	}
 }
 
+function redirect() {
+    window.open("Home Page.html", "_self")
+}
+
 function myDestination(open){
 	if(open == 'americas'){
 		window.open("Americas.html", "_self")
