@@ -6,23 +6,21 @@ body{
 }
 
 .bg {
-  /* The image used */
-  background-image: url("https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg");
-  
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* The image used */
+    background-image: url("https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 p{
-	font-size: 20px;
+	font-size: 16px;
+    color: blueviolet;
 	font-family: Arial;
-	padding: 20px;
+	padding: 10px;
 }
 
 .textbox{
@@ -45,16 +43,17 @@ p{
 	display: block;
 }
 
-header{
-	text-align: center;
-	font-family: Arial;
-	font-size: 25px;
+header {
+    color: blueviolet;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
 }
 
 .navbar{
 	z-index: 1;
 	overflow: hidden;
-	background-color: black;
+	background-color: lightskyblue;
 	font-family: Arial;
 }
 
@@ -65,7 +64,7 @@ header{
 	text-align: center;
 	text-decoration: none;
 	padding: 14px 16px;
-	color: white;
+	color: blue;
 }
 
 .navbar a.b{
@@ -77,19 +76,19 @@ header{
 }
 
 .navbar a.c:hover{
-	background-color: black;
+	background-color: lightskyblue;
 }
 
 .navbar a.active{ 
-	color: red;
+	color: aliceblue;
 }
 
 .navbar a:hover{ 
-	background-color: #ddd;
+	background-color: deepskyblue;
 }
 
 .navbar a.active:hover{ 
-	color: red;
+	color: aliceblue;
 }
 
 .dropdown{
@@ -98,38 +97,37 @@ header{
 }
 
 .dropdown .dropbtn {
-  cursor: pointer;
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  margin: 0;
-  color: white;
-  background-color: black;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: blue;
+        padding: 14px 16px;
+        margin: 0;
+        background-color: lightskyblue;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  color: white;
-  background-color: black;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: lightskyblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .dropdown-content a {
-  float: none;
-  padding: 12px 16px;
-  color: white;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+        float: none;
+        padding: 12px 16px;
+        color: blue;
+        text-decoration: none;
+        display: block;
+        text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+    background-color: deepskyblue;
 }
 
 .dropdown:hover .dropdown-content {

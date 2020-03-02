@@ -41,7 +41,8 @@ function myQuote(){
 }
 
 function myBackgroundimg(){
-	document.body.style.backgroundImage = "url('https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg')";
+/*    document.body.style.backgroundImage = "url('https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg')";
+*/	document.body.style.backgroundImage = "url('https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp')";
 }
 
 function start() {
