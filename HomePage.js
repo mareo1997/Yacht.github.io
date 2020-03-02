@@ -2,7 +2,7 @@
 
 function myPage(open){
 	if(open == 'home'){
-		window.open("Home Page.html", "_self")
+		window.open("index.html", "_self")
 	}else if(open == 'contact'){		
 		window.open("Contact.html", "_self")
 	}else if(open == 'faq'){
