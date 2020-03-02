@@ -2,31 +2,32 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<title>5800 Master - 6 Cabins Catamaran</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body>
+<body class="bg">
     <div id="body">
         <div class="navbar">
-            <a href="#" onclick="myPage('home')"> Home </a>
-            <a class="c" href="#"> > </a>
+            <a href="#" onclick="myPage('home')">Home</a>
+            <a class="c" href="#">></a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myType('power')"> Yachts </button>
+                <button class="dropbtn" onclick="myType('power')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
-                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
-                    <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
+                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
+                    <a href="#" onclick="myType('power')">Powered Yachts</a>
+                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
                 </div>
             </div>
-            <a class="c" href="#"> > </a>
-            <a href="#" onclick="myType('crew')"> Crewed Yachts </a>
-            <a class="c" href="#"> > </a>
+            <a class="c" href="#">></a>
+            <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+            <a class="c" href="#">></a>
             <a href="#" class="active" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
-            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+            <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
-        <header>5800 Master - 6 Cabins Catamaran</header>
+        <header id="3.02">5800 Master - 6 Cabins Catamaran</header>
         <br>
 
         <div class="textbox">
@@ -44,43 +45,136 @@
             </p>
         </div>
 
-        <section>
-            <article>
-                <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/5800_cy_master_deck_plan.jpg?t=1HAiIB&itok=NIPK7Ctt&timestamp=1477344740">
-            </article>
-            <nav>
-                <ul>
-                    <li><a href="#">Destination: Tahiti</a></li>
-                    <li><a href="#">Max Passengers: 10</a></li>
-                    <li><a href="#">Toilets: 7</a></li>
-                    <li><a href="#">Showers: 8</a></li>
-                    <li><a href="#">Length Overall: 57'7''</a></li>
-                    <li><a href="#">Sail Area: 2010 sq ft</a></li>
-                    <li><a href="#">Water Capacity: 412 gal.</a></li>
-                    <li><a href="#">Engine: 2 x Yanmar 100 hp</a></li>
-                    <li><a href="#">Fuel Capacity: 238 gal.</a></li>
-                    <li><button onclick="openForm()">Email Quote</button></li>
-                </ul>
-            </nav>
-        </section><br>
+        <div class="imgbox">
+            <div class="rows">
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Ext.jpg?t=1IuyZg&itok=HV0_0sFi&timestamp=1573565390" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Salon.jpg?t=1IuyZh&itok=Pb9KM_Bp&timestamp=1573565674" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Rear_Cockpit.jpg?t=1ICzCz&itok=fXn8Gsk4&timestamp=1575479786" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Cabin.jpg%20.jpg?t=1IuyZg&itok=f0pv9uaZ&timestamp=1573565332" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Flybridge2.jpg?t=1IuyZg&itok=4oLg8i_1&timestamp=1573565455" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Helm.jpg?t=1IuyZg&itok=HJC3vqyY&timestamp=1573565541" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Transom.jpg?t=1IuyZg&itok=OtkW4YnF&timestamp=1573565715" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Cabin2.jpg?t=1IuyZg&itok=6m8RGa4q&timestamp=1573565368" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="gallery" class="gallerymodal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="gallerymodal-content">
+
+                    <div class="slideshow">
+                        <div class="numbertext">1 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Ext.jpg?t=1IuyZg&itok=HV0_0sFi&timestamp=1573565390" style="width:100%">
+                        <br><header>Exterior</header>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">2 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Salon.jpg?t=1IuyZh&itok=Pb9KM_Bp&timestamp=1573565674" style="width:100%">
+                        <br><header>Salon</header>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">3 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Rear_Cockpit.jpg?t=1ICzCz&itok=fXn8Gsk4&timestamp=1575479786" style="width:100%">
+                        <br><header>Rear Cockpit Table with Crew</header>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">4 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Cabin.jpg%20.jpg?t=1IuyZg&itok=f0pv9uaZ&timestamp=1573565332" style="width:100%">
+                        <br><header>First Cabin</header>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">5 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Flybridge2.jpg?t=1IuyZg&itok=4oLg8i_1&timestamp=1573565455" style="width:100%">
+                        <br><header>Flybridge and Helm</header>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">6 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Helm.jpg?t=1IuyZg&itok=HJC3vqyY&timestamp=1573565541" style="width:100%">
+                        <br><header>Helm with Crew</header>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Transom.jpg?t=1IuyZg&itok=OtkW4YnF&timestamp=1573565715" style="width:100%">
+                        <br><header>Transom</header>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">8 / 8</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Cabin2.jpg?t=1IuyZg&itok=6m8RGa4q&timestamp=1573565368" style="width:100%">
+                        <br><header>Second Cabin</header>
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="imgbox">
+            <section>
+                <article>
+                    <header>Yacht Details</header><br>
+                    <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/5800_cy_master_deck_plan.jpg?t=1HAiIB&itok=NIPK7Ctt&timestamp=1477344740">
+                </article>
+                <nav>
+                    <ul>
+                        <li><a href="#">Destination: Tahiti</a></li>
+                        <li><a href="#">Max Passengers: 10</a></li>
+                        <li><a href="#">Toilets: 7</a></li>
+                        <li><a href="#">Showers: 8</a></li>
+                        <li><a href="#">Length Overall: 57'7''</a></li>
+                        <li><a href="#">Sail Area: 2010 sq ft</a></li>
+                        <li><a href="#">Water Capacity: 412 gal.</a></li>
+                        <li><a href="#">Engine: 2 x Yanmar 100 hp</a></li>
+                        <li><a href="#">Fuel Capacity: 238 gal.</a></li>
+                        <li><button onclick="openForm(3.02)">Email Quote</button></li>
+                    </ul>
+                </nav>
+            </section><br>
+        </div>
 
         <div class="form-popup" id="myForm">
-            <form class="form-container">
+            <form class="form-container" id="formcontent">
                 <header>Get a Quote</header><br>
+                Name*<br><input type="text" required name="name"><br><br>
 
-                Name*<br>
-                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+                Email*<br><input type="email" required name="@"><br><br>
 
-                Email*<br>
-                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+                Phone<br><input type="tel" name="#"><br><br>
 
-                Phone<br>
-                <input type="tel" name="#" value="954-305-2814"><br><br>
-
+                Boat<br>
+                <select class="sel" id="boatname"></select><br>
+                <br>
                 Date of Departure*<br>
-                <select class="sel" id="date">
-				</select><br>
-				<br>
+                <select class="sel" id="date"></select><br>
+                <br>
                 Number of days<br>
                 <select class="sel" id="times">
                     <option value="time1">5</option>
@@ -89,8 +183,8 @@
                     <option value="time2">8</option>
                     <option value="time2">9</option>
                     <option value="time3">10</option>
-                </select><br><br>
-
+                </select><br>
+                <br>
                 Number of Passengers<br>
                 <select class="sel" id="nums">
                     <option value="num1">1</option>
@@ -98,10 +192,15 @@
                     <option value="num3">3</option>
                     <option value="num4">4</option>
                     <option value="num5">5</option>
-                </select><br><br>
-
-                <button type="submit" class="btn">Submit</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    <option value="num1">6</option>
+                    <option value="num2">7</option>
+                    <option value="num3">8</option>
+                    <option value="num4">9</option>
+                    <option value="num5">10</option>
+                </select><br>
+                <br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
             </form>
         </div>
     </div>

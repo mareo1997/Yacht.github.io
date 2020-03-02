@@ -3,10 +3,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3900 - 3 Cabin Catamaran</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body >
+<body class="bg">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
@@ -26,7 +27,7 @@
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
-        <header>3900 - 3 Cabin Catamaran</header>
+        <header id="1.02">3900 - 3 Cabin Catamaran</header>
         <br>
 
         <div class="textbox">
@@ -52,50 +53,107 @@
             </p>
         </div>
 
-        <section>
-            <article>
-                <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/3900_3c_deck_plan.jpg?t=1HAji3&itok=kCutWKOQ&timestamp=1476472946">
-            </article>
-            <nav>
-                <ul>
-                    <li><a href="#">Destination: Italy</a></li>
-                    <li><a href="#">Max Passengers: 10</a></li>
-                    <li><a href="#">Toilets: 2</a>
-                    <li>
-                    <li><a href="#">Showers: 2</a>
-                    <li>
-                    <li><a href="#">Sail Area: 829 sq ft</a>
-                    <li>
-                    <li><a href="#">Water Capacity: 79 gal</a>
-                    <li>
-                    <li><a href="#">Engine: Yanmar 2 x 30HP</a>
-                    <li>
-                    <li><a href="#">Fuel Capacity: 52 gal.</a>
-                    <li>
-                    <li><a href="#">Starting Price: $500.00</a>
-                    <li>
-                    <li><button onclick="openForm()">Email Quote</button></li>
-                </ul>
-            </nav>
-        </section><br>
+        <div class="imgbox">
+            <div class="rows">
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Ext.jpg?t=1IwHRM&itok=O-8BYGAS&timestamp=1574086545" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Front.jpg?t=1IwHRM&itok=diPL3lx5&timestamp=1574086706" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Cabin.jpg?t=1IwHRL&itok=9UUf8Fr1&timestamp=1574086506" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Shower.jpg?t=1IwJoc&itok=ZeHIyN2c&timestamp=1574086876" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="gallery" class="gallerymodal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="gallerymodal-content">
+
+                    <div class="slideshow">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Ext.jpg?t=1IwHRM&itok=O-8BYGAS&timestamp=1574086545" style="width:100%">
+                        <br><header>Exterior</header><br>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Front.jpg?t=1IwHRM&itok=diPL3lx5&timestamp=1574086706" style="width:100%">
+                        <br><header>Front</header><br>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Cabin.jpg?t=1IwHRL&itok=9UUf8Fr1&timestamp=1574086506" style="width:100%">
+                        <br><header>Bedroom</header><br>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/catamaran_gallery/Gallery/3900/3900_Gallery_Shower.jpg?t=1IwJoc&itok=ZeHIyN2c&timestamp=1574086876" style="width:100%">
+                        <br><header>Shower</header><br>
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="imgbox">
+            <section>
+                <article>
+                    <header>Yacht Details: 3900 - 3 Cabin Catamaran</header><br>
+                    <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/3900_3c_deck_plan.jpg?t=1HAji3&itok=kCutWKOQ&timestamp=1476472946">
+                </article>
+                <nav>
+                    <ul>
+                        <li><a href="#">Destination: Italy</a></li>
+                        <li><a href="#">Max Passengers: 10</a></li>
+                        <li><a href="#">Toilets: 2</a>
+                        <li>
+                        <li><a href="#">Showers: 2</a>
+                        <li>
+                        <li><a href="#">Sail Area: 829 sq ft</a>
+                        <li>
+                        <li><a href="#">Water Capacity: 79 gal</a>
+                        <li>
+                        <li><a href="#">Engine: Yanmar 2 x 30HP</a>
+                        <li>
+                        <li><a href="#">Fuel Capacity: 52 gal.</a>
+                        <li>
+                        <li><a href="#">Starting Price: $500.00</a>
+                        <li>
+                        <li><button onclick="openForm(1.02)">Email Quote</button></li>
+                    </ul>
+                </nav>
+            </section><br>
+        </div>
 
         <div class="form-popup" id="myForm">
-            <form class="form-container" method="post">
-                <header>Get a Quote</header>
-				<br>
-                Name*<br>
-                <input type="text" required name="name" value="Mareo Yapp"><br><br>
+            <form class="form-container" id="formcontent">
+                <header>Get a Quote</header><br>
+                Name*<br><input type="text" required name="name"><br><br>
 
-                Email*<br>
-                <input type="email" required name="@" value="mareo1997@gmail.com"><br><br>
+                Email*<br><input type="email" required name="@"><br><br>
 
-                Phone<br>
-                <input type="tel" name="#" value="954-305-2814"><br><br>
+                Phone<br><input type="tel" name="#"><br><br>
 
+                Boat<br>
+                <select class="sel" id="boatname"></select><br>
+                <br>
                 Date of Departure*<br>
-                <select class="sel" id="date">
-				</select><br>
-				<br>
+                <select class="sel" id="date"></select><br>
+                <br>
                 Number of days<br>
                 <select class="sel" id="times">
                     <option value="time1">5</option>
@@ -104,8 +162,8 @@
                     <option value="time2">8</option>
                     <option value="time2">9</option>
                     <option value="time3">10</option>
-                </select><br><br>
-
+                </select><br>
+                <br>
                 Number of Passengers<br>
                 <select class="sel" id="nums">
                     <option value="num1">1</option>
@@ -113,10 +171,15 @@
                     <option value="num3">3</option>
                     <option value="num4">4</option>
                     <option value="num5">5</option>
-                </select><br><br>
-
-                <button type="button" class="btn" >Submit</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    <option value="num1">6</option>
+                    <option value="num2">7</option>
+                    <option value="num3">8</option>
+                    <option value="num4">9</option>
+                    <option value="num5">10</option>
+                </select><br>
+                <br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
             </form>
         </div>
     </div>

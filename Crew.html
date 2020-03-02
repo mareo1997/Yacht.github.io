@@ -6,30 +6,30 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body>
+<body class="bg">
     <div id="body">
         <div class="navbar">
-            <a href="#" onclick="myPage('home')"> Home </a>
+            <a href="#" onclick="myPage('home')">Home</a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myDestination('americas')"> Destinations </button>
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myDestination('americas')"> Americas Yacht Charters </a>
-                    <a href="#" onclick="myDestination('caribbean')"> Caribbean Yacht Charters </a>
-                    <a href="#" onclick="myDestination('exotic')"> Exotics Yacht Charters </a>
-                    <a href="#" onclick="myDestination('medi')"> Mediterranean Yacht Charters </a>
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myType('sail')"> Yachts </button>
+                <button class="dropbtn" onclick="myType('sail')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')"> Sail Yachts </a>
-                    <a href="#" onclick="myType('power')"> Powered Yachts </a>
-                    <a href="#" class="active" onclick="myType('crew')"> Crewed Yachts </a>
+                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
+                    <a href="#" onclick="myType('power')">Powered Yachts</a>
+                    <a href="#" class="active" onclick="myType('crew')">Crewed Yachts</a>
                 </div>
             </div>
-            <a href="#" onclick="myPage('contact')"> Contact Us </a>
-            <a href="#" onclick="myPage('faq')"> FAQ </a>
-            <a href="#" class="b" id="edit" onclick="editor()">View as Administrator</a>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
+            <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
         <header>Crewed Yachts</header><br>
@@ -47,7 +47,7 @@
                     Step aboard one of our state-of-the-art yachts designed specifically for the ultimate Crewed vacation experience on the water. Our innovative fleet
                     features a wide range of expertly-crafted yachts that deliver impeccable performance and resort-like accommodations. Explore some of the most exquisite
                     destinations in the world while cutting-edge technology and stylish comfort provide a safe and smooth vacation on the water that is impossible to forget.<br>
-                    <button class="read" onclick="readless('crew')"><< Show Less</button>                    
+                    <button class="read" onclick="readless('crew')"><< Show Less</button>
                 </p>
             </div>
         </div>
@@ -66,31 +66,76 @@
         <div id="301" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="span(301)">&times;</span>
-                <header>5800 Legacy - 6 Cabin Catamaran</header><br>
+                <header id="3.01">5800 Legacy - 6 Cabin Catamaran</header><br>
                 <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109"><br>
                 <p>
                     Explore the islands in plush comfort aboard Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with
                     private en-suite baths-and room for up to 10 guests.
                 </p><br>
-                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(301)">Read More</button>
+                <button class="box1" onclick="openForm(3.01)">Get Quote</button> <button class="box2" onclick="box(301)">Read More</button>
             </div>
         </div>
 
         <div id="302" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="span(302)">&times;</span>
-                <header>5800 Master - 6 Cabins Catamaran</header><br>
+                <header id="3.02">5800 Master - 6 Cabins Catamaran</header><br>
                 <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071"><br>
                 <p>
                     Complete with your very own captain, gourmet chef and hostess, a Crewed charter aboard Crewed 5800 Master Edition treats you to a getaway at sea most
                     can only dream of. This six-cabin Sail catamaran is our largest and newest, providing an equally spacious and exclusive cruising experience for up to
                     10 guests.
                 </p><br>
-                <button class="box1" onclick="openForm()">Get Quote</button> <button class="box2" onclick="box(302)">Read More</button>
+                <button class="box1" onclick="openForm(3.02)">Get Quote</button> <button class="box2" onclick="box(302)">Read More</button>
             </div>
         </div>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" id="formcontent">
+                <header>Get a Quote</header><br>
+                Name*<br><input type="text" required name="name"><br><br>
+
+                Email*<br><input type="email" required name="@"><br><br>
+
+                Phone<br><input type="tel" name="#"><br><br>
+
+                Boat<br>
+                <select class="sel" id="boatname"></select><br>
+                <br>
+                Date of Departure*<br>
+                <select class="sel" id="date"></select><br>
+                <br>
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br>
+                <br>
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                    <option value="num1">6</option>
+                    <option value="num2">7</option>
+                    <option value="num3">8</option>
+                    <option value="num4">9</option>
+                    <option value="num5">10</option>
+                </select><br>
+                <br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
+            </form>
+        </div>
+    </div>
     </div>
 
 </body>
