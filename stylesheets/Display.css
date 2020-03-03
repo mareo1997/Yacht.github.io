@@ -638,79 +638,16 @@ e:active,e:hover {
 	padding-bottom: 50px;
 }
 
-.yacht-grid-left-extra-details{
-	width: 20%;
-	height: auto;
-	padding-left: 250px;
-	text-align: center;
-	font-size: 20px;
-	margin-top: -20px;
-}
-
-.yacht-grid-center-extra-details{
-	width: 20%;
-	height: auto;
-	padding-left: 660px;
-	text-align: center;
-	font-size: 20px;
-	margin-top: -430px;
-}
-
-.yacht-grid-right-extra-details{
-	width: 20%;
-	height: auto;
-	padding-left: 1100px;
-	text-align: center;
-	font-size: 20px;
-	margin-top: -645px;
-	padding-bottom: 40px;
-}
-
-
-.yacht-learn-more-button-left {
-  background-color: #110123; /* Green */
+.yacht-learn-more-button{
+  background-color: #000000;
   border: none;
   color: white;
   padding: 15px 52px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin-left: 320px;
-  margin-bottom: 200px;
   border-radius: 8px;
-}
-
-
-.yacht-learn-more-button-center {
-  background-color: #110123; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 52px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 750px;
-  margin-bottom: 400px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-
-.yacht-learn-more-button-right {
-  background-color: #110123; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 52px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-left: 1200px;
-  margin-bottom: 200px;
-  border-radius: 8px;
-  margin-top: -200px;
+  margin-top:15px;
 }
 
 .rows > .cols {
@@ -836,6 +773,88 @@ img.hover-shadow {
 
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.column {
+  margin-top: 150px;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.column p{
+  font-size: 26px;
+  color:black;
+}
+
+.column img{
+  width:99%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column2 {
+  margin-top: 150px;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.column2 p{
+  font-size: 20px;
+  color:black;
+}
+
+.column2 b{
+  font-size:36px;
+}
+
+.column2 img{
+  width:99%;
+  margin-bottom: 50px;
+}
+
+.learn-more-button-cols {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 200px;
+}
+
+.learn-more-button-cols .button{
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 25px 72px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  border-radius: 8px;
+  margin-top:15px;
+}
+
+.learn-more-button-cols p{
+  font-size:22px;
+  color:white;
+}
+
+.learn-more-button-cols b{
+  font-size:36px;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*
