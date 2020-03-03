@@ -51,7 +51,8 @@ function myBackgroundimg(){
 
 function start() {
     myBackgroundimg();
-	date();
+    date();
+    boats();
 }
 window.onload = start;
 
@@ -246,6 +247,24 @@ function date(){
 			select.add(option);
 		}
 	}
+}
+
+function boats() {
+    var yacht = new Array();
+    yacht[0] = "3900 - 3 Cabin Catamaran";
+    yacht[1] = "35.2 - 2 Cabin Monohull";
+    yacht[2] = "394 PC - 4 Cabin Catamaran";
+    yacht[3] = "514 PC - 4 Cabin Catamaran";
+    yacht[4] = "5800 Legacy - 6 Cabin Catamaran";
+    yacht[5] = "5800 Master - 6 Cabins Catamaran";
+    var i;
+    for (i = 0; i < 6; i++) {
+        var boat = yacht[i];
+        var select = document.getElementById("boatname");
+        var option = document.createElement("option");
+        option.text = boat;
+        select.add(option);
+    }
 }
 
 /*function email() {
