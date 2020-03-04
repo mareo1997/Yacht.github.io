@@ -260,7 +260,7 @@ function boats() {
     var i;
     for (i = 0; i < 6; i++) {
         var boat = yacht[i];
-        var select = document.getElementById("boatname");
+        var select = document.getElementById("boats");
         var option = document.createElement("option");
         option.text = boat;
         select.add(option);

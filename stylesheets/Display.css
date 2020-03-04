@@ -17,8 +17,8 @@ body{
 }
 
 p{
-	font-size: 16px;
-    color: blueviolet;
+	font-size: 22px;
+    color: gray;
 	font-family: Arial;
 	padding: 10px;
 }
@@ -47,7 +47,7 @@ header {
     color: blueviolet;
     text-align: center;
     font-family: Arial;
-    font-size: 20px;
+    font-size: 26px;
 }
 
 .navbar{
@@ -674,6 +674,7 @@ e:active,e:hover {
     height: 100%;
     overflow: auto;
     background-color: black;
+    opacity: .8;
 }
 
 /* Modal Content */
@@ -704,6 +705,7 @@ e:active,e:hover {
 
 /* Hide the slides by default */
 .slideshow {
+    opacity: 1;
     display: none;
 }
 
