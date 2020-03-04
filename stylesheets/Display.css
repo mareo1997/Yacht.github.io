@@ -173,11 +173,12 @@ header {
  }
 
 .map{
-	width: 500px;
-	height: 500px;
+	width: 1000px;
+	height: 600px;
 	display: block;	
 	margin-left: auto;
  	margin-right: auto;
+    opacity: .8;
 }
  
 .gridimage{
@@ -504,6 +505,7 @@ e:active,e:hover {
 }
 
 .button {
+    cursor: pointer;
     background-color: #000000;
     border: none;
     color: white;
@@ -828,6 +830,7 @@ img.hover-shadow {
 }
 
 .learn-more-button-cols .button{
+  cursor: pointer;
   background-color: #000000;
   border: none;
   color: white;
