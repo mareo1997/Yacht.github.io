@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>514 PC - 4 Cabin Catamaran</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
@@ -11,19 +10,43 @@
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
-            <a class="c" href="#">></a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myType('power')">Yachts</button>
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
                 </div>
             </div>
-            <a class="c" href="#">></a>
-            <a href="#" onclick="myType('power')">Powered Yachts</a>
-            <a class="c" href="#">></a>
-            <a href="#" class="active" onclick="myType('power')">514 PC - 4 Cabin Catamaran</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')">Yachts</button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" class="active" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
@@ -101,7 +124,6 @@
         <div class="imgbox">
             <section>
                 <article>
-                    <header>Yacht Details: 514 PC - 4 Cabin Catamaran</header><br>
                     <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/514pc_deck_plan_0.jpg?t=1HAgzM&itok=eAcD4ob0&timestamp=1476457867">
                 </article>
                 <nav>

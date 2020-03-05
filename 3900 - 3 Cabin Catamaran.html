@@ -10,47 +10,48 @@
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
-            <a class="c" href="#">></a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button class="dropbtn" onclick="myType('sail')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" class="active" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a class="c" href="#">></a>
-            <a href="#" onclick="myType('sail')">Sail Yachts</a>
-            <a class="c" href="#">></a>
-            <a href="#" class="active" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
         <header id="1.02">3900 - 3 Cabin Catamaran</header>
         <br>
-
-        <div class="textbox">
-            <p>
-                The 3900 was built by Robertson and Caine, and based upon the award-winning hull design, interior accommodation plan and helm station of
-                their private model Leopard 38 - named Cruising World's Boat of the Year 2010 and Best Boat 2010 by SAIL magazine. With her generous sail
-                plan and hull design, the Moorings 3900 offers high performance yet is highly practical and easy-to-use.<br>
-                <br>
-                Uniting the very best features for relaxation and superb sailing, she features a raised helm station that provides 360-degree visibility
-                beneath a hardtop bimini, while a separate extended hardtop with hatch ventilation shades the spacious cockpit area. Environmental
-                considerations were also central to the design, with solar panels installed the hardtop to charge the onboard batteries. The 3900
-                is also equipped with a full suite of Raymarine navigational electronics, cockpit-led sail controls, anchoring system with electric
-                windlass, convenient dinghy davit with electric winch, and twin 30hp diesel engines. A wide stepped transom enables easier boarding.
-                Vertical front windscreens offer panoramic visibility, lots of natural light, and sun protection.<br>
-                <br>
-                Below deck, comfort remains the top priority with a roomy saloon and 3-cabin/2-head accommodation plan. Fully equipped, the ergonomic
-                galley layout features heat-resistant Corian countertops, standard stainless steel stove with oven and broiler, deep sink with mixer tap
-                and ample counter and cabinet space. Storing provisioning is easy in the large refrigerator-freezer system's well-insulated drawer opening
-                compartments. The entire starboard hull is dedicated to a well-appointed charter suite with queen-size berth, study area, hanging storage,
-                and en-suite bath with electric head and enclosed shower compartment. Two large double cabins with shared a bath fill the port hull. There
-                is a small child berth / storage space in the portside forward cabin. There's generous headroom throughout and substantial storage capacity
-                provided by under-bunk lockers.
-            </p>
-        </div>
 
         <div class="imgbox">
             <div class="rows">
@@ -104,10 +105,32 @@
             </div>
         </div><br>
 
+        <div class="textbox">
+            <p>
+                The 3900 was built by Robertson and Caine, and based upon the award-winning hull design, interior accommodation plan and helm station of
+                their private model Leopard 38 - named Cruising World's Boat of the Year 2010 and Best Boat 2010 by SAIL magazine. With her generous sail
+                plan and hull design, the Moorings 3900 offers high performance yet is highly practical and easy-to-use.<br>
+                <br>
+                Uniting the very best features for relaxation and superb sailing, she features a raised helm station that provides 360-degree visibility
+                beneath a hardtop bimini, while a separate extended hardtop with hatch ventilation shades the spacious cockpit area. Environmental
+                considerations were also central to the design, with solar panels installed the hardtop to charge the onboard batteries. The 3900
+                is also equipped with a full suite of Raymarine navigational electronics, cockpit-led sail controls, anchoring system with electric
+                windlass, convenient dinghy davit with electric winch, and twin 30hp diesel engines. A wide stepped transom enables easier boarding.
+                Vertical front windscreens offer panoramic visibility, lots of natural light, and sun protection.<br>
+                <br>
+                Below deck, comfort remains the top priority with a roomy saloon and 3-cabin/2-head accommodation plan. Fully equipped, the ergonomic
+                galley layout features heat-resistant Corian countertops, standard stainless steel stove with oven and broiler, deep sink with mixer tap
+                and ample counter and cabinet space. Storing provisioning is easy in the large refrigerator-freezer system's well-insulated drawer opening
+                compartments. The entire starboard hull is dedicated to a well-appointed charter suite with queen-size berth, study area, hanging storage,
+                and en-suite bath with electric head and enclosed shower compartment. Two large double cabins with shared a bath fill the port hull. There
+                is a small child berth / storage space in the portside forward cabin. There's generous headroom throughout and substantial storage capacity
+                provided by under-bunk lockers.
+            </p>
+        </div>
+
         <div class="imgbox">
             <section>
                 <article>
-                    <header>Yacht Details: 3900 - 3 Cabin Catamaran</header><br>
                     <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/3900_3c_deck_plan.jpg?t=1HAji3&itok=kCutWKOQ&timestamp=1476472946">
                 </article>
                 <nav>

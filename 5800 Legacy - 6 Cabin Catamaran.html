@@ -10,40 +10,48 @@
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
-            <a class="c" href="#">></a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myType('crew')">Yachts</button>
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
                 </div>
             </div>
-            <a class="c" href="#">></a>
-            <a href="#" onclick="myType('crew')">Crewed Yachts</a>
-            <a class="c" href="#">></a>
-            <a href="#" class="active" onclick="box(301)">5800 Legacy - 6 Cabin Catamaran</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')">Yachts</button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" class="active" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
         <header id="3.01">5800 Legacy - 6 Cabin Catamaran</header>
         <br>
-
-        <div class="textbox">
-            <p>
-                Explore the islands in plush comfort aboard The Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with
-                private en-suite baths-and room for up to 10 guests.<br>
-                <br>
-                Wake up to breathtaking waterfront vistas and roam about the gorgeously spacious floor plan both inside and out. When you're ready, meet with the captain
-                who will help you plan the day's adventure and kick back as your personal chef whips up gourmet meals for everyone aboard.<br>
-                <br>
-                The 5800 Legacy Edition set the standard with an innovative split-level accommodation plan featuring two roomy cabins on the main deck and four more
-                (including crew quarters) below. The saloon features a large dining table with plush wrap-around seating and a wet bar. Step outside the saloon to dine
-                in the sweeping aft cockpit as the hostess caters to your every need and you kick back on teak outdoor furniture. Or, venture up to the fly bridge and
-                enjoy a 360-degree view your tropical surroundings with stylish lounge seating, a wet bar/refrigerator and grill to help your crew craft a bevy of
-                palate-pleasing cocktails and open-air dining.
-            </p>
-        </div>
 
         <div class="imgbox">
             <div class="rows">
@@ -129,10 +137,25 @@
             </div>
         </div><br>
 
+        <div class="textbox">
+            <p>
+                Explore the islands in plush comfort aboard The Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with
+                private en-suite baths-and room for up to 10 guests.<br>
+                <br>
+                Wake up to breathtaking waterfront vistas and roam about the gorgeously spacious floor plan both inside and out. When you're ready, meet with the captain
+                who will help you plan the day's adventure and kick back as your personal chef whips up gourmet meals for everyone aboard.<br>
+                <br>
+                The 5800 Legacy Edition set the standard with an innovative split-level accommodation plan featuring two roomy cabins on the main deck and four more
+                (including crew quarters) below. The saloon features a large dining table with plush wrap-around seating and a wet bar. Step outside the saloon to dine
+                in the sweeping aft cockpit as the hostess caters to your every need and you kick back on teak outdoor furniture. Or, venture up to the fly bridge and
+                enjoy a 360-degree view your tropical surroundings with stylish lounge seating, a wet bar/refrigerator and grill to help your crew craft a bevy of
+                palate-pleasing cocktails and open-air dining.
+            </p>
+        </div>
+
         <div class="imgbox">
             <section>
                 <article>
-                    <header>Yacht Details: 5800 Legacy - 6 Cabin Catamaran</header><br>
                     <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/5800_cy_legacy_deck_plan_0.jpg?t=1HAlur&itok=SpBOhCH4&timestamp=1477080566">
                 </article>
                 <nav>
