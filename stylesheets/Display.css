@@ -134,6 +134,60 @@ header {
   display: block;
 }
 
+.submenu {
+    float: left;
+    overflow: hidden;
+}
+
+.submenu .submenubtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: blue;
+    padding: 14px 16px;
+    margin: 0;
+    background-color: lightskyblue;
+}
+
+.submenu .submenubtnactive {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    padding: 14px 16px;
+    margin: 0;
+    background-color: lightskyblue;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: lightskyblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.submenu-content a {
+    float: none;
+    padding: 12px 16px;
+    color: blue;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.submenu-content a:hover {
+    background-color: deepskyblue;
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
 .read{
   cursor: pointer;
   border: none;
