@@ -134,7 +134,7 @@ header {
   display: block;
 }
 
-.submenu {
+.submenu{
     float: left;
     overflow: hidden;
 }
@@ -500,9 +500,6 @@ section:after {
 }
 
 nav {
-  float: left;
-  width: 30%;
-  height: 450px;
   background: #ccc;
   padding: 20px;
 }
