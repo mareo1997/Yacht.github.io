@@ -28,7 +28,7 @@ function myDestination(open){
 
 function myType(open){
 	if(open == 'sail'){
-		window.open("Sail.html", "_self")
+		window.open("40+.html", "_self")
 	}else if(open == 'power'){		
 		window.open("Power.html", "_self")
 	}else if(open == 'crew'){
@@ -56,7 +56,7 @@ function start() {
 }
 window.onload = start;
 
-function readmore(more){
+/*function readmore(more){
 	if(more == 'sail'){
 		document.getElementById("readsail").style.display= "none";
 		document.getElementById(more).style.display= "block";
@@ -104,7 +104,7 @@ function readless(less){
 		document.getElementById(less).style.display= "none";
 		document.getElementById("readcrew").style.display= "block";
   }
-}
+}*/
 
 function mySocial(open){
 	if(open == 'fb'){
@@ -142,7 +142,7 @@ function image(x){
 
 function box(y){
 	if(y == "101"){
-		window.open("3900 - 3 Cabin Catamaran.html", "_self")
+		window.open("40′ VANDUTCH BLACK.html", "_self")
 	}
 	else if(y == "102"){
 		window.open("35.2 - 2 Cabin Monohull.html", "_self")
