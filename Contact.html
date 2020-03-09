@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Us</title>
     <script type="text/javascript" src="HomePage.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/Display.css">
-    <title>Contact Us</title>
+    <script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="bg">
     <div id="body">
@@ -24,9 +24,27 @@
             <div class="dropdown">
                 <button class="dropbtn" onclick="myType('sail')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Power Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a href="#" class="active" onclick="myPage('contact')">Contact Us</a>
@@ -34,10 +52,9 @@
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
-        <header>Contact Information</header><br>
-
         <div class="split right">
             <div class="centered">
+                <header>Contact Info</header><br>
                 <div class="textbox">
                     <p>
                         <b>
@@ -63,19 +80,23 @@
         </div>
 
         <div class="split left">
+            <header>Contact Us</header><br>
             <div class="textbox">
-                <p>Our company lives to help any and all potential customers with any questions they may have!<br></p>
-                <form name="contact" onsubmit="return validateForm()" method="post">
-                    Email*<br>
-                    <input type="email" required name="@" size="35"><br>
-                    <br>
-                    Message<br>
-                    <input type="text" name="msg" placeholder="How can we help you?" maxlength="100" size="65"><br>
-                    <br>
-                    <input type="submit" class="centered2" value="Submit">
-                </form>
+                <p>
+                    Our company lives to help any and all potential customers with any questions they may have!<br>
+                    <form name="contact" onsubmit="return validateForm()" method="post">
+                        Email*<br>
+                        <input type="email" required name="@" size="35"><br>
+                        <br>
+                        Message<br>
+                        <input type="text" name="msg" placeholder="How can we help you?" maxlength="100" size="65"><br>
+                        <br>
+                        <input type="submit" class="centered2" value="Submit">
+                    </form>
+                </p>
             </div>
         </div>
+        <br><br><br><br><br><br><br><br><br>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
     </div>

@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>35.2 - 2 Cabin Monohull</title>
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
@@ -11,24 +10,100 @@
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
-            <a class="c" href="#">></a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button class="dropbtn" onclick="myType('sail')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" class="active" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" class="active" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a class="c" href="#">></a>
-            <a href="#" onclick="myType('sail')">Sail Yachts</a>
-            <a class="c" href="#">></a>
-            <a href="#" class="active" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
         <header id="1.01">35.2 - 2 Cabin Monohull</header>
         <br>
+
+        <div class="imgbox">
+            <div class="rows">
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/gallery_35.2_exterior_3.jpg?t=1IvODW&itok=DoYfwdIF&timestamp=1573845302" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/asset_2-100.jpg?t=1IvkAR&itok=thXGXH3K&timestamp=1573740667" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-3682158-3682158.jpg?t=1IuHYK&itok=-b_icl-T&timestamp=1573592234" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="cols">
+                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-4963566-4963566.jpg?t=1IuHYK&itok=x1NkwiUJ&timestamp=1573592277" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="gallery" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="gallerymodal-content">
+
+                    <div class="slideshow">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/gallery_35.2_exterior_3.jpg?t=1IvODW&itok=DoYfwdIF&timestamp=1573845302" style="width:100%">
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/asset_2-100.jpg?t=1IvkAR&itok=thXGXH3K&timestamp=1573740667" style="width:100%">
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-3682158-3682158.jpg?t=1IuHYK&itok=-b_icl-T&timestamp=1573592234" style="width:100%">
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-4963566-4963566.jpg?t=1IuHYK&itok=x1NkwiUJ&timestamp=1573592277" style="width:100%">
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
 
         <div class="textbox">
             <p>
@@ -48,66 +123,9 @@
         </div>
 
         <div class="imgbox">
-            <div class="rows">
-                <div class="cols">
-                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/gallery_35.2_exterior_3.jpg?t=1IvODW&itok=DoYfwdIF&timestamp=1573845302" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-                </div>
-                <div class="cols">
-                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/asset_2-100.jpg?t=1IvkAR&itok=thXGXH3K&timestamp=1573740667" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-                </div>
-                <div class="cols">
-                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-3682158-3682158.jpg?t=1IuHYK&itok=-b_icl-T&timestamp=1573592234" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-                </div>
-                <div class="cols">
-                    <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-4963566-4963566.jpg?t=1IuHYK&itok=x1NkwiUJ&timestamp=1573592277" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-                </div>
-            </div>
-
-            <div id="gallery" class="gallerymodal">
-                <span class="close cursor" onclick="closeModal()">&times;</span>
-                <div class="gallerymodal-content">
-
-                    <div class="slideshow">
-                        <div class="numbertext">1 / 4</div>
-                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/gallery_35.2_exterior_3.jpg?t=1IvODW&itok=DoYfwdIF&timestamp=1573845302" style="width:100%">
-                        <br><header>Sky View</header>
-                    </div>
-
-                    <div class="slideshow">
-                        <div class="numbertext">2 / 4</div>
-                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/asset_2-100.jpg?t=1IvkAR&itok=thXGXH3K&timestamp=1573740667" style="width:100%">
-                        <br><header>Salon</header>
-                    </div>
-
-                    <div class="slideshow">
-                        <div class="numbertext">3 / 4</div>
-                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-3682158-3682158.jpg?t=1IuHYK&itok=-b_icl-T&timestamp=1573592234" style="width:100%">
-                        <br><header>Interior</header>
-                    </div>
-
-                    <div class="slideshow">
-                        <div class="numbertext">4 / 4</div>
-                        <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/-medias-images-4963566-4963566.jpg?t=1IuHYK&itok=x1NkwiUJ&timestamp=1573592277" style="width:100%">
-                        <br><header>Bedroom</header>
-                    </div>
-
-                    <!-- Next/previous controls -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                    <!-- Caption text -->
-                    <div class="caption-container">
-                        <p id="caption"></p>
-                    </div>
-                </div>
-            </div>
-        </div><br>
-
-        <div class="imgbox">
             <section>
                 <article>
-                    <header>Yacht Details: 35.2 - 2 Cabin Monohull</header><br>
-                    <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/moorings_35_2_deckplan_rebranded.jpg?t=1HAka9&itok=klhOyUux&timestamp=1491592881">
+                    <img class="specs" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/moorings_35_2_deckplan_rebranded.jpg?t=1HAka9&itok=klhOyUux&timestamp=1491592881">
                 </article>
                 <nav>
                     <ul>

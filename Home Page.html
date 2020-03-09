@@ -22,16 +22,34 @@
             <div class="dropdown">
                 <button class="dropbtn" onclick="myType('sail')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a href="#" onclick="myPage('contact')">Contact Us</a>
-            <a href="#" onclick="myPage('faq')">FAQ</a>
-            <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
-        </div><br>
-        <!--
+                <a href="#" onclick="myPage('contact')">Contact Us</a>
+                <a href="#" onclick="myPage('faq')">FAQ</a>
+                <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
+            </div><br>
+            <!--
         <div class="header">
             <img src= "158463acfc822c5c08274e7e28d1e325.png" class="logo"> </img>
             <a href="#" onclick="myHOME()">Home</a>
@@ -43,69 +61,73 @@
             <h> 1-800-CONTACT </h>
         </div>
     -->
-        <!--
+            <!--
     <img src="Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg" alt='Yacht for Rent'>
     -->
-        <header>Yacht Charter Fleet</header><br>
 
-        <div class="textbox">
-            <div class="benefits_header">
-                <b> Benefits of chartering a yacht with us </b>
-            </div>
+            <div class="textbox">
 
-            <div class="row">
-                <div class="column">
-                    <b>Customer Service</b>
-                    <p>Best Custommer Service in the industry </p>
-
-                </div>
-                <div class="column">
-                    <b>Five Star Rating</b>
-                    <p>5 Star Reviews on all platforms</p>
-                </div>
-                <div class="column">
-                    <b>Year Long Trips</b>
-                    <p> The most routes and most dates available</p>
-                </div>
-            </div>
-
-            <div class="row2">
-                <div class="column2">
-                    <img src="gallery_35.2_exterior_3.jpg">
-                    <b> 2 Cabin </b>
-                    <p>Up to 4 Passengers</p>
-                    <p> Includes: Captain, Water, Sodas & Ice. </p>
+                <div class="benefits_header">
+                    <b> Yacht Charter Fleet </b>
                 </div>
 
-                <div class="column2">
-                    <img src="51_powercat_light_interior_moorings-5481.jpg">
-                    <b> 4 Cabin </b>
-                    <p>Up to 8 Passengers</p>
-                    <p> Includes: Captain, Mate, Water, Sodas & Ice. </p>
+                <div class="benefits_header">
+                    <b> Benefits of chartering a yacht with us </b>
                 </div>
 
-                <div class="column2">
-                    <img src="5800_CY_Legacy_Gallery_Ext.jpg">
-                    <b> 6+ Cabin </b>
-                    <p>Up to 12 Passengers</p>
-                    <p>Includes: Captain, Mate, Water, Sodas, Ice & Water Toys. </p>
+                <div class="row2">
+                    <div class="column2">
+                        <img src="gallery_35.2_exterior_3.jpg">
+                        <b> 2 Cabin </b>
+                        <p>Up to 4 Passengers</p>
+                        <p> Includes: Captain, Water, Sodas & Ice. </p>
+                    </div>
+
+                    <div class="column2">
+                        <img src="51_powercat_light_interior_moorings-5481.jpg">
+                        <b> 4 Cabin </b>
+                        <p>Up to 8 Passengers</p>
+                        <p> Includes: Captain, Mate, Water, Sodas & Ice. </p>
+                    </div>
+
+                    <div class="column2">
+                        <img src="5800_CY_Legacy_Gallery_Ext.jpg">
+                        <b> 6+ Cabin </b>
+                        <p>Up to 12 Passengers</p>
+                        <p>Includes: Captain, Mate, Water, Sodas, Ice & Water Toys. </p>
+                    </div>
+
+                    <div class="learn-more-button-cols">
+                        <div class="button" onclick="window.location.href = '35.2 - 2 Cabin Monohull.html';"> Learn More </div>
+                    </div>
+
+                    <div class="learn-more-button-cols">
+                        <div class="button" onclick="window.location.href = '514 PC - 4 Cabin Catamaran.html';"> Learn More </div>
+                    </div>
+
+                    <div class="learn-more-button-cols">
+                        <div class="button" onclick="window.location.href = '5800 Legacy - 6 Cabin Catamaran.html';"> Learn More </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <b>Customer Service</b>
+                            <p>Best Custommer Service in the industry </p>
+
+                        </div>
+                        <div class="column">
+                            <b>Five Star Rating</b>
+                            <p>5 Star Reviews on all platforms</p>
+                        </div>
+                        <div class="column">
+                            <b>Year Long Trips</b>
+                            <p> The most routes and most dates available</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="learn-more-button-cols">
-                    <div class="button" onclick="window.location.href = '35.2 - 2 Cabin Monohull.html';"> Learn More </div>
-                </div>
-
-                <div class="learn-more-button-cols">
-                    <div class="button" onclick="window.location.href = '514 PC - 4 Cabin Catamaran.html';"> Learn More </div>
-                </div>
-
-                <div class="learn-more-button-cols">
-                    <div class="button" onclick="window.location.href = '5800 Legacy - 6 Cabin Catamaran.html';"> Learn More </div>
-                </div>
-
-            </div>
-
-            <!--
+                <!--
                 <div class="yacht-grid-left-details">
                     <b> Sail Yacht </b>
                     <p>8 Passengers</p>
@@ -152,7 +174,7 @@
             </div>
 
         -->
-            <!--
+                <!--
             <div class="benefits_left1">
                 <b> Customer Service <span class="tab"> Five Star Rating</span> </b>
             </div>
@@ -174,14 +196,13 @@
         -->
 
 
-            <div style="text-align: center">
-                <button class="button" onclick="myPage('contact')"> CONTACT US </button>
-            </div><br>
+                <div style="text-align: center">
+                    <button class="button" onclick="myPage('contact')"> CONTACT US </button>
 
-        </div><br><br>
+                </div><br>
 
-        <button class="open-button" onclick="myQuote()">Build a Quote</button>
-
-    </div>
+                <button class="open-button" onclick="myQuote()">Build a Quote</button>
+            </div><br><br>
+        </div>
 </body>
 </html>
