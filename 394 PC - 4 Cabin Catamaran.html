@@ -3,7 +3,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>394 PC - 4 Cabin Catamaran</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
@@ -11,38 +10,47 @@
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
-            <a class="c" href="#">></a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myType('power')">Yachts</button>
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
                 </div>
             </div>
-            <a class="c" href="#">></a>
-            <a href="#" onclick="myType('power')">Powered Yachts</a>
-            <a class="c" href="#">></a>
-            <a href="#" class="active" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')">Yachts</button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" class="active" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
         <header id="2.01">394 PC - 4 Cabin Catamaran</header><br>
-
-        <div class="textbox">
-            <p>
-                Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the 394 PC is a cutting edge design that merges the
-                best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck levels with large
-                functional living spaces, ease of handling, versatility and a range of design features and amenities to ensure a memorable on-board experience.<br>
-                <br>
-                On the flybridge, a centrally positioned helm station offers excellent visibility on all corners of the yacht for ease of maneuvering. Powered by two 110
-                hp Yanmar diesel engines, the 394 PC offers excellent fuel efficiency. She features air conditioning, generator, upgraded electronics, and
-                everything necessary for comfortable cruising.<br>
-                <br>
-                This 394PC features a special alternative accommodation plan with a 4-cabin/2-head design. Two large double cabins with a shared bath fill each hull.
-                There's generous headroom throughout and substantial storage capacity provided by under-bunk lockers.
-            </p>
-        </div>
 
         <div class="imgbox">
             <div class="rows">
@@ -63,38 +71,33 @@
                 </div>
             </div>
 
-            <div id="gallery" class="gallerymodal">
+            <div id="gallery" class="modal">
                 <span class="close cursor" onclick="closeModal()">&times;</span>
                 <div class="gallerymodal-content">
 
                     <div class="slideshow">
                         <div class="numbertext">1 / 5</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/394pc/394PC/394PC_Gallery_Aft.jpg?t=1IuHFR&itok=EHOQ4Uxz&timestamp=1573592686" style="width:100%">
-                        <br><header>Aft</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">2 / 5</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/394pc/394PC/394PC_Gallery_Sundeck.jpg?t=1IFwig&itok=wBESL8ME&timestamp=1576162537" style="width:100%">
-                        <br><header>Sundeck</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">3 / 5</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/394pc/394PC/394PC_Gallery_Cabin.jpg?t=1IuHFR&itok=A-2Y2-v5&timestamp=1573592872" style="width:100%">
-                        <br><header>Cabin</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">4 / 5</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/394pc/394PC/394PC_Gallery_Salon.jpg?t=1IuHFR&itok=da1cxskn&timestamp=1573593229" style="width:100%">
-                        <br><header>Salon</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">5 / 5</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/394pc/394PC/394PC_Gallery_Galley.jpg?t=1IuHFR&itok=6X-qZZ-s&timestamp=1573592981" style="width:100%">
-                        <br><header>Kitchen</header>
                     </div>
 
                     <!-- Next/previous controls -->
@@ -109,11 +112,25 @@
             </div>
         </div><br>
 
+        <div class="textbox">
+            <p>
+                Conceived between The Moorings, yacht builders Robertson and Caine, and architects Morrelli and Melvin, the 394 PC is a cutting edge design that merges the
+                best features learned from customer expectations and many years of yacht design. This is an ideal cruising yacht boasting 3 deck levels with large
+                functional living spaces, ease of handling, versatility and a range of design features and amenities to ensure a memorable on-board experience.<br>
+                <br>
+                On the flybridge, a centrally positioned helm station offers excellent visibility on all corners of the yacht for ease of maneuvering. Powered by two 110
+                hp Yanmar diesel engines, the 394 PC offers excellent fuel efficiency. She features air conditioning, generator, upgraded electronics, and
+                everything necessary for comfortable cruising.<br>
+                <br>
+                This 394PC features a special alternative accommodation plan with a 4-cabin/2-head design. Two large double cabins with a shared bath fill each hull.
+                There's generous headroom throughout and substantial storage capacity provided by under-bunk lockers.
+            </p>
+        </div>
+
         <div class="imgbox">
             <section>
                 <article>
-                    <header>Yacht Details: 394 PC - 4 Cabin Catamaran</header><br>
-                    <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/394pc_deck_plan_0.jpg?t=1HAnzT&itok=kZx4gKlm&timestamp=1476823236">
+                    <img class="specs" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/394pc_deck_plan_0.jpg?t=1HAnzT&itok=kZx4gKlm&timestamp=1476823236">
                 </article>
                 <nav>
                     <ul>
@@ -129,47 +146,47 @@
                 </nav>
             </section><br>
         </div>
-           
-        <div class="form-popup" id="myForm">                
-            <form class="form-container" id="formcontent">                    
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" id="formcontent">
                 <header>Get a Quote</header><br>
-                    Name*<br><input type="text" required name="name"><br><br>
+                Name*<br><input type="text" required name="name"><br><br>
 
-                    Email*<br><input type="email" required name="@"><br><br>
+                Email*<br><input type="email" required name="@"><br><br>
 
-                    Phone<br><input type="tel" name="#"><br><br>
+                Phone<br><input type="tel" name="#"><br><br>
 
-                    Boat<br>
-                    <select class="sel" id="boatname"></select><br>
-                    <br>
-                    Date of Departure*<br>
-                    <select class="sel" id="date"></select><br>
-                    <br>
-                    Number of days<br>
-                    <select class="sel" id="times">
-                        <option value="time1">5</option>
-                        <option value="time2">6</option>
-                        <option value="time2">7</option>
-                        <option value="time2">8</option>
-                        <option value="time2">9</option>
-                        <option value="time3">10</option>
-                    </select><br>
-                    <br>
-                    Number of Passengers<br>
-                    <select class="sel" id="nums">
-                        <option value="num1">1</option>
-                        <option value="num2">2</option>
-                        <option value="num3">3</option>
-                        <option value="num4">4</option>
-                        <option value="num5">5</option>
-                        <option value="num1">6</option>
-                        <option value="num2">7</option>
-                        <option value="num3">8</option>
-                        <option value="num4">9</option>
-                    </select><br>
-                    <br>
-                    <input type="submit" class="btn" value="Submit">
-                    <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
+                Boat<br>
+                <select class="sel" id="boatname"></select><br>
+                <br>
+                Date of Departure*<br>
+                <select class="sel" id="date"></select><br>
+                <br>
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br>
+                <br>
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                    <option value="num1">6</option>
+                    <option value="num2">7</option>
+                    <option value="num3">8</option>
+                    <option value="num4">9</option>
+                </select><br>
+                <br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
             </form>
         </div>
     </div>

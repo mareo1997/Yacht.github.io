@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Yachts Size 40+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src = "HomePage.js"></script>
+<link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
+</head>
+<body class="bg">
+    <div id="body">
+        <div class="navbar">
+            <a href="#" onclick="myPage('home')">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')">Sizes</button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <button class="submenubtnactive" onclick="myType('sail')">40+</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">40' VANDUTCH BLACK</a>
+                            <a href="#" onclick="box(102)">43' MARQUIS</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">50+</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">52' SEA RAY</a>
+                            <a href="#" onclick="box(202)">55' AZIMUT</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">60+</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">65' MONTE CARLO</a>
+                            <a href="#" onclick="box(302)">65' AICON</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
+            <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
+        </div><br>
+
+        <header>40+ Size Yachts</header><br>
+
+        <div class="textbox">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <header>40' VANDUTCH BLACK</header><br>
+                    <img onclick="image(101)" class="gridimage" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/40-Vandutch-Black-0001.jpg">
+                </div>
+                <div class="grid-item">
+                    <header>43' MARQUIS</header><br>
+                    <img onclick="image(102)" class="gridimage" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/43-marquis-yacht-image-09.jpg">
+                </div>
+            </div><br><br>
+        </div>
+
+
+        <div id="101" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(101)">&times;</span>
+                <header id="1.01">40' VANDUTCH BLACK</header><br>
+                <img class="modal-image" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/40-Vandutch-Black-0001.jpg">                
+                <p>MAKE VANDUTCH | SIZE 40' | YEAR 2014 | STARTING AT $2200.00</p>
+                <button class="box1" onclick="openForm(1.01)">Get a Quote</button> <button class="box2" onclick="box(101)">Explore</button>
+            </div>
+        </div>
+
+        <div id="102" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="span(102)">&times;</span>
+                <header id="1.02">43' MARQUIS</header><br>
+                <img class="modal-image" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/43-marquis-yacht-image-09.jpg">
+                <p>MAKE MARQUIS | SIZE 43' | YEAR 2008 | STARTING AT $2200.00</p>
+                <button class="box1" onclick="openForm(1.02)">Get a Quote</button> <button class="box2" onclick="box(102)">Explore</button>
+            </div>
+        </div><br>
+
+        <button class="open-button" onclick="myQuote()">Build a Quote</button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" id="formcontent">
+                <header>Get a Quote</header><br>
+                Name*<br><input type="text" required name="name"><br><br>
+
+                Email*<br><input type="email" required name="@"><br><br>
+
+                Phone<br><input type="tel" name="#"><br><br>
+
+                Boat<br><select class="sel" id="boatname"></select><br><br>
+
+                Date of Departure*<br>
+                <select class="sel" id="date"></select><br>
+                <br>
+
+                Number of days<br>
+                <select class="sel" id="times">
+                    <option value="time1">5</option>
+                    <option value="time2">6</option>
+                    <option value="time2">7</option>
+                    <option value="time2">8</option>
+                    <option value="time2">9</option>
+                    <option value="time3">10</option>
+                </select><br><br>
+
+                Number of Passengers<br>
+                <select class="sel" id="nums">
+                    <option value="num1">1</option>
+                    <option value="num2">2</option>
+                    <option value="num3">3</option>
+                    <option value="num4">4</option>
+                    <option value="num5">5</option>
+                    <option value="num1">6</option>
+                    <option value="num2">7</option>
+                    <option value="num3">8</option>
+                    <option value="num4">9</option>
+                    <option value="num5">10</option>
+                </select><br><br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
