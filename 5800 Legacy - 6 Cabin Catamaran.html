@@ -3,7 +3,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>5800 Legacy - 6 Cabins Catamaran</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
@@ -11,40 +10,48 @@
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
-            <a class="c" href="#">></a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myType('crew')">Yachts</button>
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
                 </div>
             </div>
-            <a class="c" href="#">></a>
-            <a href="#" onclick="myType('crew')">Crewed Yachts</a>
-            <a class="c" href="#">></a>
-            <a href="#" class="active" onclick="box(301)">5800 Legacy - 6 Cabin Catamaran</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')">Yachts</button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" class="active" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
         <header id="3.01">5800 Legacy - 6 Cabin Catamaran</header>
         <br>
-
-        <div class="textbox">
-            <p>
-                Explore the islands in plush comfort aboard The Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with
-                private en-suite baths-and room for up to 10 guests.<br>
-                <br>
-                Wake up to breathtaking waterfront vistas and roam about the gorgeously spacious floor plan both inside and out. When you're ready, meet with the captain
-                who will help you plan the day's adventure and kick back as your personal chef whips up gourmet meals for everyone aboard.<br>
-                <br>
-                The 5800 Legacy Edition set the standard with an innovative split-level accommodation plan featuring two roomy cabins on the main deck and four more
-                (including crew quarters) below. The saloon features a large dining table with plush wrap-around seating and a wet bar. Step outside the saloon to dine
-                in the sweeping aft cockpit as the hostess caters to your every need and you kick back on teak outdoor furniture. Or, venture up to the fly bridge and
-                enjoy a 360-degree view your tropical surroundings with stylish lounge seating, a wet bar/refrigerator and grill to help your crew craft a bevy of
-                palate-pleasing cocktails and open-air dining.
-            </p>
-        </div>
 
         <div class="imgbox">
             <div class="rows">
@@ -74,56 +81,48 @@
                 </div>
             </div>
 
-            <div id="gallery" class="gallerymodal">
+            <div id="gallery" class="modal">
                 <span class="close cursor" onclick="closeModal()">&times;</span>
                 <div class="gallerymodal-content">
 
                     <div class="slideshow">
                         <div class="numbertext">1 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Ext.jpg?t=1IuyZg&itok=HV0_0sFi&timestamp=1573565390" style="width:100%">
-                        <br><header>Exterior</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">2 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Salon.jpg?t=1IuyZh&itok=Pb9KM_Bp&timestamp=1573565674" style="width:100%">
-                        <br><header>Salon</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">3 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Rear_Cockpit.jpg?t=1ICzCz&itok=fXn8Gsk4&timestamp=1575479786" style="width:100%">
-                        <br><header>Rear Cockpit Table with Crew</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">4 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Cabin.jpg%20.jpg?t=1IuyZg&itok=f0pv9uaZ&timestamp=1573565332" style="width:100%">
-                        <br><header>First Cabin</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">5 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Flybridge.jpg?t=1IuyZg&itok=bS9fdDVF&timestamp=1573565430" style="width:100%">
-                        <br><header>Flybridge with Crew</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">6 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Forward.jpg?t=1IuyZg&itok=gUL_yqIN&timestamp=1573565497" style="width:100%">
-                        <br><header>Forward</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">7 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Transom.jpg?t=1IuyZg&itok=OtkW4YnF&timestamp=1573565715" style="width:100%">
-                        <br><header>Transom</header>
                     </div>
 
                     <div class="slideshow">
                         <div class="numbertext">8 / 8</div>
                         <img src="https://www.moorings.com/sites/default/files/styles/full_2_1_breakpoints_theme_moorings_lg_1x/public/crewed_gallery/Gallery/Moorings%205800%20Legacy/5800_CY_Legacy_Gallery_Cabin2.jpg?t=1IuyZg&itok=6m8RGa4q&timestamp=1573565368" style="width:100%">
-                        <br><header>Second Cabin</header>
                     </div>
 
                     <!-- Next/previous controls -->
@@ -138,11 +137,26 @@
             </div>
         </div><br>
 
+        <div class="textbox">
+            <p>
+                Explore the islands in plush comfort aboard The Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with
+                private en-suite baths-and room for up to 10 guests.<br>
+                <br>
+                Wake up to breathtaking waterfront vistas and roam about the gorgeously spacious floor plan both inside and out. When you're ready, meet with the captain
+                who will help you plan the day's adventure and kick back as your personal chef whips up gourmet meals for everyone aboard.<br>
+                <br>
+                The 5800 Legacy Edition set the standard with an innovative split-level accommodation plan featuring two roomy cabins on the main deck and four more
+                (including crew quarters) below. The saloon features a large dining table with plush wrap-around seating and a wet bar. Step outside the saloon to dine
+                in the sweeping aft cockpit as the hostess caters to your every need and you kick back on teak outdoor furniture. Or, venture up to the fly bridge and
+                enjoy a 360-degree view your tropical surroundings with stylish lounge seating, a wet bar/refrigerator and grill to help your crew craft a bevy of
+                palate-pleasing cocktails and open-air dining.
+            </p>
+        </div>
+
         <div class="imgbox">
             <section>
                 <article>
-                    <header>Yacht Details: 5800 Legacy - 6 Cabin Catamaran</header><br>
-                    <img class="img2" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/5800_cy_legacy_deck_plan_0.jpg?t=1HAlur&itok=SpBOhCH4&timestamp=1477080566">
+                    <img class="specs" src="https://www.moorings.com/sites/default/files/styles/full_width_breakpoints_theme_moorings_md_1x/public/images/yacht/layout/5800_cy_legacy_deck_plan_0.jpg?t=1HAlur&itok=SpBOhCH4&timestamp=1477080566">
                 </article>
                 <nav>
                     <ul>

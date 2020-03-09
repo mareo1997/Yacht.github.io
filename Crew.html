@@ -22,9 +22,27 @@
             <div class="dropdown">
                 <button class="dropbtn" onclick="myType('sail')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" class="active" onclick="myType('crew')">Crewed Yachts</a>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtnactive" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a href="#" onclick="myPage('contact')">Contact Us</a>
@@ -33,6 +51,19 @@
         </div><br>
 
         <header>Crewed Yachts</header><br>
+
+        <div class="textbox">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <header>5800 Legacy - 6 Cabin Catamaran</header><br>
+                    <img onclick="image(301)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109">
+                </div>
+                <div class="grid-item">
+                    <header>5800 Master - 6 Cabins Catamaran</header><br>
+                    <img onclick="image(302)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071">
+                </div>
+            </div><br><br>
+        </div>
 
         <div class="textbox">
             <p>
@@ -52,44 +83,29 @@
             </div>
         </div>
 
-
-        <div class="textbox">
-            <div class="grid-container">
-                <div class="grid-item">
-                    <header>5800 Legacy - 6 Cabin Catamaran</header><br>
-                    <img onclick="image(301)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109">
-                </div>
-                <div class="grid-item">
-                    <header>5800 Master - 6 Cabins Catamaran</header><br>
-                    <img onclick="image(302)" class="gridimage" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071">
-                </div>
-            </div><br><br>
-        </div>
-
         <div id="301" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="span(301)">&times;</span>
                 <header id="3.01">5800 Legacy - 6 Cabin Catamaran</header><br>
-                <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109"><br>
+                <img class="modal-image" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_legacy_card.jpg?t=1ICx8x&itok=dHYIt3SA&timestamp=1575472109"><br>
                 <p>
                     Explore the islands in plush comfort aboard Crewed 5800 Legacy Edition. This spacious, air-conditioned boat features five guest cabins-all with
                     private en-suite baths-and room for up to 10 guests.
-                </p><br>
+                </p>
                 <button class="box1" onclick="openForm(3.01)">Get Quote</button> <button class="box2" onclick="box(301)">Read More</button>
             </div>
         </div>
-
 
         <div id="302" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="span(302)">&times;</span>
                 <header id="3.02">5800 Master - 6 Cabins Catamaran</header><br>
-                <img class="img3" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071"><br>
+                <img class="modal-image" src="https://www.moorings.com/sites/default/files/styles/four_col_2_1_breakpoints_theme_moorings_md_1x/public/images/yacht/5800_cy_master_card.jpg?t=1HAjci&itok=GOFxN9Ke&timestamp=1478881071"><br>
                 <p>
                     Complete with your very own captain, gourmet chef and hostess, a Crewed charter aboard Crewed 5800 Master Edition treats you to a getaway at sea most
                     can only dream of. This six-cabin Sail catamaran is our largest and newest, providing an equally spacious and exclusive cruising experience for up to
                     10 guests.
-                </p><br>
+                </p>
                 <button class="box1" onclick="openForm(3.02)">Get Quote</button> <button class="box2" onclick="box(302)">Read More</button>
             </div>
         </div>

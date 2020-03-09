@@ -22,9 +22,27 @@
             <div class="dropdown">
                 <button class="dropbtn" onclick="myType('sail')">Yachts</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="myType('sail')">Sail Yachts</a>
-                    <a href="#" onclick="myType('power')">Powered Yachts</a>
-                    <a href="#" onclick="myType('crew')">Crewed Yachts</a>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">Sail Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">3900 - 3 Cabin Catamaran</a>
+                            <a href="#" onclick="box(102)">35.2 - 2 Cabin Monohull</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">Powered Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">394 PC - 4 Cabin Catamaran</a>
+                            <a href="#" onclick="box(202)">514 PC - 4 Cabin Catamaran</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">Crewed Yachts</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">5800 Legacy - 6 Cabins Catamaran</a>
+                            <a href="#" onclick="box(302)">5800 Master - 6 Cabins Catamaran</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a href="#" onclick="myPage('contact')">Contact Us</a>
@@ -46,27 +64,27 @@
         <!--
     <img src="Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg" alt='Yacht for Rent'>
     -->
-        <header>Yacht Charter Fleet</header><br>
+
+        <div class="bg" align="center">
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+
+            <button class="home-button" onclick="myQuote()">Build a Quote</button>
+        </div>
+        <br>
+
 
         <div class="textbox">
             <div class="benefits_header">
-                <b> Benefits of chartering a yacht with us </b>
+                <b> Yacht Charter Fleet </b>
             </div>
 
-            <div class="row">
-                <div class="column">
-                    <b>Customer Service</b>
-                    <p>Best Custommer Service in the industry </p>
-
-                </div>
-                <div class="column">
-                    <b>Five Star Rating</b>
-                    <p>5 Star Reviews on all platforms</p>
-                </div>
-                <div class="column">
-                    <b>Year Long Trips</b>
-                    <p> The most routes and most dates available</p>
-                </div>
+            <div class="benefits_header">
+                <b> Benefits of chartering a yacht with us </b>
             </div>
 
             <div class="row2">
@@ -101,6 +119,22 @@
 
                 <div class="learn-more-button-cols">
                     <div class="button" onclick="window.location.href = '5800 Legacy - 6 Cabin Catamaran.html';"> Learn More </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <b>Customer Service</b>
+                        <p>Best Custommer Service in the industry </p>
+
+                    </div>
+                    <div class="column">
+                        <b>Five Star Rating</b>
+                        <p>5 Star Reviews on all platforms</p>
+                    </div>
+                    <div class="column">
+                        <b>Year Long Trips</b>
+                        <p> The most routes and most dates available</p>
+                    </div>
                 </div>
 
             </div>
@@ -176,12 +210,11 @@
 
             <div style="text-align: center">
                 <button class="button" onclick="myPage('contact')"> CONTACT US </button>
+
             </div><br>
 
+            <button class="open-button" onclick="myQuote()">Build a Quote</button>
         </div><br><br>
-
-        <button class="open-button" onclick="myQuote()">Build a Quote</button>
-
     </div>
 </body>
 </html>
