@@ -91,12 +91,12 @@ header {
 	color: aliceblue;
 }
 
-.dropdown{
-	float: left;
-	overflow: hidden;
+.dropdown, .submenu {
+    float: left;
+    overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdown .dropbtn, .submenu .submenubtn  {
         cursor: pointer;
         font-size: 16px;
         border: none;
@@ -107,7 +107,7 @@ header {
         background-color: lightskyblue;
 }
 
-.dropdown-content {
+.dropdown-content, .submenu-content{
     display: none;
     position: absolute;
     color: white;
@@ -117,7 +117,7 @@ header {
     z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content a, .submenu-content a{
         float: none;
         padding: 12px 16px;
         color: blue;
@@ -126,28 +126,12 @@ header {
         text-align: left;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover, .submenu-content a:hover {
     background-color: deepskyblue;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.submenu{
-    float: left;
-    overflow: hidden;
-}
-
-.submenu .submenubtn {
-    cursor: pointer;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: blue;
-    padding: 14px 16px;
-    margin: 0;
-    background-color: lightskyblue;
+.dropdown:hover .dropdown-content, .submenu:hover .submenu-content {
+    display: block;
 }
 
 .submenu .submenubtnactive {
@@ -159,33 +143,6 @@ header {
     padding: 14px 16px;
     margin: 0;
     background-color: lightskyblue;
-}
-
-.submenu-content {
-    display: none;
-    position: absolute;
-    color: white;
-    background-color: lightskyblue;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.submenu-content a {
-    float: none;
-    padding: 12px 16px;
-    color: blue;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.submenu-content a:hover {
-    background-color: deepskyblue;
-}
-
-.submenu:hover .submenu-content {
-    display: block;
 }
 
 .read{
@@ -325,6 +282,16 @@ footer{
     bottom: 23px;
     right: 28px;
     width: 280px;
+}
+
+.home-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 16px 20px;
+    width: 280px;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .fit{
@@ -500,8 +467,11 @@ section:after {
 }
 
 nav {
-  background: #ccc;
-  padding: 20px;
+    float: left;
+    width: 30%;
+    height: 255px;
+    background: #ccc;
+    padding: 20px;
 }
 
 nav ul {
@@ -519,7 +489,7 @@ article {
   float: left;
   padding: 20px;
   width: 70%;
-  height: 450px;
+  height: 255px;
   background-color: #f1f1f1;
 }
 
@@ -528,7 +498,7 @@ article {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 425px;
+  height: 100px;
 }
 
 @media (max-width: 600px) {

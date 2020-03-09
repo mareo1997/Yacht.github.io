@@ -50,7 +50,7 @@ function myBackgroundimg(){
 }
 
 function start() {
-    myBackgroundimg();
+    //myBackgroundimg();
     date();
     boats();
 }
@@ -142,7 +142,7 @@ function image(x){
 
 function box(y){
 	if(y == "101"){
-		window.open("40′ VANDUTCH BLACK.html", "_self")
+		window.open("40' VANDUTCH BLACK.html", "_self")
 	}
 	else if(y == "102"){
 		window.open("35.2 - 2 Cabin Monohull.html", "_self")
