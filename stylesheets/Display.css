@@ -16,6 +16,14 @@ body{
     background-size: cover;
 }
 
+.bg2 {
+    /* The image used */
+    background-image: url("https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 p{
 	font-size: 22px;
     color: gray;
@@ -884,26 +892,27 @@ img.hover-shadow {
   clear: both;
 }
 
-/*
-body {
- background-image: url("Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg");
- background-color: #cccccc;
+.textbox2{
+  background-color: white;
+  font-family: Arial;
+  opacity: .8;
+  float:left;
 }
 
-
-body, html {
-  height: 100%;
+.yacht-name-details{
+  margin-top:100px;
+  margin-left:10%;
+  float:left;
+  width:30%;
 }
 
-.bg { 
-  // The image used
-  background-image: url("Gentech.jpg");
+.yacht-name-details h1{
+  font-size:50px;
+}
 
-  // Full height
-  height: 100%; 
+.yacht-image {
+    float: right;
+    width: 60%;
+    height: 500px;
+}
 
-  // Center and scale the image nicely
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-*/
