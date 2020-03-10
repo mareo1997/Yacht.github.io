@@ -16,6 +16,14 @@ body{
     background-size: cover;
 }
 
+.bg2 {
+    /* The image used */
+    background-image: url("https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 p{
 	font-size: 22px;
     color: gray;
@@ -888,11 +896,7 @@ img.hover-shadow {
   background-color: white;
   font-family: Arial;
   opacity: .8;
-  margin: 0px 20px;
-  width:99%;
   float:left;
-  margin-bottom: 200px;
-  height:800px;
 }
 
 .yacht-name-details{
@@ -906,8 +910,9 @@ img.hover-shadow {
   font-size:50px;
 }
 
-.yacht-image{
-  float:right;
-  min-height: 800px;
+.yacht-image {
+    float: right;
+    width: 60%;
+    height: 500px;
 }
 
