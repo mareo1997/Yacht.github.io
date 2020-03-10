@@ -16,6 +16,14 @@ body{
     background-size: cover;
 }
 
+.bg2 {
+    /* The image used */
+    background-image: url("https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 p{
 	font-size: 22px;
     color: gray;
@@ -492,7 +500,16 @@ article {
   height: 255px;
   background-color: #f1f1f1;
 }
-
+/*
+    Get rid of home background      
+    Making website mobile           MEDIUM M
+    Adding yachts to home           MEDIUM S
+    Make calendar                   HIGH M
+    Work on the animation           HIGH S
+    Email
+    Enable image change via swiping LOW
+    Return quote button to pop up form M
+*/
 .specs{
   display: block;
   margin-left: auto;
@@ -888,11 +905,7 @@ img.hover-shadow {
   background-color: white;
   font-family: Arial;
   opacity: .8;
-  margin: 0px 20px;
-  width:99%;
   float:left;
-  margin-bottom: 200px;
-  height:800px;
 }
 
 .yacht-name-details{
@@ -906,8 +919,9 @@ img.hover-shadow {
   font-size:50px;
 }
 
-.yacht-image{
-  float:right;
-  min-height: 800px;
+.yacht-image {
+    float: right;
+    width: 60%;
+    height: 500px;
 }
 
