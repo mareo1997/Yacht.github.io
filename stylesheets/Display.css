@@ -18,7 +18,7 @@ body{
 
 .align-homebutton {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     bottom: 0px;
 }
 
@@ -161,14 +161,14 @@ header {
     background-color: lightskyblue;
 }
 
-.read{
-  cursor: pointer;
-  border: none;
-  outline: none;
-  margin: 0;
-  color: blue;
-  font-family: inherit;
-  font-size: inherit;
+.read {
+    cursor: pointer;
+    border: solid;
+    outline: none;
+    margin: 0;
+    color: blue;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .box1 {
