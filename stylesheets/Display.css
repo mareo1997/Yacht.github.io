@@ -163,26 +163,24 @@ header {
   font-size: inherit;
 }
 
-.box1{
-  cursor: pointer;
-  border: none;
-  outline: none;
-  margin: 0;
-  float: left;
-  color: blue;
-  font-family: inherit;
-  font-size: inherit;
+.box1 {
+    cursor: pointer;
+    border: solid;
+    outline: none;
+    margin: 0;
+    float: left;
+    color: blue;
+    padding: 20px;
 }
 
-.box2{
-  cursor: pointer;
-  border: none;
-  outline: none;
-  margin: 0;
-  float: right;
-  color: blue;
-  font-family: inherit;
-  font-size: inherit;
+.box2 {
+    cursor: pointer;
+    border: solid;
+    outline: none;
+    margin: 0;
+    float: right;
+    color: blue;
+    padding: 20px;
 }
 
 .modal-image{
