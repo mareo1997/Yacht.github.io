@@ -56,7 +56,7 @@ function start() {
 }
 window.onload = start;
 
-/*function readmore(more){
+function readmore(more){
 	if(more == 'sail'){
 		document.getElementById("readsail").style.display= "none";
 		document.getElementById(more).style.display= "block";
@@ -104,7 +104,7 @@ function readless(less){
 		document.getElementById(less).style.display= "none";
 		document.getElementById("readcrew").style.display= "block";
   }
-}*/
+}
 
 function mySocial(open){
 	if(open == 'fb'){
