@@ -16,12 +16,20 @@ body{
     background-size: cover;
 }
 
-.bg2 {
-    /* The image used */
-    background-image: url("https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+.align-homebutton {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.home-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 16px 20px;
+    width: 280px;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 p{
@@ -290,22 +298,6 @@ footer{
     width: 280px;
 }
 
-.align-homebutton{
-    position: absolute;
-    width: 100vw;
-    bottom: 0vw;
-}
-
-.home-button {
-    background-color: #000000;
-    color: white;
-    border: none;
-    padding: 16px 20px;
-    width: 280px;
-    cursor: pointer;
-    opacity: 0.8;
-}
-
 .fit{
 	overflow: auto;
 }
@@ -503,14 +495,6 @@ article {
   width: 70%;
   height: 300px;
   background-color: #f1f1f1;
-}
-
-.specs{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  height: 425px;
 }
 
 @media (max-width: 600px) {
