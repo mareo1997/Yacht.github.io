@@ -2,18 +2,16 @@
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Contact Us</title>
+    <title>Yachts Size 60+</title>
     <script type="text/javascript" src="HomePage.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/Display.css">
-    <script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg2">
+<body class="bg">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
             <div class="dropdown">
-                <button class="dropbtn" onclick="myDestination('americas')">Destinations</button>
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations </button>
                 <div class="dropdown-content">
                     <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
                     <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
@@ -39,7 +37,7 @@
                         </div>
                     </div>
                     <div class="submenu">
-                        <button class="submenubtn" onclick="myType('crew')">60+</button>
+                        <button class="submenubtnactive" onclick="myType('crew')">60+</button>
                         <div class="submenu-content">
                             <a href="#" onclick="box(301)">65' MONTE CARLO</a>
                             <a href="#" onclick="box(302)">69' AICON</a>
@@ -47,49 +45,52 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="active" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
             <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div><br>
 
-              <div align="center">
-                  <header>Contact Us</header><br>
-                  <div class="textbox">
-                      <p>
-                          <b>
-                              Yacht Charter Fleet<br>
-                              <i class="fas fa-phone">(305)954-4862</i><br>
-                              CONTACTUS@yachtcharterfleet.com<br><br>
+        <header>60+ Size Yachts</header><br>
 
-                              South Pointe Pier<br>
-                              1 Washington Ave<br>
-                              Miami Beach<br>
-                              FL, 33139<br>
-                          </b>
-                      </p>
+        <div class="textbox">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <header>65' MONTE CARLO</header><br>
+                    <img onclick="image(301)" class="gridimage"
+                         src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/IMG_0014-2.jpg"><br>
+                </div>
+                <div class="grid-item">
+                    <header>65' MONTE CARLO</header><br>
+                    <img onclick="image(302)" class="gridimage"
+                         src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/fNf6gFtA.jpg"><br>
+                </div>
+            </div><br><br>
+        </div>
 
-                      <footer>
-                          Share us on:
-                          <a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
-                          <a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
-                          <a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
-                      </footer>
-                  </div>
-                  <div class="textbox">
-                      <p>Our company lives to help any and all potential customers with any questions they may have!</p>
-                      <form name="contact" onsubmit="return validateForm()" method="post">
-                          Email*<br>
-                          <input type="email" required name="@" size="35"><br>
-                          <br>
-                          Message<br>
-                          <input type="text" name="msg" placeholder="How can we help you?" maxlength="100" size="65"><br>
-                          <br>
-                          <input type="submit" class="home-button" value="Submit"><br><br><br>
-                      </form>
-                  </div>
-              </div>
+        <div id="301" class="modal">
+            <div class="modal-content" align="center">
+                <span class="close" onclick="span(301)">&times;</span>
+                <header id="3.01">65' MONTE CARLO</header><br>
+                <img class="modal-image"
+                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/IMG_0014-2.jpg"><br>
+                <p>MAKE MONTECARLO | SIZE 65' | YEAR 2017 | STARTING AT $5000.00</p>
+                <button class="box1" onclick="openForm(3.01)">Get Quote</button> <button class="box2" onclick="box(301)">Read More</button>
+            </div>
+        </div>
+
+        <div id="302" class="modal">
+            <div class="modal-content" align="center">
+                <span class="close" onclick="span(302)">&times;</span>
+                <header id="3.02">69' AICON</header><br>
+                <img class="modal-image"
+                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/fNf6gFtA.jpg"><br>
+                <p>MAKE AICON | SIZE 69' | YEAR 2017 | STARTING AT $5100.00</p>
+                <button class="box1" onclick="openForm(3.02)">Get Quote</button> <button class="box2" onclick="box(302)">Read More</button>
+            </div>
+        </div>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
+        <br>
     </div>
 </body>
 </html>

@@ -30,9 +30,9 @@ function myType(open){
 	if(open == 'sail'){
 		window.open("40+.html", "_self")
 	}else if(open == 'power'){		
-		window.open("Power.html", "_self")
+		window.open("50+.html", "_self")
 	}else if(open == 'crew'){
-		window.open("Crew.html", "_self")
+		window.open("60+.html", "_self")
 	}	
 }
 
@@ -56,17 +56,8 @@ function start() {
 }
 window.onload = start;
 
-/*function readmore(more){
-	if(more == 'sail'){
-		document.getElementById("readsail").style.display= "none";
-		document.getElementById(more).style.display= "block";
-	}else if(more == 'power'){
-		document.getElementById("readpower").style.display= "none";
-		document.getElementById(more).style.display= "block";
-	}else if(more == 'crew'){
-		document.getElementById("readcrew").style.display= "none";
-		document.getElementById(more).style.display= "block";
-	}else if(more == 'americas'){
+function readmore(more){
+	if(more == 'americas'){
 		document.getElementById("readamericas").style.display= "none";
 		document.getElementById(more).style.display= "block";
 	}else if(more == 'caribbean'){
@@ -94,17 +85,8 @@ function readless(less){
   }else if(less == 'medi'){
 		document.getElementById(less).style.display= "none";
         document.getElementById("readmedi").style.display= "block";
-  }else if(less == 'sail'){
-		document.getElementById(less).style.display= "none";
-		document.getElementById("readsail").style.display= "block";
-  }else if(less == 'power'){
-		document.getElementById(less).style.display= "none";
-		document.getElementById("readpower").style.display= "block";
-  }else if(less == 'crew'){
-		document.getElementById(less).style.display= "none";
-		document.getElementById("readcrew").style.display= "block";
   }
-}*/
+}
 
 function mySocial(open){
 	if(open == 'fb'){
@@ -145,19 +127,19 @@ function box(y){
 		window.open("40' VANDUTCH BLACK.html", "_self")
 	}
 	else if(y == "102"){
-		window.open("35.2 - 2 Cabin Monohull.html", "_self")
+        window.open("43' MARQUIS.html", "_self")
 	}
 	else if(y == "201"){
-		window.open("394 PC - 4 Cabin Catamaran.html", "_self")
+        window.open("52' SEA RAY.html", "_self")
 	}
 	else if(y == "202"){
-		window.open("514 PC - 4 Cabin Catamaran.html", "_self")
+        window.open("55' AZIMUT.html", "_self")
 	}
 	else if(y == "301"){
-		window.open("5800 Legacy - 6 Cabin Catamaran.html", "_self")
+        window.open("65' MONTE CARLO.html", "_self")
 	}
 	else if(y == "302"){
-		window.open("5800 Master - 6 Cabins Catamaran.html", "_self")
+        window.open("69' AICON.html", "_self")
 	}
 }
 
@@ -251,12 +233,12 @@ function date(){
 
 function boats() {
     var yacht = new Array();
-    yacht[0] = "3900 - 3 Cabin Catamaran";
-    yacht[1] = "35.2 - 2 Cabin Monohull";
-    yacht[2] = "394 PC - 4 Cabin Catamaran";
-    yacht[3] = "514 PC - 4 Cabin Catamaran";
-    yacht[4] = "5800 Legacy - 6 Cabin Catamaran";
-    yacht[5] = "5800 Master - 6 Cabins Catamaran";
+    yacht[0] = "40' VANDUTCH BLACK";
+    yacht[1] = "43' MARQUIS";
+    yacht[2] = "52' SEA RAY";
+    yacht[3] = "55' AZIMUT";
+    yacht[4] = "65' MONTE CARLO";
+    yacht[5] = "69' AICON";
     var i;
     for (i = 0; i < 6; i++) {
         var boat = yacht[i];
