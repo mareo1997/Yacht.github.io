@@ -235,7 +235,7 @@ header {
 .split{
 	height: 100%;
 	width: 50%;
-	position: fixed;
+	position: absolute;
 	top: 9%;
 	overflow-x: hidden;
 	padding-top: 20px;
@@ -255,10 +255,18 @@ header {
 	left: 25%;
 }
 
-.centered2{
-	position: absolute;
-	text-align: center;
-	left: 50%;
+.centered2 {
+    cursor: pointer;
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
 }
 
 footer{
