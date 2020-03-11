@@ -57,16 +57,7 @@ function start() {
 window.onload = start;
 
 function readmore(more){
-	if(more == 'sail'){
-		document.getElementById("readsail").style.display= "none";
-		document.getElementById(more).style.display= "block";
-	}else if(more == 'power'){
-		document.getElementById("readpower").style.display= "none";
-		document.getElementById(more).style.display= "block";
-	}else if(more == 'crew'){
-		document.getElementById("readcrew").style.display= "none";
-		document.getElementById(more).style.display= "block";
-	}else if(more == 'americas'){
+	if(more == 'americas'){
 		document.getElementById("readamericas").style.display= "none";
 		document.getElementById(more).style.display= "block";
 	}else if(more == 'caribbean'){
@@ -94,15 +85,6 @@ function readless(less){
   }else if(less == 'medi'){
 		document.getElementById(less).style.display= "none";
         document.getElementById("readmedi").style.display= "block";
-  }else if(less == 'sail'){
-		document.getElementById(less).style.display= "none";
-		document.getElementById("readsail").style.display= "block";
-  }else if(less == 'power'){
-		document.getElementById(less).style.display= "none";
-		document.getElementById("readpower").style.display= "block";
-  }else if(less == 'crew'){
-		document.getElementById(less).style.display= "none";
-		document.getElementById("readcrew").style.display= "block";
   }
 }
 
