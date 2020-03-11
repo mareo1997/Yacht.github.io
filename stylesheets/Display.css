@@ -903,7 +903,7 @@ img.hover-shadow {
   margin-top:100px;
   margin-left:10%;
   float:left;
-  width:30%;
+  width:40%;
 }
 
 .yacht-name-details h1{
@@ -912,7 +912,7 @@ img.hover-shadow {
 
 .yacht-image {
     float: right;
-    width: 60%;
+    width: 50%;
     height: 500px;
 }
 
