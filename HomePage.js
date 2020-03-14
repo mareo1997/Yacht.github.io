@@ -98,18 +98,18 @@ function mySocial(open){
 	}
 }
 
-function openForm(x) {
-    var name = document.getElementById(x).innerHTML;
+function openForm() {
+    /*var name = document.getElementById(x).innerHTML;
     var select = document.getElementById("boatname");
     var option = document.createElement("option");
     option.text = name;
-    select.add(option);
+    select.add(option);*/
     document.getElementById("myForm").style.display = "block";
 }
 
 function closeForm() {
-    var removeboat = document.getElementById("boatname");
-    removeboat.remove(removeboat.selectedIndex);
+    //var removeboat = document.getElementById("boatname");
+    //removeboat.remove(removeboat.selectedIndex);
     document.getElementById("formcontent").reset();
     document.getElementById("myForm").style.display = "none";
 }
