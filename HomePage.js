@@ -36,23 +36,20 @@ function myType(open){
 	}	
 }
 
-function validateForm(){
-	window.open("index/index.html", "_self")
-}
-
 function myQuote(){
 	window.open("Quote.html", "_self")
 }
 
 function myBackgroundimg(){
-/*    document.body.style.backgroundImage = "url('https://www.fraseryachts.com/uploads/image/yachts/queen-anne/Gentech-yachts_yacht_for_sale_Queen-anne_12467.jpg')";*/
       document.body.style.backgroundImage = "url('https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp')";
 }
 
 function start() {
-    //myBackgroundimg();
     date();
+    days();
     boats();
+    passengers();
+    quote();
 }
 window.onload = start;
 
@@ -99,23 +96,11 @@ function mySocial(open){
 }
 
 function openForm() {
-    /*var name = document.getElementById(x).innerHTML;
-    var select = document.getElementById("boatname");
-    var option = document.createElement("option");
-    option.text = name;
-    select.add(option);*/
     document.getElementById("myForm").style.display = "block";
 }
 
 function closeForm() {
-    //var removeboat = document.getElementById("boatname");
-    //removeboat.remove(removeboat.selectedIndex);
-    document.getElementById("formcontent").reset();
     document.getElementById("myForm").style.display = "none";
-}
-
-function resetForm(){
-        document.getElementById("quote").reset();
 }
 
 function image(x){
@@ -231,6 +216,37 @@ function date(){
 	}
 }
 
+function days() {
+    var count;
+    var months = document.getElementById("date").value.split(" ", 2); //Seperate the month and year
+    var months = months[0]; //Assign the month
+    var yr = months[1]; //Assign the year
+    if (months == "April" || months == "June" || months == "September" || months == "November") {
+        day = 31; //Months with 30 days
+    } else if (months == "February" && yr % 4 == 0) {
+        day = 30;
+    } else if (months == "February" && yr % 4 != 0) {
+        day = 29;
+    } else if (months == "January" || months == "March" || months == "May" || months == "July" || months == "August" || months == "October" || months == "December") {
+        day = 32; //Months with 31 days
+    }
+    for (count = 1; count < day; count++) {
+        var select = document.getElementById("days");
+        var option = document.createElement("option");
+        option.text = count;
+        select.add(option);
+    }
+}
+
+function deldays() {
+    var x = document.getElementById("days");
+    var y;
+    for (y = 0; y < 32;y++){
+        x.remove(x.selectedIndex);
+    }
+    days();
+}
+
 function boats() {
     var yacht = new Array();
     yacht[0] = "40' VANDUTCH BLACK";
@@ -249,46 +265,115 @@ function boats() {
     }
 }
 
-/*function email() {
-    var fname = document.getElementById("fullname");
-    var typeselect = document.getElementById("types").selectedIndex;
-    var typeoption = document.getElementById("types").options;
-    var destselect = document.getElementById("destination").selectedIndex;
-    var destoption = document.getElementById("destination").options;
-    var timeselect = document.getElementById("times").selectedIndex;
-    var timeoption = document.getElementById("times").options;
-    alert(
-        "Dear " + fname.value + ",\n" +
-        "Your request for a " + typeoption[typeselect].text +
-        " going towards the " + destoption[destselect].text +
-        " for " + timeoption[timeselect].text +
-        " nights will cost around $5000.00"
-    );
+function passengers() {
+    var count;
+    var boat = document.getElementById("boats").value;
+    if (boat == "65' MONTE CARLO" || boat == "69' AICON") {
+        num = 14;
+    } else if (boat == "55' AZIMUT" || boat == "52' SEA RAY" || boat == "43' MARQUIS") {
+        num = 13;
+    } else if (boat == "40' VANDUTCH BLACK") {
+        num = 11;
+    }
+    for (count = 1; count < num; count++) {
+        var select = document.getElementById("nums");
+        var option = document.createElement("option");
+        option.text = count;
+        select.add(option);
+    }
 }
 
-function reminder(){
-	document.getElementById("myForm").style.display = "none";	
-	var timestamp = new Date();
-	var yr = timestamp.getFullYear();
-	var mth = timestamp.getMonth();
-	var dy = timestamp.getDate();
-    var remind = new Date(yr, mth, dy, 18);
-    setInterval(reminderemail(), 5000);
+function delnums() {
+    var x = document.getElementById("nums");
+    var y;
+    for (y = 0; y < 13; y++) {
+        x.remove(x.selectedIndex);
+    }
+    passengers();
 }
 
-function reminderemail() {
-    var fname = document.getElementById("fullname");
-    var typeselect = document.getElementById("types").selectedIndex;
-    var typeoption = document.getElementById("types").options;
-    var destselect = document.getElementById("destination").selectedIndex;
-    var destoption = document.getElementById("destination").options;
-    var timeselect = document.getElementById("times").selectedIndex;
-    var timeoption = document.getElementById("times").options;
+function delprice() {
+    var x = document.getElementById("budget");
+    x.remove(x.selectedIndex);
+    quote();
+}
+
+function quote() {
+    var boat = document.getElementById("boats").value;
+    var time = document.getElementById("hours").value;
+    var months = document.getElementById("date").value.split(" ", 2); //Seperate the month and year
+    var months = months[0]; //Assign the month
+    var quote = 0;
+    if (boat == "40' VANDUTCH BLACK" || boat == "43' MARQUIS") {
+        quote = 2200;
+    } else if (boat == "55' AZIMUT" || boat == "52' SEA RAY") {
+        quote = 2800;
+    } else if (boat == "65' MONTE CARLO") {
+        quote = 5000;
+    } else if (boat == "69' AICON") {
+        quote = 5100;
+    }
+    if (months == "March" || months == "April" || months == "May" || months == "June" || months == "July" || months == "August") {
+        quote = quote + 2500;
+    } else if (months == "January" || months == "February" || months == "September" || months == "October" || months == "November" || months == "December") {
+        quote = quote + 1000;
+    }
+    if (time == "4") {
+        quote = quote * 2;
+    } else if (time == "8") {
+        quote = quote * 4;
+    }
+    select = document.getElementById("budget");
+    var option = document.createElement("option");
+    option.text = "$" + quote + ".00";
+    select.add(option);
+
+}
+
+function submit() {
+    closeForm();
+    document.getElementById("emailform").style.display = "block";
+}
+
+function resetForm() {
+    document.getElementById("emailform").style.display = "none";
+}
+
+function message() {
+    closeForm2();
+    var name = document.getElementById("name").value;
+    var mail = document.getElementById("@").value;
+    var boat = document.getElementById("boats").value;
+    var nums = document.getElementById("nums").value;
+    var dest = document.getElementById("destination").value;
+    var months = document.getElementById("date").value.split(" ", 2); //Seperate the month and year
+    var mth = months[0]; //Assign the month
+    var yr = months[1]; //Assign the year
+    var dy = document.getElementById("days").value;
+    var time = document.getElementById("hours").value;
+    var price = document.getElementById("budget").value;
     alert(
-        "Dear " + fname.value + ",\n" +
-        "This is an reminder that your request for a " + typeoption[typeselect].text +
-        " going towards the " + destoption[destselect].text +
-        " for " + timeoption[timeselect].text +
-        " nights will cost around $5000.00"
-    );
-}*/
+        "To " + mail + "\n" +
+        "Dear " + name + ",\n" +
+        "Your request for a " + boat +
+        " with " + nums +
+        " passenger(s) to " + dest +
+        " on " + mth + " " + dy + " " + yr +
+        " will cost " + price + ".\n\n" +
+        "Sincerly,\n" +
+        "Yacht Charter Fleet"
+        );
+}
+
+function reminder() {
+
+}
+
+function contact() {
+    var mail = document.getElementById("@").value;
+    var msg = document.getElementById("msg").value;
+    alert(
+        "To " + mail + "\n" +
+        msg
+        );
+}

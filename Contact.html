@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg2">
+<body class="bg">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
@@ -77,17 +77,16 @@
                   </div>
                   <div class="textbox">
                       <p>Our company lives to help any and all potential customers with any questions they may have!</p>
-                      <form name="contact" onsubmit="return validateForm()" method="post">
+                      <form onsubmit="contact()">
                           Email*<br>
-                          <input type="email" required name="@" size="35"><br>
+                          <input type="email" required id="@" size="35"><br>
                           <br>
                           Message<br>
-                          <input type="text" name="msg" placeholder="How can we help you?" maxlength="100" size="65"><br>
-                          <br>
-                          <input type="submit" class="home-button" value="Submit"><br><br><br>
+                          <textarea rows="4" cols="50" maxlength="1000" required id="msg" placeholder="How can we help you?"></textarea>                          <br>
+                          <input type="submit" class="home-button" value="Submit">
                       </form>
                   </div>
-              </div>
+              </div><br>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
     </div>
