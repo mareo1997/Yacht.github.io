@@ -70,6 +70,13 @@
                 <button class="home-button" onclick="openForm()">Build a Quote</button>
             </div>
         </div>
+        
+        <div class="month">
+            <ul>
+                <li id="li"></li>
+            </ul>
+        </div>
+        <ul class="days" id="ul"></ul>
 
         <div class="textbox2">
             <div class="yacht-name-details">
@@ -87,7 +94,7 @@
             </div>
             <img class="yacht-image" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/40-Vandutch-Black-0001.jpg">
         </div>
-        
+
         <div class="textbox2">
             <div class="benefits_header">
                 <b> Yacht Charter Fleet </b>
@@ -153,7 +160,7 @@
                 <button class="button" onclick="myPage('contact')"> CONTACT US </button>
             </div><br>
         </div>
-        
+
         <div class="form-popup" id="myForm">
             <div class="form-container" id="formcontent">
                 <header>Get a Quote</header>
@@ -196,14 +203,13 @@
         </div>
 
         <div class="form-popup" id="emailform">
-            <form class="form-container" onsubmit="message()">
+            <form class="form-container" onsubmit="message(), setTimeout(reminder, 5000)">
                 <header>Email Quote</header>
                 Name*<br><input type="text" required id="name"><br>
                 Email*<br><input type="email" required id="@"><br>
                 Phone<br><input type="tel" name="#"><br>
                 <input type="submit" class="btn" value="Submit">
-                <!--<button class="btn" onclick="message()">Submit</button>-->
-                <input type="button" class="btn cancel" onclick="resetForm()">
+                <input type="reset"  class="btn cancel" onclick="resetForm()" value="Cancel">
             </form>
         </div>
 

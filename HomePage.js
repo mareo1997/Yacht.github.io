@@ -218,9 +218,10 @@ function date(){
 
 function days() {
     var count;
-    var months = document.getElementById("date").value.split(" ", 2); //Seperate the month and year
-    var months = months[0]; //Assign the month
-    var yr = months[1]; //Assign the year
+    var mths = document.getElementById("date").value; //Seperate the month and year
+    var m = mths.split(" ", 2);
+    var months = m[0]; //Assign the month
+    var yr = m[1]; //Assign the year
     if (months == "April" || months == "June" || months == "September" || months == "November") {
         day = 31; //Months with 30 days
     } else if (months == "February" && yr % 4 == 0) {
@@ -230,19 +231,29 @@ function days() {
     } else if (months == "January" || months == "March" || months == "May" || months == "July" || months == "August" || months == "October" || months == "December") {
         day = 32; //Months with 31 days
     }
+    document.getElementById("li").innerHTML = mths;
     for (count = 1; count < day; count++) {
         var select = document.getElementById("days");
         var option = document.createElement("option");
         option.text = count;
         select.add(option);
+        var ul = document.getElementById("ul");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(count));
+        ul.appendChild(li);
     }
 }
 
 function deldays() {
     var x = document.getElementById("days");
+    var ul = document.getElementById("ul");
+    var len = ul.children.length;
     var y;
     for (y = 0; y < 32;y++){
         x.remove(x.selectedIndex);
+    }
+    for (y = 0; y < len; y++){
+        ul.removeChild(ul.children[0])
     }
     days();
 }
@@ -340,7 +351,6 @@ function resetForm() {
 }
 
 function message() {
-    closeForm2();
     var name = document.getElementById("name").value;
     var mail = document.getElementById("@").value;
     var boat = document.getElementById("boats").value;
@@ -352,6 +362,7 @@ function message() {
     var dy = document.getElementById("days").value;
     var time = document.getElementById("hours").value;
     var price = document.getElementById("budget").value;
+    resetForm();
     alert(
         "To " + mail + "\n" +
         "Dear " + name + ",\n" +
@@ -366,7 +377,28 @@ function message() {
 }
 
 function reminder() {
-
+    var name = document.getElementById("name").value;
+    var mail = document.getElementById("@").value;
+    var boat = document.getElementById("boats").value;
+    var nums = document.getElementById("nums").value;
+    var dest = document.getElementById("destination").value;
+    var months = document.getElementById("date").value.split(" ", 2); //Seperate the month and year
+    var mth = months[0]; //Assign the month
+    var yr = months[1]; //Assign the year
+    var dy = document.getElementById("days").value;
+    var time = document.getElementById("hours").value;
+    var price = document.getElementById("budget").value;
+    alert(
+        "To " + mail + "\n" +
+        "Dear " + name + ",\n" +
+        "This is a reminder about your request for a " + boat +
+        " with " + nums +
+        " passenger(s) to " + dest +
+        " on " + mth + " " + dy + " " + yr +
+        " will cost " + price + ".\n\n" +
+        "Sincerly,\n" +
+        "Yacht Charter Fleet"
+        );
 }
 
 function contact() {
