@@ -856,20 +856,83 @@ img.hover-shadow {
   font-family: Arial;
   opacity: .8;
   float:left;
+  padding-bottom: 100px;
+  animation-name: move_in_right;
+  animation-duration: 6s;
+  margin-bottom: 100px;
+}
+
+.textbox2-2{
+  background-color: white;
+  font-family: Arial;
+  opacity: .8;
+  width:100%;
+  float:right;
+  padding-bottom: 100px;
+  animation-name: move_in_left;
+  animation-duration: 6s;
+  animation-duration: 6.5s;
+}
+
+.textbox3{
+  background-color: white;
+  font-family: Arial;
+  opacity: .8;
+  float:left;
+}
+
+@keyframes move_in_right {
+  from {padding-left: 1000px;}
+  to {padding-left: 0px;}
+}
+
+@keyframes move_in_left {
+  from {padding-right: 1000px;}
+  to {padding-right: 0px;}
 }
 
 .yacht-name-details{
   margin-top:100px;
+  padding-bottom: 200px;
   float:left;
   width:50%;
 }
 
+.textbox2:hover,
+.textbox2:active{
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 5);
+}
+
+.textbox2-2:hover,
+.textbox2-2:active{
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 5);
+}
+
 .yacht-name-details h1{
   font-size:50px;
+
 }
 
 .yacht-image {
     float: right;
+    width: 50%;
+    height: 500px;
+}
+
+.yacht-name-details2{
+  margin-top:100px;
+  padding-bottom: 200px;
+  float:right;
+  width:50%;
+}
+
+.yacht-name-details2 h1{
+  font-size: 50px;
+
+}
+
+.yacht-image2 {
+    float: left;
     width: 50%;
     height: 500px;
 }
@@ -937,3 +1000,5 @@ img.hover-shadow {
         width: 12.2%;
     }
 }
+
+
