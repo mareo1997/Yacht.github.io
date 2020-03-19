@@ -164,7 +164,7 @@
         <div class="form-popup" id="myForm">
             <div class="form-container" id="formcontent">
                 <header>Get a Quote</header>
-                Boats<br><select class="sel" required id="boats" onchange="delprice(), delnums()"></select><br>
+                Boats<br><select class="sel" required id="boats" onchange="delprice(), delnums(), calendar()"></select><br>
                 Number of Passengers<br><select class="sel" id="nums"></select><br>
                 Destination<br>
                 <select class="sel" required id="destination">
@@ -192,7 +192,7 @@
                 <select class="sel" id="date" onchange="delprice(), deldays()"></select>
                 <select class="sel" id="days"></select><br>
                 Number of hours<br>
-                <select class="sel" id="hours" onchange="delprice()">
+                <select class="sel" id="hours" onchange="delprice(), calendar()">
                     <option>4</option>
                     <option>8</option>
                 </select><br>

@@ -45,11 +45,12 @@ function myBackgroundimg(){
 }
 
 function start() {
-    date();
-    days();
     boats();
     passengers();
+    date();
+    days();
     quote();
+    calendar();
 }
 window.onload = start;
 
@@ -218,6 +219,7 @@ function date(){
 
 function days() {
     var count;
+    var x = document.getElementById("budget").value;
     var mths = document.getElementById("date").value; //Seperate the month and year
     var m = mths.split(" ", 2);
     var months = m[0]; //Assign the month
@@ -239,7 +241,38 @@ function days() {
         select.add(option);
         var ul = document.getElementById("ul");
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(count));
+        li.appendChild(document.createTextNode(count + "\n\n" + x));
+        ul.appendChild(li);
+    }
+}
+
+function calendar() {
+    var ul = document.getElementById("ul");
+    var len = ul.children.length;
+    var y;
+    for (y = 0; y < len; y++) {
+        ul.removeChild(ul.children[0])
+    }
+    var count;
+    var x = document.getElementById("budget").value;
+    var mths = document.getElementById("date").value; //Seperate the month and year
+    var m = mths.split(" ", 2);
+    var months = m[0]; //Assign the month
+    var yr = m[1]; //Assign the year
+    if (months == "April" || months == "June" || months == "September" || months == "November") {
+        day = 31; //Months with 30 days
+    } else if (months == "February" && yr % 4 == 0) {
+        day = 30;
+    } else if (months == "February" && yr % 4 != 0) {
+        day = 29;
+    } else if (months == "January" || months == "March" || months == "May" || months == "July" || months == "August" || months == "October" || months == "December") {
+        day = 32; //Months with 31 days
+    }
+    document.getElementById("li").innerHTML = mths;
+    for (count = 1; count < day; count++) {
+        var ul = document.getElementById("ul");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(count + "\n" + x));
         ul.appendChild(li);
     }
 }
@@ -334,11 +367,10 @@ function quote() {
     } else if (time == "8") {
         quote = quote * 4;
     }
-    select = document.getElementById("budget");
+    var select = document.getElementById("budget");
     var option = document.createElement("option");
     option.text = "$" + quote + ".00";
     select.add(option);
-
 }
 
 function submit() {
