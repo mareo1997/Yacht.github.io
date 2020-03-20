@@ -335,7 +335,7 @@ footer{
 
 /* Add styles to the form container */
 .form-container {
-  height: 470px;
+  height: 550px;
   width: 280px;
   padding: 10px;
   background-color: white;
@@ -974,11 +974,10 @@ img.hover-shadow {
         color: #777;
 }
 
-        .days li .active {
-            padding: 5px;
+.days li:hover {
             background: #1abc9c;
             color: white !important
-        }
+}
 
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {

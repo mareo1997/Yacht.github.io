@@ -198,7 +198,7 @@ function date(){
 	var renew = 0;
 	for(i=0;i<13;i++){
 		if(updatemonth == "December"){
-			var renew = 12;
+			renew = 12;
 			yr = yr + 1;
 			var update = new Date()
 			var updatemonth = month[update.getMonth() + i - renew]
@@ -242,6 +242,64 @@ function days() {
     }
     calendar();
 }
+
+/*function next() {
+    var next = document.getElementById("li").innerHTML;
+    var m = next.split(" ", 2);
+    var months = m[0]; //Assign the month
+    var yr = m[1]; //Assign the year
+    var timestamp = new Date();
+	var currentyear = timestamp.getFullYear();
+	var month = new Array();
+	month[0] = "January";
+	month[1] = "February";
+	month[2] = "March";
+	month[3] = "April";
+	month[4] = "May";
+	month[5] = "June";
+	month[6] = "July";
+	month[7] = "August";
+	month[8] = "September";
+	month[9] = "October";
+	month[10] = "November";
+	month[11] = "December";
+	var i;
+	var renew = 0;
+	for (i = 0; i < 13; i++) {
+	    if (months == "December") {
+	        var renew = 12;
+	        currentyear = currentyear + 1;
+
+	        months = month[0];
+
+	        break;
+	    }else if (months == month[i]) {
+	        months = month[i + 1 - renew];
+	        i++;
+	        break;
+	    }
+	}
+	document.getElementById("li").innerHTML = months + " " + currentyear + " " + i;
+
+		/*if(updatemonth == "December"){
+			var renew = 12;
+			yr = yr + 1;
+			var update = new Date()
+			var updatemonth = month[update.getMonth() + i - renew]
+			var select = document.getElementById("date");
+			var option = document.createElement("option");
+			option.text = updatemonth + " " + yr;
+			select.add(option);
+		}else{
+			var update = new Date()
+			var updatemonth = month[update.getMonth() + i - renew]
+			var select = document.getElementById("date");
+			var option = document.createElement("option");
+			option.text = updatemonth + " " + yr;
+			select.add(option);
+		}
+	
+}*/
 
 function calendar() {
     var count;
