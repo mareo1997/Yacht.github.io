@@ -50,9 +50,10 @@ function start() {
     date();
     days();
     quote();
-    calendar();
+    delcalendar();
+    changeday();
 }
-window.onload = start;
+//window.onload = start;
 
 function readmore(more){
 	if(more == 'americas'){
@@ -241,18 +242,17 @@ function days() {
         select.add(option);
         var ul = document.getElementById("ul");
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(count + "\n\n" + x));
+        li.appendChild(document.createTextNode(count + "\n" + x));
         ul.appendChild(li);
     }
+    for (count = 1; count < day; count++) {
+        var y = document.getElementsByTagName("LI")[count];
+        y.id = count; //Assign id to li attribute based on the day
+    }
+    assigndays();
 }
 
 function calendar() {
-    var ul = document.getElementById("ul");
-    var len = ul.children.length;
-    var y;
-    for (y = 0; y < len; y++) {
-        ul.removeChild(ul.children[0])
-    }
     var count;
     var x = document.getElementById("budget").value;
     var mths = document.getElementById("date").value; //Seperate the month and year
@@ -275,6 +275,50 @@ function calendar() {
         li.appendChild(document.createTextNode(count + "\n" + x));
         ul.appendChild(li);
     }
+    for (count = 1; count < day; count++) {
+        var y = document.getElementsByTagName("LI")[count];
+        y.id = count; //Assign id to li attribute based on the day
+    }
+    assigndays();
+}
+
+function assigndays() {
+    document.getElementsByTagName("LI")[1].onclick = function () { changeday(1) }
+    document.getElementsByTagName("LI")[2].onclick = function () { changeday(2) }
+    document.getElementsByTagName("LI")[3].onclick = function () { changeday(3) }
+    document.getElementsByTagName("LI")[4].onclick = function () { changeday(4) }
+    document.getElementsByTagName("LI")[5].onclick = function () { changeday(5) }
+    document.getElementsByTagName("LI")[6].onclick = function () { changeday(6) }
+    document.getElementsByTagName("LI")[7].onclick = function () { changeday(7) }
+    document.getElementsByTagName("LI")[8].onclick = function () { changeday(8) }
+    document.getElementsByTagName("LI")[9].onclick = function () { changeday(9) }
+    document.getElementsByTagName("LI")[10].onclick = function () { changeday(10) }
+    document.getElementsByTagName("LI")[11].onclick = function () { changeday(11) }
+    document.getElementsByTagName("LI")[12].onclick = function () { changeday(12) }
+    document.getElementsByTagName("LI")[13].onclick = function () { changeday(13) }
+    document.getElementsByTagName("LI")[14].onclick = function () { changeday(14) }
+    document.getElementsByTagName("LI")[15].onclick = function () { changeday(15) }
+    document.getElementsByTagName("LI")[16].onclick = function () { changeday(16) }
+    document.getElementsByTagName("LI")[17].onclick = function () { changeday(17) }
+    document.getElementsByTagName("LI")[18].onclick = function () { changeday(18) }
+    document.getElementsByTagName("LI")[19].onclick = function () { changeday(19) }
+    document.getElementsByTagName("LI")[20].onclick = function () { changeday(20) }
+    document.getElementsByTagName("LI")[21].onclick = function () { changeday(21) }
+    document.getElementsByTagName("LI")[22].onclick = function () { changeday(22) }
+    document.getElementsByTagName("LI")[23].onclick = function () { changeday(23) }
+    document.getElementsByTagName("LI")[24].onclick = function () { changeday(24) }
+    document.getElementsByTagName("LI")[25].onclick = function () { changeday(25) }
+    document.getElementsByTagName("LI")[26].onclick = function () { changeday(26) }
+    document.getElementsByTagName("LI")[27].onclick = function () { changeday(27) }
+    document.getElementsByTagName("LI")[28].onclick = function () { changeday(28) }
+    document.getElementsByTagName("LI")[29].onclick = function () { changeday(29) }
+    document.getElementsByTagName("LI")[30].onclick = function () { changeday(30) }
+    document.getElementsByTagName("LI")[31].onclick = function () { changeday(31) }
+}
+
+function changeday(day) {
+    var days = document.getElementsByTagName("LI");
+    document.getElementById("days").selectedIndex = day - 1;
 }
 
 function deldays() {
@@ -289,6 +333,16 @@ function deldays() {
         ul.removeChild(ul.children[0])
     }
     days();
+}
+
+function delcalendar() {
+    var ul = document.getElementById("ul");
+    var len = ul.children.length;
+    var y;
+    for (y = 0; y < len; y++) {
+        ul.removeChild(ul.children[0])
+    }
+    calendar();
 }
 
 function boats() {
