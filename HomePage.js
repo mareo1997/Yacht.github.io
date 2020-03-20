@@ -239,16 +239,8 @@ function days() {
         var option = document.createElement("option");
         option.text = count;
         select.add(option);
-        var ul = document.getElementById("ul");
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(count + "\n" + x));
-        ul.appendChild(li);
     }
-    for (count = 1; count < day; count++) {
-        var y = document.getElementsByTagName("LI")[count];
-        y.id = count; //Assign id to li attribute based on the day
-    }
-    assigndays();
+    calendar();
 }
 
 function calendar() {
