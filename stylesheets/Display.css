@@ -963,6 +963,7 @@ img.hover-shadow {
 }
 
 .days li {
+        cursor: pointer;
         list-style-type: none;
         display: inline-block;
         width: 13.6%;

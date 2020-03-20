@@ -51,7 +51,6 @@ function start() {
     days();
     quote();
     delcalendar();
-    changeday();
 }
 //window.onload = start;
 
@@ -319,6 +318,7 @@ function assigndays() {
 function changeday(day) {
     var days = document.getElementsByTagName("LI");
     document.getElementById("days").selectedIndex = day - 1;
+    openForm();
 }
 
 function deldays() {

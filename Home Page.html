@@ -6,7 +6,7 @@
     <script type="text/javascript" src="HomePage.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/Display.css">
 </head>
-<body>
+<body onload="start()">
     <div id="body">
         <div class="navbar">
             <a href="#" class="active" onclick="myPage('home')">Home</a>
@@ -113,7 +113,6 @@
             
         </div>
 
-
         <div class="textbox3">
             <div class="benefits_header">
                 <b> Yacht Charter Fleet </b>
@@ -183,7 +182,7 @@
         <div class="form-popup" id="myForm">
             <div class="form-container" id="formcontent">
                 <header>Get a Quote</header>
-                Boats<br><select class="sel" required id="boats" onchange="delprice(), delnums()"></select><br>
+                Boats<br><select class="sel" required id="boats" onchange="delprice(), delnums(), delcalendar()"></select><br>
                 Number of Passengers<br><select class="sel" id="nums"></select><br>
                 Destination<br>
                 <select class="sel" required id="destination">
@@ -211,7 +210,7 @@
                 <select class="sel" id="date" onchange="delprice(), deldays()"></select>
                 <select class="sel" id="days"></select><br>
                 Number of hours<br>
-                <select class="sel" id="hours" onchange="delprice()">
+                <select class="sel" id="hours" onchange="delprice(), delcalendar()">
                     <option>4</option>
                     <option>8</option>
                 </select><br>
