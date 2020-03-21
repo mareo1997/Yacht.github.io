@@ -9,6 +9,18 @@ body{
     /* The image used */
     background-image: url("https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp");
     /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg2 {
+    /* The image used */
+    background-image: url("https://i.insider.com/5b59df8d1982d835008b460a?width=1100&format=jpeg&auto=webp");
+    /* Full height */
+    height: 100%;
     height: 100vh;
     /* Center and scale the image nicely */
     background-position: center;
@@ -223,8 +235,7 @@ header {
 .split{
 	height: 100%;
 	width: 50%;
-	position: fixed;
-	z-index: -1;
+	position: absolute;
 	top: 9%;
 	overflow-x: hidden;
 	padding-top: 20px;
@@ -244,10 +255,18 @@ header {
 	left: 25%;
 }
 
-.centered2{
-	position: absolute;
-	text-align: center;
-	left: 50%;
+.centered2 {
+    cursor: pointer;
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
 }
 
 footer{
@@ -316,58 +335,11 @@ footer{
 
 /* Add styles to the form container */
 .form-container {
-  height: 470px;
+  height: 550px;
   width: 280px;
   padding: 10px;
   background-color: white;
   overflow: auto;
-}
-
-.container {
-    align-content: center;
-    opacity: .8;
-    padding: 10px;
-    background-color: white;
-    overflow: auto;
-    font-size: 20px;
-    font-family: Arial;
-}
-
-/* Full-width input fields */
-.container input[type=text], .container input[type=email], .container input[type=tel], .container input[type=date], .container .sel {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.container input[type=text]:focus, .container input[type=email]:focus, .container input[type=date], .container input[type=tel]:focus, .container .sel:focus{
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 1;
-}
-
-/* Add a red background color to the cancel button */
-.container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.container .btn:hover, .open-button:hover {
-  opacity: 1;
 }
 
 .form-container input[type=text], .form-container input[type=email], .form-container input[type=tel], .form-container input[type=date], .form-container .sel {
@@ -406,7 +378,6 @@ footer{
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-
 
 .grid-container {
     padding: 5px;
@@ -885,22 +856,150 @@ img.hover-shadow {
   font-family: Arial;
   opacity: .8;
   float:left;
+  padding-bottom: 100px;
+  animation-name: move_in_right;
+  animation-duration: 6s;
+  margin-bottom: 100px;
+}
+
+.textbox2-2{
+  background-color: white;
+  font-family: Arial;
+  opacity: .8;
+  width:100%;
+  float:right;
+  padding-bottom: 100px;
+  animation-name: move_in_left;
+  animation-duration: 6s;
+  animation-duration: 6.5s;
+}
+
+.textbox3{
+  background-color: white;
+  font-family: Arial;
+  opacity: .8;
+  float:left;
+}
+
+@keyframes move_in_right {
+  from {padding-left: 1000px;}
+  to {padding-left: 0px;}
+}
+
+@keyframes move_in_left {
+  from {padding-right: 1000px;}
+  to {padding-right: 0px;}
 }
 
 .yacht-name-details{
   margin-top:100px;
-  margin-left:10%;
+  padding-bottom: 200px;
   float:left;
-  width:30%;
+  width:50%;
+}
+
+.textbox2:hover,
+.textbox2:active{
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 5);
+}
+
+.textbox2-2:hover,
+.textbox2-2:active{
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 5);
 }
 
 .yacht-name-details h1{
   font-size:50px;
+
 }
 
 .yacht-image {
     float: right;
-    width: 60%;
+    width: 50%;
     height: 500px;
 }
+
+.yacht-name-details2{
+  margin-top:100px;
+  padding-bottom: 200px;
+  float:right;
+  width:50%;
+}
+
+.yacht-name-details2 h1{
+  font-size: 50px;
+
+}
+
+.yacht-image2 {
+    float: left;
+    width: 50%;
+    height: 500px;
+}
+
+.month {
+    width: 100%;
+    padding: 20px;
+    background: #1abc9c;
+    text-align: center;
+}
+
+    .month ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .month ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+        cursor: pointer;
+        list-style-type: none;
+        display: inline-block;
+        width: 13.6%;
+        height: 30px;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #777;
+}
+
+.days li:hover {
+            background: #1abc9c;
+            color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .days li {
+        width: 13.1%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .days li {
+        width: 12.5%;
+    }
+
+        .days li .active {
+            padding: 2px;
+        }
+}
+
+@media screen and (max-width: 290px) {
+    .days li {
+        width: 12.2%;
+    }
+}
+
 
