@@ -217,38 +217,76 @@ function date(){
 	}
 }
 
-function days() {
-    var count;
-    var x = document.getElementById("budget").value;
-    var mths = document.getElementById("date").value; //Seperate the month and year
-    var m = mths.split(" ", 2);
-    var months = m[0]; //Assign the month
-    var yr = m[1]; //Assign the year
-    if (months == "April" || months == "June" || months == "September" || months == "November") {
-        day = 31; //Months with 30 days
-    } else if (months == "February" && yr % 4 == 0) {
-        day = 30;
-    } else if (months == "February" && yr % 4 != 0) {
-        day = 29;
-    } else if (months == "January" || months == "March" || months == "May" || months == "July" || months == "August" || months == "October" || months == "December") {
-        day = 32; //Months with 31 days
+function deldays2() {
+    var x = document.getElementById("days");
+    var ul = document.getElementById("ul");
+    var len = ul.children.length;
+    var y;
+    for (y = 0; y < 32; y++) {
+        x.remove(x.selectedIndex);
     }
-    document.getElementById("li").innerHTML = mths;
-    for (count = 1; count < day; count++) {
-        var select = document.getElementById("days");
-        var option = document.createElement("option");
-        option.text = count;
-        select.add(option);
+    for (y = 0; y < len; y++) {
+        ul.removeChild(ul.children[0])
     }
-    calendar();
 }
 
-/*function next() {
+function prev() {
+    var next = document.getElementById("li").innerHTML;
+    var m = next.split(" ", 2);
+    var months = m[0]; //Assi-gn the month
+    var timestamp = new Date();
+    var currentmonth = timestamp.getMonth();
+    var yr = m[1];
+    var currentyear = timestamp.getFullYear();
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var i;
+    var renew = 0;
+    deldays2();
+    for (i = 13; i > 0; i--) {
+        if (months == month[0]) {
+            currentyear = yr - 1;
+            months = month[i - 2];
+            document.getElementById("date").value = months + " " + currentyear;
+            break;
+        } else if (month[i] == month[currentmonth + 1] && yr == currentyear) {
+            currentyear = yr;
+            months = month[i - 1];
+            document.getElementById("date").value = months + " " + currentyear;
+            break;
+        } else if (months == month[i] && yr > currentyear) {
+            currentyear = yr;
+            months = month[i - 1];
+            document.getElementById("date").value = months + " " + currentyear;
+            break;
+        } else if (months == month[i]) {
+            months = month[i - 1 + renew];
+            document.getElementById("date").value = months + " " + currentyear;
+            break;
+        }
+    }
+    document.getElementById("li").innerHTML = months + " " + currentyear;
+    calendar2(months, currentyear);
+}
+
+function next() {
     var next = document.getElementById("li").innerHTML;
     var m = next.split(" ", 2);
     var months = m[0]; //Assign the month
-    var yr = m[1]; //Assign the year
     var timestamp = new Date();
+    var currentmonth = timestamp.getMonth();
+    var yr = m[1];
 	var currentyear = timestamp.getFullYear();
 	var month = new Array();
 	month[0] = "January";
@@ -265,41 +303,106 @@ function days() {
 	month[11] = "December";
 	var i;
 	var renew = 0;
+	deldays2();
 	for (i = 0; i < 13; i++) {
-	    if (months == "December") {
-	        var renew = 12;
+	    if (months == month[11] && i >= 11) {
+	        renew = 12;
 	        currentyear = currentyear + 1;
-
-	        months = month[0];
-
-	        break;
-	    }else if (months == month[i]) {
 	        months = month[i + 1 - renew];
-	        i++;
+	        //del();
+	        document.getElementById("date").value = months + " " + currentyear;
+	        break;
+	    } else if (month[i] == month[currentmonth - 1] && yr > currentyear) {
+	        currentyear = yr;
+	        months = month[i + 1 - renew];
+	        //del();
+	        document.getElementById("date").value = months + " " + currentyear;
+	        break;
+	    } else if (months == month[i] && yr > currentyear) {
+	        currentyear = yr;
+	        months = month[i + 1 - renew];
+	        //del();
+	        document.getElementById("date").value = months + " " + currentyear;
+	        break;
+	    } else if (months == month[i]) {
+	        months = month[i + 1 - renew];
+	        //del();
+	        document.getElementById("date").value = months + " " + currentyear;
 	        break;
 	    }
 	}
-	document.getElementById("li").innerHTML = months + " " + currentyear + " " + i;
+	document.getElementById("li").innerHTML = months + " " + currentyear;
+	calendar2(months, currentyear);
+}
 
-		/*if(updatemonth == "December"){
-			var renew = 12;
-			yr = yr + 1;
-			var update = new Date()
-			var updatemonth = month[update.getMonth() + i - renew]
-			var select = document.getElementById("date");
-			var option = document.createElement("option");
-			option.text = updatemonth + " " + yr;
-			select.add(option);
-		}else{
-			var update = new Date()
-			var updatemonth = month[update.getMonth() + i - renew]
-			var select = document.getElementById("date");
-			var option = document.createElement("option");
-			option.text = updatemonth + " " + yr;
-			select.add(option);
-		}
-	
-}*/
+function calendar2(months, yr) {
+    var count;
+    var x = document.getElementById("budget").value;
+    if (months == "April" || months == "June" || months == "September" || months == "November") {
+        day = 31; //Months with 30 days
+    } else if (months == "February" && yr % 4 == 0) {
+        day = 30;
+    } else if (months == "February" && yr % 4 != 0) {
+        day = 29;
+    } else if (months == "January" || months == "March" || months == "May" || months == "July" || months == "August" || months == "October" || months == "December") {
+        day = 32; //Months with 31 days
+    }
+    for (count = 1; count < day; count++) {
+        var ul = document.getElementById("ul");
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(count + "\n" + x));
+        ul.appendChild(li);
+    }
+    for (count = 1; count < day; count++) {
+        var y = document.getElementsByTagName("LI")[count];
+        y.id = count; //Assign id to li attribute based on the day
+    }
+    for (count = 1; count < day; count++) {
+        var select = document.getElementById("days");
+        var option = document.createElement("option");
+        option.text = count;
+        select.add(option);
+    }
+    assigndays();
+}
+
+function deldays() {
+    var x = document.getElementById("days");
+    var ul = document.getElementById("ul");
+    var len = ul.children.length;
+    var y;
+    for (y = 0; y < 32;y++){
+        x.remove(x.selectedIndex);
+    }
+    for (y = 0; y < len; y++){
+        ul.removeChild(ul.children[0])
+    }
+    days();
+}
+
+function days() {
+    var count;
+    var mths = document.getElementById("date").value; //Seperate the month and year
+    var m = mths.split(" ", 2);
+    var months = m[0]; //Assign the month
+    var yr = m[1]; //Assign the year
+    if (months == "April" || months == "June" || months == "September" || months == "November") {
+        day = 31; //Months with 30 days
+    } else if (months == "February" && yr % 4 == 0) {
+        day = 30;
+    } else if (months == "February" && yr % 4 != 0) {
+        day = 29;
+    } else if (months == "January" || months == "March" || months == "May" || months == "July" || months == "August" || months == "October" || months == "December") {
+        day = 32; //Months with 31 days
+    }
+    for (count = 1; count < day; count++) {
+        var select = document.getElementById("days");
+        var option = document.createElement("option");
+        option.text = count;
+        select.add(option);
+    }
+    calendar();
+}
 
 function calendar() {
     var count;
@@ -369,20 +472,6 @@ function changeday(day) {
     var days = document.getElementsByTagName("LI");
     document.getElementById("days").selectedIndex = day - 1;
     openForm();
-}
-
-function deldays() {
-    var x = document.getElementById("days");
-    var ul = document.getElementById("ul");
-    var len = ul.children.length;
-    var y;
-    for (y = 0; y < 32;y++){
-        x.remove(x.selectedIndex);
-    }
-    for (y = 0; y < len; y++){
-        ul.removeChild(ul.children[0])
-    }
-    days();
 }
 
 function delcalendar() {
