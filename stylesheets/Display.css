@@ -851,15 +851,16 @@ img.hover-shadow {
   clear: both;
 }
 
-.textbox2{
-  background-color: white;
-  font-family: Arial;
-  opacity: .8;
-  float:left;
-  padding-bottom: 100px;
-  animation-name: move_in_right;
-  animation-duration: 6s;
-  margin-bottom: 100px;
+.textbox2 {
+    background-color: white;
+    font-family: Arial;
+    opacity: .8;
+    float: left;
+    padding-bottom: 10px;
+    animation-name: move_in_right;
+    animation-duration: 6s;
+    margin-bottom: 0px;
+    padding-top: 10px;
 }
 
 .textbox2-2{
@@ -868,10 +869,9 @@ img.hover-shadow {
   opacity: .8;
   width:100%;
   float:right;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   animation-name: move_in_left;
-  animation-duration: 6s;
-  animation-duration: 6.5s;
+  animation-duration: 7s;
 }
 
 .textbox3{
