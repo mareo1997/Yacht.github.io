@@ -54,6 +54,12 @@ function start() {
 }
 //window.onload = start;
 
+function b() {
+    var a = document.getElementById("a");
+    var bounding = a.getBoundingClientRect();
+    alert(bounding);
+}
+
 function readmore(more){
 	if(more == 'americas'){
 		document.getElementById("readamericas").style.display= "none";
