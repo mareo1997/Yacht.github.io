@@ -237,8 +237,8 @@ function deldays2() {
 }
 
 function prev() {
-    var next = document.getElementById("li").innerHTML;
-    var m = next.split(" ", 2);
+    var prev = document.getElementById("li").innerHTML;
+    var m = prev.split(" ", 2);
     var months = m[0]; //Assi-gn the month
     var timestamp = new Date();
     var currentmonth = timestamp.getMonth();

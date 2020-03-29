@@ -183,6 +183,22 @@ header {
     font-size: inherit;
 }
 
+.read:hover{
+    color: white;
+    background-color: blue;
+}
+
+.readactive {
+    cursor: pointer;
+    border: solid;
+    outline: none;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    color: white;
+    background-color: blue;
+}
+
 .box1 {
     cursor: pointer;
     border: solid;
@@ -388,6 +404,12 @@ footer{
     padding: 5px;
     display: grid;
     grid-template-columns: auto auto;
+}
+
+.country-container {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
 .grid-item {
@@ -669,6 +691,11 @@ e:active,e:hover {
     width: 50%;
 }
 
+.grid-yacht{
+    height: 500px;
+    min-height: 25%;
+}
+
 /* The Modal (background) */
 .gallerymodal {
     display: none;
@@ -717,8 +744,7 @@ e:active,e:hover {
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -944,11 +970,25 @@ img.hover-shadow {
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 5);
 }
 
+.monthbtn{
+    padding: 10px;
+}
+
 .month {
     width: 100%;
     padding: 20px;
     background: #1abc9c;
     text-align: center;
+}
+
+.month .prevmth {
+        float: left;
+        padding: 10px;
+}
+
+.month .nextmth {
+        float: right;
+        padding: 10px;
 }
 
 .month ul {

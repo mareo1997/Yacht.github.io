@@ -7,7 +7,7 @@
 <script type="text/javascript" src = "js/jquery.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body class="bg2">
+<body class="bg">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
@@ -77,6 +77,21 @@
                 </p>
             </div>
         </div>
+
+        <div class="country-container">
+            <div class="grid-item">
+                <button class="readactive" onclick="myDestination('americas')">Americas</button>
+            </div>
+            <div class="grid-item">
+                <button class="read" onclick="myDestination('caribbean')">Caribbean</button>
+            </div>
+            <div class="grid-item">
+                <button class="read" onclick="myDestination('exotic')">Exotics</button>
+            </div>
+            <div class="grid-item">
+                <button class="read" onclick="myDestination('medi')">Mediterranean</button>
+            </div>
+        </div><br><br>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
     </div>
