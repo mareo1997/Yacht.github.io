@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg2">
+<body class="bg">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
@@ -50,43 +50,43 @@
             <a href="#" class="active" onclick="myPage('contact')">Contact Us</a>
             <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
+        </div>
+
+        <div align="center">
+            <header>Contact Us</header><br>
+            <div class="whitebox">
+                <p>
+                    <b>
+                        Yacht Charter Fleet<br>
+                        <i class="fas fa-phone">(305)954-4862</i><br>
+                        CONTACTUS@yachtcharterfleet.com<br><br>
+
+                        South Pointe Pier<br>
+                        1 Washington Ave<br>
+                        Miami Beach<br>
+                        FL, 33139<br>
+                    </b>
+                </p>
+
+                <footer>
+                    Share us on:
+                    <a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
+                    <a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
+                    <a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
+                </footer>
+            </div>
+            <div class="whitebox">
+                <p>Our company lives to help any and all potential customers with any questions they may have!</p>
+                <form onsubmit="contact()">
+                    Email*<br>
+                    <input type="email" required id="@" size="35"><br>
+                    <br>
+                    Message<br>
+                    <textarea rows="4" cols="50" maxlength="1000" required id="msg" placeholder="How can we help you?"></textarea>                          <br>
+                    <input type="submit" class="home-button" value="Submit">
+                </form>
+            </div>
         </div><br>
-
-              <div align="center">
-                  <header>Contact Us</header><br>
-                  <div class="textbox">
-                      <p>
-                          <b>
-                              Yacht Charter Fleet<br>
-                              <i class="fas fa-phone">(305)954-4862</i><br>
-                              CONTACTUS@yachtcharterfleet.com<br><br>
-
-                              South Pointe Pier<br>
-                              1 Washington Ave<br>
-                              Miami Beach<br>
-                              FL, 33139<br>
-                          </b>
-                      </p>
-
-                      <footer>
-                          Share us on:
-                          <a href="#" class="fa fa-facebook" onclick="mySocial('fb')"></a>
-                          <a href="#" class="fa fa-twitter" onclick="mySocial('tweet')"></a>
-                          <a href="#" class="fa fa-youtube" onclick="mySocial('you')"></a>
-                      </footer>
-                  </div>
-                  <div class="textbox">
-                      <p>Our company lives to help any and all potential customers with any questions they may have!</p>
-                      <form onsubmit="contact()">
-                          Email*<br>
-                          <input type="email" required id="@" size="35"><br>
-                          <br>
-                          Message<br>
-                          <textarea rows="4" cols="50" maxlength="1000" required id="msg" placeholder="How can we help you?"></textarea>                          <br>
-                          <input type="submit" class="home-button" value="Submit">
-                      </form>
-                  </div>
-              </div><br>
 
         <button class="open-button" onclick="myQuote()">Build a Quote</button>
     </div>

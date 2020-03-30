@@ -6,7 +6,7 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body class="bg">
+<body class="">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
@@ -49,20 +49,27 @@
             <a href="#" onclick="myPage('faq')">FAQ</a>
             <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
         </div>
-        <header>40+ Size Yachts</header><br>
+
+        <div class="bg2" align="center">
+            <header>50+ Size Yachts</header><br>
+            <div class="align-homebutton">
+                <button class="home-button" onclick="openForm()">Build a Quote</button>
+            </div>
+        </div>
 
         <div class="textbox">
             <div class="grid-container">
                 <div class="grid-item">
                     <header>52' SEA RAY</header><br>
-                    <img onclick="image(201)" class="gridimage" 
-                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/52-SeaRay-Yacht-0001.jpg">
+                    <img onclick="image(201)" class="gridimage"
+                         src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/52-SeaRay-Yacht-0001.jpg">
                 </div>
                 <div class="grid-item">
                     <header>55' AZIMUT</header><br>
-                    <img onclick="image(202)" class="gridimage" 
-                    src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">             </div>
-            </div><br><br>
+                    <img onclick="image(202)" class="gridimage"
+                         src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">
+                </div>
+            </div>
         </div>
 
         <div id="201" class="modal">
@@ -70,7 +77,7 @@
                 <span class="close" onclick="span(201)">&times;</span>
                 <header id="2.01">52' SEA RAY</header><br>
                 <img class="modal-image"
-                 src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/52-SeaRay-Yacht-0001.jpg">
+                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/52-SeaRay-Yacht-0001.jpg">
                 <p>MAKE SEA RAY | SIZE 52' | YEAR 2006 | STARTING AT $2800.00</p>
                 <button class="box1" onclick="openForm(2.01)">Get Quote</button> <button class="box2" onclick="box(201)">Read More</button>
             </div>
@@ -81,56 +88,12 @@
                 <span class="close" onclick="span(202)">&times;</span>
                 <header id="2.02">55' AZIMUT</header><br>
                 <img class="modal-image"
-                src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">
+                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">
                 <p>MAKE AZIMUT | SIZE 55' | YEAR 2019 | STARTING AT $2800.00</p>
                 <button class="box1" onclick="openForm(2.02)">Get Quote</button> <button class="box2" onclick="box(202)">Read More</button>
             </div>
         </div>
 
-        <button class="open-button" onclick="myQuote()">Build a Quote</button>
-
-        <div class="form-popup" id="myForm">
-            <form class="form-container" id="formcontent">
-                <header>Get a Quote</header><br>
-                Name*<br><input type="text" required name="name"><br><br>
-
-                Email*<br><input type="email" required name="@"><br><br>
-
-                Phone<br><input type="tel" name="#"><br><br>
-
-                Boat<br><select class="sel" id="boatname"></select><br><br>
-
-                Date of Departure*<br>
-                <select class="sel" id="date"></select><br>
-                <br>
-
-                Number of days<br>
-                <select class="sel" id="times">
-                    <option value="time1">5</option>
-                    <option value="time2">6</option>
-                    <option value="time2">7</option>
-                    <option value="time2">8</option>
-                    <option value="time2">9</option>
-                    <option value="time3">10</option>
-                </select><br><br>
-
-                Number of Passengers<br>
-                <select class="sel" id="nums">
-                    <option value="num1">1</option>
-                    <option value="num2">2</option>
-                    <option value="num3">3</option>
-                    <option value="num4">4</option>
-                    <option value="num5">5</option>
-                    <option value="num1">6</option>
-                    <option value="num2">7</option>
-                    <option value="num3">8</option>
-                    <option value="num4">9</option>
-                    <option value="num5">10</option>
-                </select><br><br>
-                <input type="submit" class="btn" value="Submit">
-                <input type="button" class="btn cancel" onclick="closeForm()" value="Cancel">
-            </form>
-        </div>
     </div>
 
 </body>

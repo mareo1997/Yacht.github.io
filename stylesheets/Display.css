@@ -52,10 +52,16 @@ p{
 }
 
 .textbox{
-	background-color: white;
+	background-color: navajowhite;
 	font-family: Arial;
 	opacity: .8;
-	margin: 0px 20px;
+}
+
+.whitebox {
+    background-color: white;
+    font-family: Arial;
+    opacity: .8;
+    margin: 0px 20px;
 }
 
 .imgbox {
@@ -245,6 +251,7 @@ header {
     cursor: pointer;
     width: 75%;
     height: 500px;
+    min-height: 25%;
 }
 
 .anchor {
@@ -561,11 +568,10 @@ e:active,e:hover {
 
 .benefits_header{
 	text-align: center;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 25px;
+	padding-bottom: 20px;
 	font-size: 25px
 }
-
 
 .tab{
 	display: inline-block;
@@ -693,6 +699,11 @@ e:active,e:hover {
 
 .grid-yacht{
     height: 500px;
+    min-height: 25%;
+}
+
+.home-yacht {
+    height: 250px;
     min-height: 25%;
 }
 
@@ -944,7 +955,7 @@ img.hover-shadow {
 }
 
 .textbox3{
-  background-color: white;
+  background-color: navajowhite;
   font-family: Arial;
   opacity: .8;
   float:left;
