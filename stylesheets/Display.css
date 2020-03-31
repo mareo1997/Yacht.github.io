@@ -52,13 +52,13 @@ p{
 }
 
 .textbox{
-	background-color: navajowhite;
+	background-color: lightblue;
 	font-family: Arial;
 	opacity: .8;
 }
 
 .whitebox {
-    background-color: white;
+    background-color: lightblue;
     font-family: Arial;
     opacity: .8;
     margin: 0px 20px;
@@ -249,7 +249,7 @@ header {
 
 .gridimage {
     cursor: pointer;
-    width: 75%;
+    width: 50%;
     height: 500px;
     min-height: 25%;
 }
@@ -953,7 +953,7 @@ img.hover-shadow {
 }
 
 .textbox3{
-  background-color: navajowhite;
+  background-color: lightblue;
   font-family: Arial;
   opacity: .8;
   float:left;
