@@ -905,8 +905,7 @@ img.hover-shadow {
     font-family: Arial;
     opacity: .8;
     float: left;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    position: relative;
 }
 
 .right-image {
@@ -937,7 +936,6 @@ img.hover-shadow {
     font-family: Arial;
     opacity: .8;
     float: right;
-    padding-bottom: 10px;
     position: relative;
 }
 
