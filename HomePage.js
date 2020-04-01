@@ -54,10 +54,13 @@ function start() {
 }
 //window.onload = start;
 
-function b() {
-    var a = document.getElementById("a");
-    var bounding = a.getBoundingClientRect();
-    alert(bounding);
+function activate() {
+    var elmnt = document.getElementById("myDIV");
+    var y = elmnt.scrollTop;
+    if (y == 805) {
+        document.getElementById("a").style.display = "block";
+        document.getElementById("a").style.animationPlayState = "running";
+    }
 }
 
 function readmore(more){

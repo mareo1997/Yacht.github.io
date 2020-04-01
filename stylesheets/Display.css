@@ -910,7 +910,8 @@ img.hover-shadow {
 
 .right-image {
     position: relative;
-    animation: move_in_right 3s ease-in-out 1;
+    display: none;
+    animation: move_in_right 3s ease-in-out 1 paused;
 }
 
 .left-image {
@@ -929,6 +930,12 @@ img.hover-shadow {
     float: right;
     width: 50%;
     height: 500px;
+}
+
+#myDIV {
+    height: 500px;
+    width: 100%;
+    overflow: auto;
 }
 
 .left-textbox {
