@@ -910,13 +910,12 @@ img.hover-shadow {
 
 .right-image {
     position: relative;
-    display: none;
-    animation: move_in_right 3s ease-in-out 1 paused;
+    animation: move_in_right 1s 1 paused;
 }
 
 .left-image {
     position: relative;
-    animation: move_in_left 3s ease-in-out 1;
+    animation: move_in_left 1s 1 paused;
 }
 
 .yacht-name-details {
@@ -930,6 +929,7 @@ img.hover-shadow {
     float: right;
     width: 50%;
     height: 500px;
+    display: none;
 }
 
 #myDIV {
@@ -957,6 +957,7 @@ img.hover-shadow {
     float: left;
     width: 50%;
     height: 500px;
+    display: none;
 }
 
 .textbox3{

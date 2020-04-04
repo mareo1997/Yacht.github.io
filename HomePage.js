@@ -57,9 +57,30 @@ function start() {
 function activate() {
     var elmnt = document.getElementById("myDIV");
     var y = elmnt.scrollTop;
-    if (y == 805) {
-        document.getElementById("a").style.display = "block";
-        document.getElementById("a").style.animationPlayState = "running";
+    document.getElementById("demo").innerHTML = "Vertically: " + y + "px";
+    if (y >= 40) {
+        document.getElementById("van").style.display = "inline";
+        document.getElementById("dutch").style.animationPlayState = "running";
+    }
+    if (y >= 360) {
+        document.getElementById("mar").style.display = "inline";
+        document.getElementById("quis").style.animationPlayState = "running";
+    }
+    if (y >= 800) {
+        document.getElementById("sea").style.display = "inline";
+        document.getElementById("ray").style.animationPlayState = "running";
+    }
+    if (y >= 1280) {
+        document.getElementById("azi").style.display = "inline";
+        document.getElementById("mut").style.animationPlayState = "running";
+    }
+    if (y >= 1680) {
+        document.getElementById("monte").style.display = "inline";
+        document.getElementById("carlo").style.animationPlayState = "running";
+    }
+    if (y >= 2080) {
+        document.getElementById("ai").style.display = "inline";
+        document.getElementById("con").style.animationPlayState = "running";
     }
 }
 
