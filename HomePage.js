@@ -48,9 +48,9 @@ function start() {
     boats();
     passengers();
     date();
-    days();
     quote();
-    delcalendar();
+    days();
+    calendar();
 }
 //window.onload = start;
 
@@ -249,8 +249,9 @@ function date(){
 	}
 }
 
-function deldays2() {
-    var x = document.getElementById("days");
+
+function delcalendardays() {
+    var x = document.getElementById("days")
     var ul = document.getElementById("ul");
     var len = ul.children.length;
     var y;
@@ -285,7 +286,7 @@ function prev() {
     month[11] = "December";
     var i;
     var renew = 0;
-    deldays2();
+    delcalendardays();
     for (i = 13; i > 0; i--) {
         if (months == month[0]) {
             currentyear = yr - 1;
@@ -309,7 +310,8 @@ function prev() {
         }
     }
     document.getElementById("li").innerHTML = months + " " + currentyear;
-    calendar2(months, currentyear);
+    delprice();
+    homecalendar(months, currentyear);
 }
 
 function next() {
@@ -335,7 +337,7 @@ function next() {
 	month[11] = "December";
 	var i;
 	var renew = 0;
-	deldays2();
+	delcalendardays();
 	for (i = 0; i < 13; i++) {
 	    if (months == month[11] && i >= 11) {
 	        renew = 12;
@@ -364,12 +366,12 @@ function next() {
 	    }
 	}
 	document.getElementById("li").innerHTML = months + " " + currentyear;
-	calendar2(months, currentyear);
+	delprice();
+	homecalendar(months, currentyear);
 }
 
-function calendar2(months, yr) {
+function homecalendar(months, yr) {
     var count;
-    var x = document.getElementById("budget").value;
     if (months == "April" || months == "June" || months == "September" || months == "November") {
         day = 31; //Months with 30 days
     } else if (months == "February" && yr % 4 == 0) {
@@ -382,7 +384,7 @@ function calendar2(months, yr) {
     for (count = 1; count < day; count++) {
         var ul = document.getElementById("ul");
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(count + "\n" + x));
+        li.appendChild(document.createTextNode(count));
         ul.appendChild(li);
     }
     for (count = 1; count < day; count++) {
@@ -438,7 +440,6 @@ function days() {
 
 function calendar() {
     var count;
-    var x = document.getElementById("budget").value;
     var mths = document.getElementById("date").value; //Seperate the month and year
     var m = mths.split(" ", 2);
     var months = m[0]; //Assign the month
@@ -456,7 +457,7 @@ function calendar() {
     for (count = 1; count < day; count++) {
         var ul = document.getElementById("ul");
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(count + "\n" + x));
+        li.appendChild(document.createTextNode(count));
         ul.appendChild(li);
     }
     for (count = 1; count < day; count++) {
@@ -504,16 +505,6 @@ function changeday(day) {
     var days = document.getElementsByTagName("LI");
     document.getElementById("days").selectedIndex = day - 1;
     openForm();
-}
-
-function delcalendar() {
-    var ul = document.getElementById("ul");
-    var len = ul.children.length;
-    var y;
-    for (y = 0; y < len; y++) {
-        ul.removeChild(ul.children[0])
-    }
-    calendar();
 }
 
 function boats() {
@@ -570,6 +561,7 @@ function delprice() {
 function quote() {
     var boat = document.getElementById("boats").value;
     var time = document.getElementById("hours").value;
+    var dest = document.getElementById("destination").value;
     var months = document.getElementById("date").value.split(" ", 2); //Seperate the month and year
     var months = months[0]; //Assign the month
     var quote = 0;
@@ -582,15 +574,18 @@ function quote() {
     } else if (boat == "69' AICON") {
         quote = 5100;
     }
+    if(dest == "Belize"){
+        quote = quote + 250;
+    }
     if (months == "March" || months == "April" || months == "May" || months == "June" || months == "July" || months == "August") {
-        quote = quote + 2500;
-    } else if (months == "January" || months == "February" || months == "September" || months == "October" || months == "November" || months == "December") {
         quote = quote + 1000;
+    } else if (months == "January" || months == "February" || months == "September" || months == "October" || months == "November" || months == "December") {
+        quote = quote + 500;
     }
     if (time == "4") {
-        quote = quote * 2;
+        quote = quote + 200;
     } else if (time == "8") {
-        quote = quote * 4;
+        quote = quote + 400;
     }
     var select = document.getElementById("budget");
     var option = document.createElement("option");
