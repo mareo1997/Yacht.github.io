@@ -55,34 +55,36 @@ function start() {
 //window.onload = start;
 
 function activate() {
-    var elmnt = document.getElementById("myDIV");
-    var y = elmnt.scrollTop;
-    document.getElementById("demo").innerHTML = "Vertically: " + y + "px";
-    if (y >= 40) {
+    var y = window.pageYOffset;
+    if (y > 735) {
         document.getElementById("van").style.display = "inline";
         document.getElementById("dutch").style.animationPlayState = "running";
     }
-    if (y >= 360) {
+    if (y >= 1262) {
         document.getElementById("mar").style.display = "inline";
         document.getElementById("quis").style.animationPlayState = "running";
     }
-    if (y >= 800) {
+    if (y >= 1736) {
         document.getElementById("sea").style.display = "inline";
         document.getElementById("ray").style.animationPlayState = "running";
     }
-    if (y >= 1280) {
+    if (y >= 2210) {
         document.getElementById("azi").style.display = "inline";
         document.getElementById("mut").style.animationPlayState = "running";
     }
-    if (y >= 1680) {
+    if (y >= 2712) {
         document.getElementById("monte").style.display = "inline";
         document.getElementById("carlo").style.animationPlayState = "running";
     }
-    if (y >= 2080) {
+    if (y >= 3212) {
         document.getElementById("ai").style.display = "inline";
         document.getElementById("con").style.animationPlayState = "running";
     }
 }
+
+/*function q() {
+    alert('Current scroll from the top: ' + window.pageYOffset);
+}*/
 
 function readmore(more){
 	if(more == 'americas'){
