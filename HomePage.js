@@ -574,14 +574,24 @@ function quote() {
     } else if (boat == "69' AICON") {
         quote = 5100;
     }
-    if(dest == "Belize"){
-        quote = quote + 250;
-    }
-    if (months == "March" || months == "April" || months == "May" || months == "June" || months == "July" || months == "August") {
+    if(dest == "Belize" || dest == "Brazil" || dest == "Bahamas"){
+        quote = quote + 1500;
+    } else if (dest == "British Virgin Islands" || dest == "Antigua" || dest == "Martinique") {
         quote = quote + 1000;
-    } else if (months == "January" || months == "February" || months == "September" || months == "October" || months == "November" || months == "December") {
+    } else if (dest == "Thailand" || dest == "Tahiti") {
         quote = quote + 500;
+    } else if (dest == "Greece" || dest == "Italy" || dest == "Spain") {
+        quote = quote + 2000;
     }
+    /*if (month == "January" || month == "February") {
+        quote = quote + 2000;
+    } else if (months == "March" || months == "April" || months == "May") {
+        quote = quote + 1000;
+    } else if (months == "June" || months == "July" || months == "August") {
+        quote = quote + 2500;
+    } else if (months == "September" || months == "October" || months == "November" || months == "December") {
+        quote = quote + 500;
+    }*/
     if (time == "4") {
         quote = quote + 200;
     } else if (time == "8") {
