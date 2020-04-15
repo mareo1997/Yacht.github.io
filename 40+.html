@@ -6,7 +6,7 @@
 <script type="text/javascript" src = "HomePage.js"></script>
 <link rel = "stylesheet" type="text/css" href = "stylesheets/Display.css">
 </head>
-<body class="">
+<body onload="start()">
     <div id="body">
         <div class="navbar">
             <a href="#" onclick="myPage('home')">Home</a>
@@ -77,7 +77,7 @@
                 <header id="1.01">40' VANDUTCH BLACK</header><br>
                 <img class="modal-image" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/40-Vandutch-Black-0001.jpg">
                 <p>MAKE VANDUTCH | SIZE 40' | YEAR 2014 | STARTING AT $2200.00</p>
-                <button class="box1" onclick="openForm(1.01)">Get a Quote</button>
+                <button class="box1" onclick="openForm()">Get a Quote</button>
                 <button class="box2" onclick="box(101)">Explore</button>
             </div>
         </div>
@@ -88,10 +88,63 @@
                 <header id="1.02">43' MARQUIS</header><br>
                 <img class="modal-image" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/43-marquis-yacht-image-09.jpg">
                 <p>MAKE MARQUIS | SIZE 43' | YEAR 2008 | STARTING AT $2200.00</p>
-                <button class="box1" onclick="openForm(1.02)">Get a Quote</button>
+                <button class="box1" onclick="openForm()">Get a Quote</button>
                 <button class="box2" onclick="box(102)">Explore</button>
             </div>
         </div>
+
+        <div class="form-popup" id="myForm">
+            <div class="form-container" id="formcontent">
+                <header>Get a Quote</header>
+                Boats<br><select class="sel" required id="boats" onchange="delprice(), delnums()"></select><br>
+                Number of Passengers<br><select class="sel" id="nums"></select><br>
+                Destination<br>
+                <select class="sel" required id="destination" onchange="delprice()">
+                    <optgroup label="Americas">
+                        <option>Belize</option>
+                        <option>Brazil</option>
+                        <option>Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option>Antigua</option>
+                        <option>British Virgin Islands</option>
+                        <option>Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option>Thailand</option>
+                        <option>Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option>Greece</option>
+                        <option>Italy</option>
+                        <option>Spain</option>
+                    </optgroup>
+                </select><br>
+                Date of Departure<br>
+                <select class="sel" id="date" onchange="delprice(), deldays()"></select>
+                <select class="sel" id="days"></select><br>
+                Number of hours<br>
+                <select class="sel" id="hours" onchange="delprice()">
+                    <option>4</option>
+                    <option>8</option>
+                </select><br>
+                Price<br><select class="sel" id="budget"></select><br>
+                <button class="btn" onclick="submit()">Submit</button>
+                <button class="btn cancel" onclick="closeForm()">Cancel</button>
+            </div>
+        </div>
+
+        <div class="form-popup" id="emailform">
+            <form class="form-container" onsubmit="transporter.sendMail(data[, callback])">
+                <header>Email Quote</header>
+                Name*<br><input type="text" required id="name"><br>
+                Email*<br><input type="email" required id="@"><br>
+                Phone<br><input type="tel" name="#"><br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="reset" class="btn cancel" onclick="resetForm()" value="Cancel">
+            </form>
+        </div>
+
 
     </div>
 </body>
