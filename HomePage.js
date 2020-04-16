@@ -52,7 +52,7 @@ function start() {
     days();
     calendar();
 }
-//window.onload = start;
+window.onload = start;
 
 function activate() {
     var y = window.pageYOffset;
@@ -136,6 +136,66 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
+function admin() {
+    document.getElementById("admin").style.display = "block";
+}
+
+function closeadmin() {
+    document.getElementById("admin").style.display = "none";
+}
+
+function verify() {
+    var admins = [
+        ["charter", "fleet"],
+        ["ab", "cd"],
+    ];
+    var subscribers = [
+        ["username", "password"],
+        ["ab", "ef"]
+    ];
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var i;
+    for (i = 0; i < admins.length; i++) {
+        if (admins[i][0] == username) {
+            if (admins[i][1] == password) {
+                closeadmin();
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+                document.getElementById("edit").style.display = "none";
+                document.getElementById("out").style.display = "block";
+                document.getElementById("msg").style.display = "block";
+                document.getElementById("msg").innerHTML = "Logged in as Admin";
+                editor();
+                break;
+            }
+        }        
+    }
+    for (i = 0; i < subscribers.length; i++) {
+        if (subscribers[i][0] == username) {
+            if (subscribers[i][1] == password) {
+                closeadmin();
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+                document.getElementById("edit").style.display = "none";
+                document.getElementById("out").style.display = "block";
+                break;
+            }
+        }
+    } if (i == verification.length) {
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        alert("This username or password does not exist!");
+    }
+}
+
+function logout() {
+    document.getElementById("edit").style.display = "block";
+    document.getElementById("out").style.display = "none";
+    document.getElementById("msg").style.display = "none";
+    editor();
+}
+
 function image(x){
 	document.getElementById(x).style.display = "block";
 }
@@ -166,14 +226,12 @@ function span(z){
 	document.getElementById(z).style.display = "none";
 }
 
-function editor(){
+function editor() {
     var x = document.getElementById("body");
 	  if (x.contentEditable == "true") {
 		  x.contentEditable = "false";
-		  document.getElementById("edit").innerHTML = "Viewing as User";
 	  }else if(x.contentEditable = "false"){
           x.contentEditable = "true";
-          document.getElementById("edit").innerHTML = "Viewing as Administrator";
 	  }
 }
 
@@ -213,19 +271,7 @@ function showSlides(n) {
 function date(){
 	var timestamp = new Date();
 	var yr = timestamp.getFullYear();
-	var month = new Array();
-	month[0] = "January";
-	month[1] = "February";
-	month[2] = "March";
-	month[3] = "April";
-	month[4] = "May";
-	month[5] = "June";
-	month[6] = "July";
-	month[7] = "August";
-	month[8] = "September";
-	month[9] = "October";
-	month[10] = "November";
-	month[11] = "December";
+	var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	var i;
 	var renew = 0;
 	for(i=0;i<13;i++){
@@ -271,19 +317,7 @@ function prev() {
     var currentmonth = timestamp.getMonth();
     var yr = m[1];
     var currentyear = timestamp.getFullYear();
-    var month = new Array();
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
-    month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
+    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var i;
     var renew = 0;
     delcalendardays();
@@ -322,19 +356,7 @@ function next() {
     var currentmonth = timestamp.getMonth();
     var yr = m[1];
 	var currentyear = timestamp.getFullYear();
-	var month = new Array();
-	month[0] = "January";
-	month[1] = "February";
-	month[2] = "March";
-	month[3] = "April";
-	month[4] = "May";
-	month[5] = "June";
-	month[6] = "July";
-	month[7] = "August";
-	month[8] = "September";
-	month[9] = "October";
-	month[10] = "November";
-	month[11] = "December";
+	var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	var i;
 	var renew = 0;
 	delcalendardays();
@@ -508,13 +530,7 @@ function changeday(day) {
 }
 
 function boats() {
-    var yacht = new Array();
-    yacht[0] = "40' VANDUTCH BLACK";
-    yacht[1] = "43' MARQUIS";
-    yacht[2] = "52' SEA RAY";
-    yacht[3] = "55' AZIMUT";
-    yacht[4] = "65' MONTE CARLO";
-    yacht[5] = "69' AICON";
+    var yacht = ["40' VANDUTCH BLACK", "43' MARQUIS", "52' SEA RAY", "55' AZIMUT", "65' MONTE CARLO", "69' AICON"];
     var i;
     for (i = 0; i < 6; i++) {
         var boat = yacht[i];

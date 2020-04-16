@@ -7,363 +7,362 @@
     <script type="text/javascript" src="HomePage.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheets/Display.css">
 </head>
-<body onload="start()" onscroll="activate()">
-    <div class="navbar">
-        <a href="#" class="active" onclick="myPage('home')">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="myDestination('americas')">Destinations</button>
-            <div class="dropdown-content">
-                <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
-                <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
-                <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
-                <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
+<body onscroll="activate()">
+    <div id="body">
+        <div class="navbar">
+            <a href="#" class="active" onclick="myPage('home')">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myDestination('americas')">Destinations</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="myDestination('americas')">Americas Yacht Charters</a>
+                    <a href="#" onclick="myDestination('caribbean')">Caribbean Yacht Charters</a>
+                    <a href="#" onclick="myDestination('exotic')">Exotics Yacht Charters</a>
+                    <a href="#" onclick="myDestination('medi')">Mediterranean Yacht Charters</a>
+                </div>
             </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="myType('sail')">Sizes</button>
-            <div class="dropdown-content">
-                <div class="submenu">
-                    <button class="submenubtn" onclick="myType('sail')">40+</button>
-                    <div class="submenu-content">
-                        <a href="#" onclick="box(101)">40' VANDUTCH BLACK</a>
-                        <a href="#" onclick="box(102)">43' MARQUIS</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myType('sail')">Sizes</button>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('sail')">40+</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(101)">40' VANDUTCH BLACK</a>
+                            <a href="#" onclick="box(102)">43' MARQUIS</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('power')">50+</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(201)">52' SEA RAY</a>
+                            <a href="#" onclick="box(202)">55' AZIMUT</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <button class="submenubtn" onclick="myType('crew')">60+</button>
+                        <div class="submenu-content">
+                            <a href="#" onclick="box(301)">65' MONTE CARLO</a>
+                            <a href="#" onclick="box(302)">69' AICON</a>
+                        </div>
                     </div>
                 </div>
-                <div class="submenu">
-                    <button class="submenubtn" onclick="myType('power')">50+</button>
-                    <div class="submenu-content">
-                        <a href="#" onclick="box(201)">52' SEA RAY</a>
-                        <a href="#" onclick="box(202)">55' AZIMUT</a>
+            </div>
+            <a href="#" onclick="myPage('contact')">Contact Us</a>
+            <a href="#" onclick="myPage('faq')">FAQ</a>
+            <a href="#" class="b" id="edit" onclick="admin()">Login</a>
+            <a href="#" class="logout" id="out" onclick="logout()">Logout</a>
+            <a href="#" class="msg" id="msg"></a>
+        </div>
+
+        <div class="bg2" align="center">
+            <div class="align-homebutton">
+                <button class="home-button" onclick="openForm()">Build a Quote</button>
+            </div>
+        </div>
+
+        <div class="month">
+            <button id="prevmonth" class="prevmth" onclick="prev()">Last Month</button>
+            <button id="nextmonth" class="nextmth" onclick="next()">Next Month</button>
+            <ul>
+                <li id="li"></li>
+            </ul>
+        </div>
+        <ul class="days" id="ul"></ul>
+
+        <div class="right-textbox">
+            <div class="yacht-name-details">
+                <p style="display:inline; font-size:25px"> MAKE </p>
+                <b style="display:inline; font-size:25px"> VANDUTCH |</b>
+                <p style="display:inline; font-size:25px"> SIZE </p>
+                <b style="display:inline; font-size:25px"> 40' |</b>
+                <br>
+                <p style="display:inline; font-size:25px"> YEAR </p>
+                <b style="display:inline; font-size:25px"> 2014 |</b>
+                <p style="display:inline; font-size:25px"> STARTING AT </p>
+                <b style="display:inline; font-size:25px"> $2200.00</b>
+                <br><br>
+                <p>
+                    Our 40' VanDutch Black is the perfect option for socializing and entertaining with family
+                    and friends. Timeless styling, beautiful cushions, and sumptuous seating features on her living
+                    area to create an elegant and comfortable atmosphere.
+                </p>
+                <p>
+                    <button class="box1" onclick="openForm()">Get Quote</button>
+                    <button class="box2" onclick="box(101)">Read More</button>
+                </p>
+            </div>
+            <div class="right-image" id="dutch">
+                <img class="yacht-image" id="van" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/40-Vandutch-Black-0001.jpg">
+            </div>
+        </div>
+
+        <div class="left-textbox">
+            <div class="left-image" id="quis">
+                <img class="left-yacht-image" id="mar" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/43-marquis-yacht-image-09.jpg">
+            </div>
+            <div class="yacht-name-details2">
+                <p style="display:inline; font-size:25px"> MAKE </p>
+                <b style="display:inline; font-size:25px"> MARQUIS |</b>
+                <p style="display:inline; font-size:25px"> SIZE </p>
+                <b style="display:inline; font-size:25px"> 43' |</b>
+                <br>
+                <p style="display:inline; font-size:25px"> YEAR </p>
+                <b style="display:inline; font-size:25px"> 2008 |</b>
+                <p style="display:inline; font-size:25px"> STARTING AT </p>
+                <b style="display:inline; font-size:25px"> $2200.00</b>
+                <br><br>
+                <p>
+                    The styling is sharp if a bit futuristic, with everything from the backrest of the
+                    bench-style helm chair to the corner moldings on the full-beam, hinged and bi-folding
+                    glass doors comprised of rigid angles, as if the interior designers had been inspired
+                    by the angles of a honeycomb.
+                </p>
+                <p>
+                    <button class="box1" onclick="openForm()">Get Quote</button>
+                    <button class="box2" onclick="box(102)">Read More</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="right-textbox">
+            <div class="yacht-name-details">
+                <p style="display:inline; font-size:25px"> MAKE </p>
+                <b style="display:inline; font-size:25px"> SEA RAY |</b>
+                <p style="display:inline; font-size:25px"> SIZE </p>
+                <b style="display:inline; font-size:25px"> 52' |</b>
+                <br>
+                <p style="display:inline; font-size:25px"> YEAR </p>
+                <b style="display:inline; font-size:25px"> 2006 |</b>
+                <p style="display:inline; font-size:25px"> STARTING AT </p>
+                <b style="display:inline; font-size:25px"> $2800.00</b>
+                <br><br>
+                <p>
+                    The 52' Sea Ray is the perfect day/evening cruiser.
+                    The fly-bridge has air conditioning and large sun pads on the bow, spacious aft deck
+                    area and a superb interior with stellar finish round out this fine vessel.
+                </p>
+                <p>
+                    <button class="box1" onclick="openForm()">Get Quote</button>
+                    <button class="box2" onclick="box(201)">Read More</button>
+                </p>
+            </div>
+            <div class="right-image" id="ray">
+                <img class="yacht-image" id="sea" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/52-SeaRay-Yacht-0001.jpg">
+            </div>
+        </div>
+
+        <div class="left-textbox">
+            <div class="left-image" id="mut">
+                <img class="left-yacht-image" id="azi" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">
+            </div>
+            <div class="yacht-name-details2">
+                <p style="display:inline; font-size:25px"> MAKE </p>
+                <b style="display:inline; font-size:25px"> AZIMUT |</b>
+                <p style="display:inline; font-size:25px"> SIZE </p>
+                <b style="display:inline; font-size:25px"> 55' |</b>
+                <br>
+                <p style="display:inline; font-size:25px"> YEAR </p>
+                <b style="display:inline; font-size:25px"> 2019 |</b>
+                <p style="display:inline; font-size:25px"> STARTING AT </p>
+                <b style="display:inline; font-size:25px"> $2800.00</b>
+                <br><br>
+                <p>
+                    A great yacht for exploring the islands, Miami Beach, Ft. Lauderdale, or the Florida
+                    Keys. This fast cruising Motoryacht has a 3 stateroom layout and a stunning flybridge.
+                </p>
+                <p>
+                    <button class="box1" onclick="openForm()">Get Quote</button>
+                    <button class="box2" onclick="box(202)">Read More</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="right-textbox">
+            <div class="yacht-name-details">
+                <p style="display:inline; font-size:25px"> MAKE </p>
+                <b style="display:inline; font-size:25px"> MONTE CARLO |</b>
+                <p style="display:inline; font-size:25px"> SIZE </p>
+                <b style="display:inline; font-size:25px"> 65' |</b>
+                <br>
+                <p style="display:inline; font-size:25px"> YEAR </p>
+                <b style="display:inline; font-size:25px"> 2017 |</b>
+                <p style="display:inline; font-size:25px"> STARTING AT </p>
+                <b style="display:inline; font-size:25px"> $5000.00</b>
+                <br><br>
+                <p>
+                    A great yacht for exploring the islands, Miami Beach, Ft. Lauderdale, or the Florida
+                    Keys. This fast cruising Motoryacht has a 3 stateroom layout and a stunning flybridge.
+                </p>
+                <p>
+                    <button class="box1" onclick="openForm()">Get Quote</button>
+                    <button class="box2" onclick="box(301)">Read More</button>
+                </p>
+            </div>
+            <div class="right-image" id="carlo">
+                <img class="yacht-image" id="monte" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/IMG_0014-2.jpg">
+            </div>
+        </div>
+
+        <div class="left-textbox">
+            <div class="left-image" id="con">
+                <img class="left-yacht-image" id="ai"
+                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/fNf6gFtA.jpg">
+            </div>
+            <div class="yacht-name-details2">
+                <p style="display:inline; font-size:25px"> MAKE </p>
+                <b style="display:inline; font-size:25px"> AICON |</b>
+                <p style="display:inline; font-size:25px"> SIZE </p>
+                <b style="display:inline; font-size:25px"> 69' |</b>
+                <br>
+                <p style="display:inline; font-size:25px"> YEAR </p>
+                <b style="display:inline; font-size:25px"> 2017 |</b>
+                <p style="display:inline; font-size:25px"> STARTING AT </p>
+                <b style="display:inline; font-size:25px"> $5100.00</b>
+                <br><br>
+                <p>
+                    A great yacht for exploring the islands, Miami Beach, Ft. Lauderdale, or the Florida
+                    Keys. This fast cruising Motoryacht has a 3 stateroom layout and a stunning flybridge.
+                </p>
+                <p>
+                    <button class="box1" onclick="openForm()">Get Quote</button>
+                    <button class="box2" onclick="box(302)">Read More</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="textbox3">
+            <div class="benefits_header">
+                <b> Yacht Charter Fleet </b>
+            </div>
+
+            <div class="benefits_header">
+                <b> Benefits of chartering a yacht with us </b>
+            </div>
+
+            <div class="row2">
+                <div class="column2">
+                    <img class="home-yacht"
+                         src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/43-marquis-yacht-image-09.jpg">
+                    <b> 2 Stateroom </b>
+                    <p>Up to 12 Passengers</p>
+                    <p> Includes: Captain, Water, Sodas & Ice. </p>
+                </div>
+
+                <div class="column2">
+                    <img class="home-yacht"
+                         src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">
+                    <b> 3 Stateroom </b>
+                    <p>Up to 12 Passengers</p>
+                    <p> Includes: Captain, Mate, Water, Sodas & Ice. </p>
+                </div>
+
+                <div class="column2">
+                    <img class="home-yacht" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/IMG_0014-2.jpg">
+                    <b> 3 Stateroom </b>
+                    <p>Up to 13 Passengers</p>
+                    <p>Includes: Captain, Mate, Water, Sodas, Ice & Water Toys. </p>
+                </div>
+
+                <div class="learn-more-button-cols">
+                    <div class="button" onclick="box(102)"> Learn More </div>
+                </div>
+
+                <div class="learn-more-button-cols">
+                    <div class="button" onclick="box(202)"> Learn More </div>
+                </div>
+
+                <div class="learn-more-button-cols">
+                    <div class="button" onclick="box(301)"> Learn More </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <img class="home-yacht"
+                             src="https://i.pinimg.com/originals/25/ba/fc/25bafcfe738dd55e807f68a58cda3d31.jpg">
+                        <b>Customer Service</b>
+                        <p>Best Custommer Service in the industry </p>
+                    </div>
+                    <div class="column">
+                        <img class="home-yacht"
+                             src="https://i.insider.com/5b9ab06fe199f336008b5e27?width=1100&format=jpeg&auto=webp">
+                        <b>Five Star Rating</b>
+                        <p>5 Star Reviews on all platforms</p>
+                    </div>
+                    <div class="column">
+                        <img class="home-yacht"
+                             src="https://previews.123rf.com/images/1xpert/1xpert1504/1xpert150400297/39057635-earth-globe-elements-of-this-image-furnished.jpg">
+                        <b>Year Long Trips</b>
+                        <p> The most routes and most dates available</p>
                     </div>
                 </div>
-                <div class="submenu">
-                    <button class="submenubtn" onclick="myType('crew')">60+</button>
-                    <div class="submenu-content">
-                        <a href="#" onclick="box(301)">65' MONTE CARLO</a>
-                        <a href="#" onclick="box(302)">69' AICON</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="#" onclick="myPage('contact')">Contact Us</a>
-        <a href="#" onclick="myPage('faq')">FAQ</a>
-        <a href="#" class="b" id="edit" onclick="editor()">Viewing as User</a>
-    </div>
-    <!--
-        <div class="header">
-            <img src= "158463acfc822c5c08274e7e28d1e325.png" class="logo"> </img>
-            <a href="#" onclick="myHOME()">Home</a>
-            <a href="#" onclick="myDEST()">Destinations</a>
-            <a href="#">Sizes</a>
-            <a href="#">Order Rental</a>
-            <a href="FAQ.html">FAQ</a>
-            <a href="Login.html">Login</a>
-            <h> 1-800-CONTACT </h>
-        </div>
-    -->
-    <!--
-    <img src="Gentech-Sizes_yacht_for_sale_Queen-anne_12467.jpg" alt='Yacht for Rent'>
-    -->
-    <div class="bg2" align="center">
-        <div class="align-homebutton">
-            <button class="home-button" onclick="openForm()">Build a Quote</button>
-        </div>
-    </div>
-
-    <div class="month">
-        <button id="prevmonth" class="prevmth" onclick="prev()">Last Month</button>
-        <button id="nextmonth" class="nextmth" onclick="next()">Next Month</button>
-        <ul>
-            <li id="li"></li>
-        </ul>
-    </div>
-    <ul class="days" id="ul"></ul>
-
-    <div class="right-textbox">
-        <div class="yacht-name-details">
-            <p style="display:inline; font-size:25px"> MAKE </p>
-            <b style="display:inline; font-size:25px"> VANDUTCH |</b>
-            <p style="display:inline; font-size:25px"> SIZE </p>
-            <b style="display:inline; font-size:25px"> 40' |</b>
-            <br>
-            <p style="display:inline; font-size:25px"> YEAR </p>
-            <b style="display:inline; font-size:25px"> 2014 |</b>
-            <p style="display:inline; font-size:25px"> STARTING AT </p>
-            <b style="display:inline; font-size:25px"> $2200.00</b>
-            <br><br>
-            <p>
-                Our 40' VanDutch Black is the perfect option for socializing and entertaining with family
-                and friends. Timeless styling, beautiful cushions, and sumptuous seating features on her living
-                area to create an elegant and comfortable atmosphere.
-            </p>
-            <p>
-                <button class="box1" onclick="openForm()">Get Quote</button>
-                <button class="box2" onclick="box(101)">Read More</button>
-            </p>
-        </div>
-        <div class="right-image" id="dutch">
-            <img class="yacht-image" id="van" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/40-Vandutch-Black-0001.jpg">
-        </div>
-    </div>
-
-    <div class="left-textbox">
-        <div class="left-image" id="quis">
-            <img class="left-yacht-image" id="mar" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/43-marquis-yacht-image-09.jpg">
-        </div>
-        <div class="yacht-name-details2">
-            <p style="display:inline; font-size:25px"> MAKE </p>
-            <b style="display:inline; font-size:25px"> MARQUIS |</b>
-            <p style="display:inline; font-size:25px"> SIZE </p>
-            <b style="display:inline; font-size:25px"> 43' |</b>
-            <br>
-            <p style="display:inline; font-size:25px"> YEAR </p>
-            <b style="display:inline; font-size:25px"> 2008 |</b>
-            <p style="display:inline; font-size:25px"> STARTING AT </p>
-            <b style="display:inline; font-size:25px"> $2200.00</b>
-            <br><br>
-            <p>
-                The styling is sharp if a bit futuristic, with everything from the backrest of the
-                bench-style helm chair to the corner moldings on the full-beam, hinged and bi-folding
-                glass doors comprised of rigid angles, as if the interior designers had been inspired
-                by the angles of a honeycomb.
-            </p>
-            <p>
-                <button class="box1" onclick="openForm()">Get Quote</button>
-                <button class="box2" onclick="box(102)">Read More</button>
-            </p>
-        </div>
-    </div>
-
-    <div class="right-textbox">
-        <div class="yacht-name-details">
-            <p style="display:inline; font-size:25px"> MAKE </p>
-            <b style="display:inline; font-size:25px"> SEA RAY |</b>
-            <p style="display:inline; font-size:25px"> SIZE </p>
-            <b style="display:inline; font-size:25px"> 52' |</b>
-            <br>
-            <p style="display:inline; font-size:25px"> YEAR </p>
-            <b style="display:inline; font-size:25px"> 2006 |</b>
-            <p style="display:inline; font-size:25px"> STARTING AT </p>
-            <b style="display:inline; font-size:25px"> $2800.00</b>
-            <br><br>
-            <p>
-                The 52' Sea Ray is the perfect day/evening cruiser.
-                The fly-bridge has air conditioning and large sun pads on the bow, spacious aft deck
-                area and a superb interior with stellar finish round out this fine vessel.
-            </p>
-            <p>
-                <button class="box1" onclick="openForm()">Get Quote</button>
-                <button class="box2" onclick="box(201)">Read More</button>
-            </p>
-        </div>
-        <div class="right-image" id="ray">
-            <img class="yacht-image" id="sea" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/52-SeaRay-Yacht-0001.jpg">
-        </div>
-    </div>
-
-    <div class="left-textbox">
-        <div class="left-image" id="mut">
-            <img class="left-yacht-image" id="azi" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">
-        </div>
-        <div class="yacht-name-details2">
-            <p style="display:inline; font-size:25px"> MAKE </p>
-            <b style="display:inline; font-size:25px"> AZIMUT |</b>
-            <p style="display:inline; font-size:25px"> SIZE </p>
-            <b style="display:inline; font-size:25px"> 55' |</b>
-            <br>
-            <p style="display:inline; font-size:25px"> YEAR </p>
-            <b style="display:inline; font-size:25px"> 2019 |</b>
-            <p style="display:inline; font-size:25px"> STARTING AT </p>
-            <b style="display:inline; font-size:25px"> $2800.00</b>
-            <br><br>
-            <p>
-                A great yacht for exploring the islands, Miami Beach, Ft. Lauderdale, or the Florida
-                Keys. This fast cruising Motoryacht has a 3 stateroom layout and a stunning flybridge.
-            </p>
-            <p>
-                <button class="box1" onclick="openForm()">Get Quote</button>
-                <button class="box2" onclick="box(202)">Read More</button>
-            </p>
-        </div>
-    </div>
-
-    <div class="right-textbox">
-        <div class="yacht-name-details">
-            <p style="display:inline; font-size:25px"> MAKE </p>
-            <b style="display:inline; font-size:25px"> MONTE CARLO |</b>
-            <p style="display:inline; font-size:25px"> SIZE </p>
-            <b style="display:inline; font-size:25px"> 65' |</b>
-            <br>
-            <p style="display:inline; font-size:25px"> YEAR </p>
-            <b style="display:inline; font-size:25px"> 2017 |</b>
-            <p style="display:inline; font-size:25px"> STARTING AT </p>
-            <b style="display:inline; font-size:25px"> $5000.00</b>
-            <br><br>
-            <p>
-                A great yacht for exploring the islands, Miami Beach, Ft. Lauderdale, or the Florida
-                Keys. This fast cruising Motoryacht has a 3 stateroom layout and a stunning flybridge.
-            </p>
-            <p>
-                <button class="box1" onclick="openForm()">Get Quote</button>
-                <button class="box2" onclick="box(301)">Read More</button>
-            </p>
-        </div>
-        <div class="right-image" id="carlo">
-            <img class="yacht-image" id="monte" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/IMG_0014-2.jpg">
-        </div>
-    </div>
-
-    <div class="left-textbox">
-        <div class="left-image" id="con">
-            <img class="left-yacht-image" id="ai"
-                 src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/fNf6gFtA.jpg">
-        </div>
-        <div class="yacht-name-details2">
-            <p style="display:inline; font-size:25px"> MAKE </p>
-            <b style="display:inline; font-size:25px"> AICON |</b>
-            <p style="display:inline; font-size:25px"> SIZE </p>
-            <b style="display:inline; font-size:25px"> 69' |</b>
-            <br>
-            <p style="display:inline; font-size:25px"> YEAR </p>
-            <b style="display:inline; font-size:25px"> 2017 |</b>
-            <p style="display:inline; font-size:25px"> STARTING AT </p>
-            <b style="display:inline; font-size:25px"> $5100.00</b>
-            <br><br>
-            <p>
-                A great yacht for exploring the islands, Miami Beach, Ft. Lauderdale, or the Florida
-                Keys. This fast cruising Motoryacht has a 3 stateroom layout and a stunning flybridge.
-            </p>
-            <p>
-                <button class="box1" onclick="openForm()">Get Quote</button>
-                <button class="box2" onclick="box(302)">Read More</button>
-            </p>
-        </div>
-    </div>
-
-    <div class="textbox3">
-        <div class="benefits_header">
-            <b> Yacht Charter Fleet </b>
-        </div>
-
-        <div class="benefits_header">
-            <b> Benefits of chartering a yacht with us </b>
-        </div>
-
-        <div class="row2">
-            <div class="column2">
-                <img class="home-yacht"
-                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/43-marquis-yacht-image-09.jpg">
-                <b> 2 Stateroom </b>
-                <p>Up to 12 Passengers</p>
-                <p> Includes: Captain, Water, Sodas & Ice. </p>
             </div>
 
-            <div class="column2">
-                <img class="home-yacht"
-                     src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/2018/04/55_Azimut.png">
-                <b> 3 Stateroom </b>
-                <p>Up to 12 Passengers</p>
-                <p> Includes: Captain, Mate, Water, Sodas & Ice. </p>
-            </div>
+            <div style="text-align: center">
+                <button class="button" onclick="myPage('contact')"> CONTACT US </button>
+            </div><br>
+        </div>
 
-            <div class="column2">
-                <img class="home-yacht" src="https://db08gzwcuv9x7.cloudfront.net/wp-content/uploads/IMG_0014-2.jpg">
-                <b> 3 Stateroom </b>
-                <p>Up to 13 Passengers</p>
-                <p>Includes: Captain, Mate, Water, Sodas, Ice & Water Toys. </p>
-            </div>
-
-            <div class="learn-more-button-cols">
-                <div class="button" onclick="box(102)"> Learn More </div>
-            </div>
-
-            <div class="learn-more-button-cols">
-                <div class="button" onclick="box(202)"> Learn More </div>
-            </div>
-
-            <div class="learn-more-button-cols">
-                <div class="button" onclick="box(301)"> Learn More </div>
-            </div>
-
-            <div class="row">
-                <div class="column">
-                    <img class="home-yacht"
-                         src="https://i.pinimg.com/originals/25/ba/fc/25bafcfe738dd55e807f68a58cda3d31.jpg">
-                    <b>Customer Service</b>
-                    <p>Best Custommer Service in the industry </p>
-                </div>
-                <div class="column">
-                    <img class="home-yacht"
-                         src="https://i.insider.com/5b9ab06fe199f336008b5e27?width=1100&format=jpeg&auto=webp">
-                    <b>Five Star Rating</b>
-                    <p>5 Star Reviews on all platforms</p>
-                </div>
-                <div class="column">
-                    <img class="home-yacht"
-                         src="https://previews.123rf.com/images/1xpert/1xpert1504/1xpert150400297/39057635-earth-globe-elements-of-this-image-furnished.jpg">
-                    <b>Year Long Trips</b>
-                    <p> The most routes and most dates available</p>
-                </div>
+        <div class="form-popup" id="myForm">
+            <div class="form-container" id="formcontent">
+                <header>Get a Quote</header>
+                Boats<br><select class="sel" required id="boats" onchange="delprice(), delnums()"></select><br>
+                Number of Passengers<br><select class="sel" id="nums"></select><br>
+                Destination<br>
+                <select class="sel" required id="destination" onchange="delprice()">
+                    <optgroup label="Americas">
+                        <option>Belize</option>
+                        <option>Brazil</option>
+                        <option>Bahamas</option>
+                    </optgroup>
+                    <optgroup label="Caribbean">
+                        <option>Antigua</option>
+                        <option>British Virgin Islands</option>
+                        <option>Martinique</option>
+                    </optgroup>
+                    <optgroup label="Exotics">
+                        <option>Thailand</option>
+                        <option>Tahiti</option>
+                    </optgroup>
+                    <optgroup label="Mediterranean">
+                        <option>Greece</option>
+                        <option>Italy</option>
+                        <option>Spain</option>
+                    </optgroup>
+                </select><br>
+                Date of Departure<br>
+                <select class="sel" id="date" onchange="delprice(), deldays()"></select>
+                <select class="sel" id="days"></select><br>
+                Number of hours<br>
+                <select class="sel" id="hours" onchange="delprice()">
+                    <option>4</option>
+                    <option>8</option>
+                </select><br>
+                Price<br><select class="sel" id="budget"></select><br>
+                <button class="btn" onclick="submit()">Submit</button>
+                <button class="btn cancel" onclick="closeForm()">Cancel</button>
             </div>
         </div>
 
-        <div style="text-align: center">
-            <button class="button" onclick="myPage('contact')"> CONTACT US </button>
-        </div><br>
-    </div>
+        <div class="form-popup" id="emailform">
+            <form class="form-container" onsubmit="transporter.sendMail(data[, callback])">
+                <header>Email Quote</header>
+                Name*<br><input type="text" required id="name"><br>
+                Email*<br><input type="email" required id="@"><br>
+                Phone<br><input type="tel" name="#"><br>
+                <input type="submit" class="btn" value="Submit">
+                <input type="reset" class="btn cancel" onclick="resetForm()" value="Cancel">
+            </form>
+        </div>
 
+        <div class="form-popup" id="admin">
+            <div class="form-container">
+                <header>Provide verification</header><br>
+                Userame*<br><input type="text" required id="username"><br>
+                Password*<br><input type="password" required id="password"><br>
+                <button class="btn" onclick="verify()">Submit</button>
+                <button class="btn cancel" onclick="closeadmin()">Cancel</button>
 
-    <div class="form-popup" id="myForm">
-        <div class="form-container" id="formcontent">
-            <header>Get a Quote</header>
-            Boats<br><select class="sel" required id="boats" onchange="delprice(), delnums()"></select><br>
-            Number of Passengers<br><select class="sel" id="nums"></select><br>
-            Destination<br>
-            <select class="sel" required id="destination" onchange="delprice()">
-                <optgroup label="Americas">
-                    <option>Belize</option>
-                    <option>Brazil</option>
-                    <option>Bahamas</option>
-                </optgroup>
-                <optgroup label="Caribbean">
-                    <option>Antigua</option>
-                    <option>British Virgin Islands</option>
-                    <option>Martinique</option>
-                </optgroup>
-                <optgroup label="Exotics">
-                    <option>Thailand</option>
-                    <option>Tahiti</option>
-                </optgroup>
-                <optgroup label="Mediterranean">
-                    <option>Greece</option>
-                    <option>Italy</option>
-                    <option>Spain</option>
-                </optgroup>
-            </select><br>
-            Date of Departure<br>
-            <select class="sel" id="date" onchange="delprice(), deldays()"></select>
-            <select class="sel" id="days"></select><br>
-            Number of hours<br>
-            <select class="sel" id="hours" onchange="delprice()">
-                <option>4</option>
-                <option>8</option>
-            </select><br>
-            Price<br><select class="sel" id="budget"></select><br>
-            <button class="btn" onclick="submit()">Submit</button>
-            <button class="btn cancel" onclick="closeForm()">Cancel</button>
+            </div>
         </div>
     </div>
-
-    <div class="form-popup" id="emailform">
-        <form class="form-container" onsubmit="transporter.sendMail(data[, callback])">
-            <header>Email Quote</header>
-            Name*<br><input type="text" required id="name"><br>
-            Email*<br><input type="email" required id="@"><br>
-            Phone<br><input type="tel" name="#"><br>
-            <input type="submit" class="btn" value="Submit">
-            <input type="reset" class="btn cancel" onclick="resetForm()" value="Cancel">
-        </form>
-    </div>
-
 </body>
 </html>

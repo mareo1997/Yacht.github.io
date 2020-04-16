@@ -105,12 +105,23 @@ header {
     float: right;
  }
 
-.d{
+.navbar a.logout{
+    float: right;
     display: none;
 }
 
-.navbar a.c:hover{
+.navbar a.msg{
+    float: right;
+    display: none;
+}
+
+.navbar a.msg:hover{
 	background-color: lightskyblue;
+
+}
+
+.d{
+    display: none;
 }
 
 .navbar a.active{ 
@@ -370,7 +381,7 @@ footer{
   overflow: auto;
 }
 
-.form-container input[type=text], .form-container input[type=email], .form-container input[type=tel], .form-container input[type=date], .form-container .sel {
+.form-container input[type=text], .form-container input[type=password], .form-container input[type=email], .form-container input[type=tel], .form-container input[type=date], .form-container .sel {
   width: 80%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -379,7 +390,7 @@ footer{
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=email]:focus, .form-container input[type=date], .form-container input[type=tel]:focus, .form-container .sel:focus{
+.form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container input[type=email]:focus, .form-container input[type=date], .form-container input[type=tel]:focus, .form-container .sel:focus{
   background-color: #ddd;
   outline: none;
 }
