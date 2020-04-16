@@ -182,7 +182,8 @@ function verify() {
                 break;
             }
         }
-    } if (i == verification.length) {
+    }
+    if (i == verification.length) {
         document.getElementById("username").value = "";
         document.getElementById("password").value = "";
         alert("This username or password does not exist!");
@@ -193,7 +194,7 @@ function logout() {
     document.getElementById("edit").style.display = "block";
     document.getElementById("out").style.display = "none";
     document.getElementById("msg").style.display = "none";
-    editor();
+    document.getElementById("body").contentEditable = false;
 }
 
 function image(x){
