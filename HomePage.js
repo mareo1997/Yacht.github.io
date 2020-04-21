@@ -147,7 +147,7 @@ function closeadmin() {
 function verify() {
     var admins = [
         ["charter", "fleet"],
-        ["ab", "cd"],
+        ["ab", "cd"]
     ];
     var subscribers = [
         ["username", "password"],
@@ -155,7 +155,7 @@ function verify() {
     ];
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    var i;
+    var i, j;
     for (i = 0; i < admins.length; i++) {
         if (admins[i][0] == username) {
             if (admins[i][1] == password) {
@@ -167,23 +167,25 @@ function verify() {
                 document.getElementById("msg").style.display = "block";
                 document.getElementById("msg").innerHTML = "Logged in as Admin";
                 editor();
+                i = 0;
                 break;
             }
         }        
     }
-    for (i = 0; i < subscribers.length; i++) {
-        if (subscribers[i][0] == username) {
-            if (subscribers[i][1] == password) {
+    for (j = 0; j < subscribers.length; j++) {
+        if (subscribers[j][0] == username) {
+            if (subscribers[j][1] == password) {
                 closeadmin();
                 document.getElementById("username").value = "";
                 document.getElementById("password").value = "";
                 document.getElementById("edit").style.display = "none";
                 document.getElementById("out").style.display = "block";
+                j = 0;
                 break;
             }
         }
     }
-    if (i == verification.length) {
+    if (i != 0 && j != 0) {
         document.getElementById("username").value = "";
         document.getElementById("password").value = "";
         alert("This username or password does not exist!");
